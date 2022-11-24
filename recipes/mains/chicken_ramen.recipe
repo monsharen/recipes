@@ -22,6 +22,8 @@ ingredients:
 - 1 u Koriander
 
 actions:
-  - free_text Skär kycklinglårfiléerna i bitar och skiva champinjonerna. Stek kycklingen i en stekpanna i olja med lite svartpeppar och pressad vitlök.
-  - free_text Tillsätt champinjonerna och stek några minuter till. Lägg över i en kastrull.
-  - free_text Tillsätt sesamolja, soja, citrongräs, vatten, smulade hönsbuljongtärningar och nudlar. Koka i 5 minuter. Servera i djupa skålar.
+  - free_text Skär kycklinglårfiléerna i bitar och skiva champinjonerna.
+  - free_text Stek kycklinglårfiléerna i en stekpanna i olja med lite svartpeppar och pressad vitlök.
+  - free_text Tillsätt champinjonerna och stek <b>några minuter</b> till. Lägg över i en kastrull.
+  - free_text Tillsätt sesamolja, soja, citrongräs, vatten, smulade hönsbuljongtärningar och nudlar. Koka i <b>5 minuter</b>.
+  - free_text Servera i djupa skålar.

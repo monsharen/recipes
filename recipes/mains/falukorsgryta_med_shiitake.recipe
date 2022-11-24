@@ -15,11 +15,11 @@ ingredients:
 
 
 actions:
-  - free_text Skär i 1 cm tjocka skivor. Dela varje skiva i fyra delar.
+  - free_text Skär i <b>1 cm</b> tjocka skivor. Dela varje skiva i <b>fyra delar</b>.
   - free_text Dela löken i klyftor.
   - free_text Skär svampen i bitar.
   - free_text Bryn lök och korven i olivolja.
-  - free_text Lägg i svampen och låt den fräsa i någon halvminut.
+  - free_text Lägg i svampen och låt den fräsa i <b>någon halvminut</b>.
   - free_text Häll i creme fraichen och mjölken och rör om.
   - free_text Tillsätt tomatpurén och basilikan.
-  - free_text Låt allt sjuda i några minuter, salta och peppra.
+  - free_text Låt allt sjuda i <b>några minuter</b>, salta och peppra.

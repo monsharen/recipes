@@ -6,10 +6,11 @@ import se.lionsinvests.recipes.sdk.Recipe;
 
 import java.io.*;
 import java.nio.file.Files;
-import java.nio.file.Paths;
+import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
+import java.util.stream.Stream;
 
 public class Main {
 
@@ -45,34 +46,46 @@ public class Main {
         UnitTranslator unitTranslator = new UnitTranslator();
         ActionTranslator actionTranslator = new ActionTranslator(unitTranslator);
 
-        Files.find(Paths.get(recipesFolder.getAbsolutePath()), Integer.MAX_VALUE, (filePath, fileAttr) -> fileAttr.isRegularFile()).forEach(recipeFile -> {
-            Recipe recipe;
-            try {
-                recipe = interpreter.interpret(recipeFile.toFile());
-            } catch (Exception e) {
-                throw new IllegalStateException("failed to interpret file " + recipeFile.toString(), e);
-            }
-            PageRenderer<Recipe> pageRenderer = new ThymeleafPageRenderer(actionTranslator, unitTranslator, recipeTemplate);
+        Path path = recipesFolder.toPath();
+        PageRenderer<Recipe> pageRenderer = new ThymeleafPageRenderer(actionTranslator, unitTranslator, recipeTemplate);
 
-            String html = pageRenderer.render(recipe);
-            String targetFileName = getTargetFileName(recipeFile.toFile().getName());
-            File file = new File(outputFolder, targetFileName);
-            try {
-                writeToFile(file, html);
-            } catch (IOException e) {
-                throw new IllegalStateException("failed to render file " + file.getAbsolutePath(), e);
-            }
-            System.out.println("rendered " + targetFileName);
+        try (Stream<Path> pathStream = Files.find(path, Integer.MAX_VALUE, (filePath, fileAttr) -> fileAttr.isRegularFile())) {
+            pathStream.forEach(recipeFile -> {
+                Recipe recipe = getRecipe(interpreter, recipeFile);
+                String html = pageRenderer.render(recipe);
+                String targetFileName = getTargetFileName(recipeFile.toFile().getName());
+                writeRecipeToFile(outputFolder, targetFileName, html);
+                System.out.println("rendered " + targetFileName);
 
-            HtmlFrontpageRenderer.RecipeLink recipeLink = new HtmlFrontpageRenderer.RecipeLink(targetFileName, recipe.getMetadata().getName(), recipe.getMetadata().getImages().get(0));
-            recipeLinkList.add(recipeLink);
-        });
+                HtmlFrontpageRenderer.RecipeLink recipeLink = new HtmlFrontpageRenderer.RecipeLink(
+                        targetFileName,
+                        recipe.getMetadata().getName(),
+                        recipe.getMetadata().getImages().get(0));
+                recipeLinkList.add(recipeLink);
+            });
+        }
 
         HtmlFrontpageRenderer htmlFrontpageRenderer = new HtmlFrontpageRenderer(new HtmlTemplate("Recipes"), recipeLinkList);
         String indexHtml = htmlFrontpageRenderer.render();
         File index = new File(outputFolder, "index.html");
         writeToFile(index, indexHtml);
+    }
 
+    private static void writeRecipeToFile(File outputFolder, String targetFileName, String html) {
+        File file = new File(outputFolder, targetFileName);
+        try {
+            writeToFile(file, html);
+        } catch (IOException e) {
+            throw new IllegalStateException("failed to render file " + file.getAbsolutePath(), e);
+        }
+    }
+
+    private static Recipe getRecipe(Interpreter interpreter, Path path) {
+        try {
+            return interpreter.interpret(path.toFile());
+        } catch (Exception e) {
+            throw new IllegalStateException("failed to interpret file " + path.toString(), e);
+        }
     }
 
     private static String getTargetFileName(String originalFileName) {

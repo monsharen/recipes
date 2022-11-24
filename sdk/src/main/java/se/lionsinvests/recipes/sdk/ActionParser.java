@@ -18,7 +18,7 @@ public class ActionParser {
             Ingredient ingredient;
             if (actionIdentifier == ActionIdentifier.FREE_TEXT) {
                 ingredient = Ingredient.builder()
-                        .description(parts[i])
+                        .description(instructionString)
                         .unit(Unit.QUANTITY)
                         .quantity(0)
                         .build();

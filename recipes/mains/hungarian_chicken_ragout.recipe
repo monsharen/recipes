@@ -23,7 +23,7 @@ ingredients:
 actions:
   - free_text Chop the onion, carrot, parsley root and celeriac.
   - free_text Fry the chopped onion in the butter, when it looks cooked and translucent add the diced chicken breast and stir around till slightly sealed.
-  - free_text Pour in the stock and bring to the boil, add the diced carrots, celeriac, salt, pepper and tarragon, finally the peas too, cook on medium heat till tender, about 20 minutes.
-  - free_text Mix the flour with the sour cream. Pour some of the hot liquid from the soup into the sour cream blend while stirring continuously. This is called tempering to help you getting a smooth result, no lumpy-bumpies! Pour tempered sour cream mixture into hot soup whisking constantly until it comes to a boil. Reduce heat to low and simmer for 3 minutes or until slightly thickened.
-  - free_text Add juice of half a lemon and a bit of mustard, cook for a further 2-3 minutes, adjust seasoning if needed.
+  - free_text Pour in the stock and bring to the boil, add the diced carrots, celeriac, salt, pepper and tarragon, finally the peas too, cook on medium heat till tender, <b>about 20 minutes</b>.
+  - free_text Mix the flour with the sour cream. Pour some of the hot liquid from the soup into the sour cream blend while stirring continuously. This is called tempering to help you getting a smooth result, no lumpy-bumpies! Pour tempered sour cream mixture into hot soup whisking constantly until it comes to a boil. Reduce heat to low and simmer for <b>3 minutes</b> or until slightly thickened.
+  - free_text Add juice of half a lemon and a bit of mustard, cook for a further <b>2-3 minutes</b>, adjust seasoning if needed.
   - free_text Serve hot with crusty bread or toast. Lovely!
