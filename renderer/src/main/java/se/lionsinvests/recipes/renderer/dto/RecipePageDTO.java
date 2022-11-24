@@ -6,6 +6,7 @@ import lombok.Data;
 import se.lionsinvests.recipes.renderer.ActionTranslator;
 import se.lionsinvests.recipes.renderer.UnitTranslator;
 import se.lionsinvests.recipes.sdk.Action;
+import se.lionsinvests.recipes.sdk.ActionIdentifier;
 import se.lionsinvests.recipes.sdk.Ingredient;
 import se.lionsinvests.recipes.sdk.Recipe;
 
@@ -28,6 +29,14 @@ public class RecipePageDTO {
 
     public String getActionDescription(Action action) {
         return actionTranslator.translate(action);
+    }
+
+    public boolean hasActionIcon(Action action) {
+        if (ActionIdentifier.SET.equals(action.getActionIdentifier())) {
+            return true;
+        }
+
+        return false;
     }
 
     public String getPresentationImage() {

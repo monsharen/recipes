@@ -14,6 +14,6 @@ public class SetActionTranslator implements Translator<Action> {
     @Override
     public String translate(Action action) {
         Ingredient ingredient = action.getIngredients()[0];
-        return "Set " + ingredient.getDescription() + " at " + ingredient.getQuantity() + " " + unitTranslator.translate(ingredient.getUnit());
+        return "Set " + ingredient.getDescription() + " at <b>" + ingredient.getQuantity() + " " + unitTranslator.translate(ingredient.getUnit()) + "</b>";
     }
 }
