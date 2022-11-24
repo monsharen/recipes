@@ -1,0 +1,27 @@
+metadata:
+  name: Chicken Ramen
+  images:
+    - https://i.imgur.com/Dmzj0mI.png
+  description:
+
+ingredients:
+- 2 u kycklinglårfilé
+- 2 u tärning(ar) hönsbuljong
+- 150 g nudlar, valfri sort
+- 1 tbsp färsk riven ingefära
+- 1 u klyfta(or) vitlök(ar)
+- 1 tsp rapsolja
+- 3 tsp sesamolja
+- 1.5 tbsp soja
+- 2 u krm svartpeppar
+- 2 tsp citrongräs, torkat
+- 1 l vatten
+- 6 u champinjoner
+- 0.5 u kokat ägg
+- 1 u Skiva lime
+- 1 u Koriander
+
+actions:
+  - free_text Skär kycklinglårfiléerna i bitar och skiva champinjonerna. Stek kycklingen i en stekpanna i olja med lite svartpeppar och pressad vitlök.
+  - free_text Tillsätt champinjonerna och stek några minuter till. Lägg över i en kastrull.
+  - free_text Tillsätt sesamolja, soja, citrongräs, vatten, smulade hönsbuljongtärningar och nudlar. Koka i 5 minuter. Servera i djupa skålar.

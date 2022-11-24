@@ -1,0 +1,25 @@
+metadata:
+  name: Falukorvsgryta med Shiitake
+  images:
+    - https://i.imgur.com/Z6ZFaER.png
+  description: Från https://malarchark.se/recept/
+
+ingredients:
+- 800 g MälarCharks Falukorv
+- 6 dl Creme fraiche med tomat och basilika
+- 100 g Shiitake svamp
+- 4 u Chalottenlökar
+- 3 dl Mjölk
+- 2 tbsp Tomatpuré
+- 1 tbsp Strimlad färsk basilika
+
+
+actions:
+  - free_text Skär i 1 cm tjocka skivor. Dela varje skiva i fyra delar.
+  - free_text Dela löken i klyftor.
+  - free_text Skär svampen i bitar.
+  - free_text Bryn lök och korven i olivolja.
+  - free_text Lägg i svampen och låt den fräsa i någon halvminut.
+  - free_text Häll i creme fraichen och mjölken och rör om.
+  - free_text Tillsätt tomatpurén och basilikan.
+  - free_text Låt allt sjuda i några minuter, salta och peppra.

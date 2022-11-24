@@ -1,0 +1,27 @@
+metadata:
+  name: Gratinerad hummer med Västerbottenost
+  images:
+    - https://i.imgur.com/xNfwB6s.png
+  description: En gratinerad hummer med Västerbottensost sätter guldkant på vilken nyårsmiddag som helst. Med några enkla knep tar du ut det delikata hummerköttet och fyller sedan skalen med hummer, gräslök och ostsås gjord på den smakrika Västerbottensosten.
+
+ingredients:
+- 1 tbsp smör
+- 1 tbsp vetemjöl
+- 2 dl mjölk
+- 2 dl riven Västerbottensost
+- 1 u äggula
+- 2 u hela humrar
+- 0.5 u kruka gräslök
+
+actions:
+  - free_text Tina hummern om den är fryst.
+  - free_text Sätt ugnen på 225˚C grill.
+  - free_text Smält smöret i en kastrull och vispa ner mjölet. Tillsätt mjölken lite i taget under vispning så att inga klumpar bildas. Låt såsen småkoka ca 2 minuter utan lock, rör då och då.
+  - free_text Riv osten.
+  - free_text Dra av såsen från värmen och vispa ner hälften av osten i såsen. När osten har smält, vispa ner äggulan och smaka av med salt och peppar.
+  - free_text Klyv hummern på längden. Se till att stjärt och sköld håller ihop.
+  - free_text Plocka ur köttet ur stjärt och leder och klor. Ta bort magsäcken från skalhalvorna den sitter längst upp i huvudet närmast känselsprötet.
+  - free_text Skär hummerköttet i ca 1 cm stora bitar. Ställ hummerskalen i en ugnssäker form. Fördela köttet i hummerskalen.
+  - free_text Skär gräslöken fint. Blanda ner gräslöken i ostsåsen.
+  - free_text Fördela ostsåsen på hummerköttet i skalen och strö på resten av osten.
+  - free_text Sätt in formen högt upp i ugnen och gratinera i ca 10 minuter eller tills det fått fin färg.

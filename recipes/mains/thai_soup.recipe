@@ -1,0 +1,31 @@
+metadata:
+  name: Thai soup
+  images:
+    - https://i.imgur.com/bInE8oc.png
+  description:
+
+ingredients:
+- 200 g chicken
+- 1 u curry paste
+- 1 u lemon grass
+- 5 u garlic cloves
+- 2 u spoons oil
+- 1 u chili
+- 1 u fresh ginger
+- 1 u lime
+- 1 u onion
+- 1 u celery
+- 1 u fish sauce
+- 2 u cans coconut milk
+- 1 u coriander
+- 1 u red/green pepper
+- 2 tbsp of turmeric for coloring
+
+
+actions:
+  - free_text Fry chicken in oil in a pan
+  - free_text Cut onion and add to pan until lightly translucent
+  - free_text Add curry paste, mashed garlic and let it fry for 2 mins
+  - free_text Add peppers and turmeric
+  - free_text Add coconut milk, celery, fish sauce, chili and let it simmer for 10 mins
+  - free_text Add lime and coriander. Serve!

@@ -1,0 +1,25 @@
+metadata:
+  name: Pasta with Sicilian pesto
+  images:
+    - https://img.hellofresh.com/f_auto,fl_lossy,q_auto,w_1200/hellofresh_s3/image/kramig-pasta-med-kyckling-a0b04061.jpg
+  description: Pasta with Sicilian pesto
+
+ingredients:
+  - 50 g sliced sundried tomatoes
+  - 2 u tomatoes
+  - 40 g basil
+  - 70 g olive-oil
+  - 100 g almonds
+  - 50 g raisins
+  - 1 u garlic clove
+  - 200 g ricotta cheese
+  - 40 g parmesan cheese
+  - 400 g pasta strozzapreti
+
+actions:
+  - boil 2 l water
+  - boil 400 g pasta-strozzapreti
+  - chop 100 g almonds
+  - roast 100 g almonds
+  - roast 1 garlic
+  - combine pasta-strozzapreti, roasted-almonds, roasted-garlic

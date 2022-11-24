@@ -1,0 +1,75 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <title th:text="${data.recipe.metadata.name}">Sample recipe</title>
+</head>
+<body>
+    <div class="content">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <nav>
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item">
+                                <a href="index.html">Home</a>
+                            </li>
+                            <li class="breadcrumb-item active" th:text="${data.recipe.metadata.name}">
+                                Chicken Ragout Soup
+                            </li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <nav>
+                        <div>
+                            <h1 th:text="${data.recipe.metadata.name}">
+                                Chicken Ragout Soup
+                            </h1>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <p th:text="${data.recipe.metadata.description}">
+                        A fragrant creamy chicken soup with tarragon and fresh vegetables. It’s light yet rich with an earthy depth just when the subtle tang of the lemon and mustard surprises you. The somewhat poetic description is fitting, this sophisticated little dish won’t hang around for long, guaranteed!
+                    </p>
+                </div>
+                <div class="col">
+                    <img class="recipe-header-img" alt="Recipe image" th:src="@{${data.getPresentationImage()}}" src="https://i.imgur.com/8WGBArE.png">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div>
+                        <h1>Ingredients</h1>
+                    </div>
+                    <div>
+                        <ul class="ingredients">
+                            <li class="ingredient" th:each="ingredient : ${data.recipe.ingredients}">
+                                <span class="quantity" th:text="${data.getAmountAndUnit(ingredient)}">400.0 grams</span>
+                                <span th:text="${ingredient.description}">chicken-breast</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col">
+                    <div>
+                        <h1>Instructions</h1>
+                    </div>
+                    <div class="actions">
+                        <div class="action" th:each="action, iter : ${data.recipe.actions}">
+                            <b><span th:text="${iter.index + 1}">1.</span></b>&nbsp;&nbsp;&nbsp;<span th:text="${data.getActionDescription(action)}">Chop the onions</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

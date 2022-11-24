@@ -1,0 +1,13 @@
+metadata:
+  name: Lemon Pie
+  images:
+    - https://i.imgur.com/gAqnUiv.png
+  description: Lemon Pie
+
+ingredients:
+  - 1.5 dl flour
+
+actions:
+  - set 200 C oven
+  - mix 1.5 dl flour, 1.5 tbsp sugar, 50 g butter, 1.5 tbsp water
+  - bake dough, 200 C oven

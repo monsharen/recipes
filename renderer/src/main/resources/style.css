@@ -1,0 +1,65 @@
+body {
+    background-color: #f9f5f5;
+    letter-spacing: .0125rem;
+}
+
+.recipe-header-img {
+    width: 100%;
+}
+
+.card {
+    margin-bottom: 0.5em;
+}
+
+.card h1 {
+    margin: 0.5em;
+}
+
+.content {
+    margin: 2em;
+}
+
+.recipe-image-small {
+    width: 10em;
+}
+
+.ingredients {
+    padding-left: 0;
+}
+.ingredient {
+    background-clip: border-box;
+    background-color: white;
+    border-radius: 0.25rem;
+    list-style: none;
+    margin: 0.25em;
+    padding: 0.75em;
+    padding-left: 1.2em;
+    box-shadow: 0 0.0625rem 0.125rem 0 rgb(0 0 0 / 6%);
+}
+
+.ingredient .quantity {
+    font-weight: 600;
+}
+
+.actions {
+
+}
+
+.action {
+    background-clip: border-box;
+    background-color: white;
+    border-radius: 0.25rem;
+    list-style: none;
+    margin: 0.25em;
+    margin-bottom: 1em;
+    padding: 0.75em;
+    padding-left: 1.2em;
+    box-shadow: 0 0.0625rem 0.125rem 0 rgb(0 0 0 / 6%);
+    font-size: 1.1em;
+}
+
+@media (max-width: 640px) {
+    .col {
+        flex: none;
+    }
+}

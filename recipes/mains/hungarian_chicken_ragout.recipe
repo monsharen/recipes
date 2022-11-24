@@ -1,0 +1,29 @@
+metadata:
+  name: Hungarian Creamy Chicken Ragout Soup
+  images:
+    - https://i.imgur.com/8WGBArE.png
+  description: A fragrant creamy chicken soup with tarragon and fresh vegetables. It’s light yet rich with an earthy depth just when the subtle tang of the lemon and mustard surprises you. The somewhat poetic description is fitting, this sophisticated little dish won’t hang around for long, guaranteed!
+
+ingredients:
+  - 400 g chicken breast
+  - 1 u carrot
+  - 1 u parsley root
+  - 70 g celeriac
+  - 200 g peas
+  - 50 g butter
+  - 1 u onion
+  - 2 u pinches of tarragon
+  - 1500 ml chicken stock
+  - 150 ml sour cream
+  - 1 u juice of half a lemon
+  - 45 g flour
+  - 1 tbsp mustard cream
+  - 3 tbsp single cream
+
+actions:
+  - free_text Chop the onion, carrot, parsley root and celeriac.
+  - free_text Fry the chopped onion in the butter, when it looks cooked and translucent add the diced chicken breast and stir around till slightly sealed.
+  - free_text Pour in the stock and bring to the boil, add the diced carrots, celeriac, salt, pepper and tarragon, finally the peas too, cook on medium heat till tender, about 20 minutes.
+  - free_text Mix the flour with the sour cream. Pour some of the hot liquid from the soup into the sour cream blend while stirring continuously. This is called tempering to help you getting a smooth result, no lumpy-bumpies! Pour tempered sour cream mixture into hot soup whisking constantly until it comes to a boil. Reduce heat to low and simmer for 3 minutes or until slightly thickened.
+  - free_text Add juice of half a lemon and a bit of mustard, cook for a further 2-3 minutes, adjust seasoning if needed.
+  - free_text Serve hot with crusty bread or toast. Lovely!

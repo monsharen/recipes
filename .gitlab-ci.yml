@@ -1,0 +1,23 @@
+image: maven:3.6-jdk-11
+
+workflow:
+  rules:
+    - if: '$CI_COMMIT_BRANCH'
+
+pages:
+  script:
+    - mvn clean install
+    - mv recipes-rendered public
+  artifacts:
+    paths:
+      - public
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "main"'
+
+
+addrecipe:
+  script:
+    - echo "Add recipe $RECIPE_URL"
+    - mvn test -pl testbench -Dtest=ImportRecipeTest
+  rules:
+    - if: '$TRIGGER_PAYLOAD'
