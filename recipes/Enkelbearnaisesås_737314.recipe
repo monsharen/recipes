@@ -1,0 +1,25 @@
+metadata:
+  name: Enkel bearnaisesås
+  images:
+    - https://i.imgur.com/HvJ7UXb.png
+  description: From https://www.matmalin.se/enkel-bearnaisesas-recept-pa-liten-sats/ 
+
+ingredients:
+ - Smält smöret i en kastrull och ställ åt sidan.
+ - Koka upp vatten, vinäger och lök. Reducera till ca 1 msk återstår.
+ - Sila av i en kopp med en tesil.
+ - Häll tillbaka i kastrullen och tillsätt äggulorna. Vispa kraftigt på låg värme tills det blir ett fluffigt skum och börjar tjockna.
+ - Ta av kastrullen från plattan och vispa i smöret, lite i sänder. Häll i en smal stråle samtidigt som du vispar ordentligt.
+ - Om såsen blir för tunn kan du värma den försiktigt samtidigt som du vispar för att få den lite tjockare.
+ - Tillsätt en tsk dragon i vinäger och 1 krm salt. Smaka av.
+ - Har du cayennepeppar hemma kan du dofta över ett uns. Har du inte det går det bra ändå. Såsen blir underbart god!
+
+actions:
+ - free_text 75 gram smör
+ - free_text 0,5 schalottenlök hackad
+ - free_text 0,5 dl vatten
+ - free_text 1,5 msk vitvinsvinäger
+ - free_text 2 äggulor rumsvarma
+ - free_text 1 tsk dragon i vinäger
+ - free_text 1 krm salt
+ - free_text cayennepeppar eventuellt
