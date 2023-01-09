@@ -19,6 +19,12 @@ body {
     margin: 2em;
 }
 
+.description-divider {
+    border: 1px dashed #e5e5e5;
+    margin-bottom: 1em;
+    margin-top: 1em;
+}
+
 .recipe-image-small {
     width: 10em;
     margin-top: 1em;

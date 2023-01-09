@@ -36,9 +36,23 @@
             </div>
             <div class="row">
                 <div class="col">
+                    <div th:if="${data.recipe.metadata.getServings()}">
+                        <b>Servings:</b> <p th:text="${data.recipe.metadata.getServings()}">10-12 st</p>
+                    </div>
+                    <div th:if="${data.recipe.metadata.getEstimatedPrepTime()}">
+                        <b>Estimated prep time:</b> <p th:text="${data.recipe.metadata.getEstimatedPrepTime()}">30 min</p>
+                    </div>
+                    <div class="description-divider"></div>
                     <p th:text="${data.recipe.metadata.description}">
                         A fragrant creamy chicken soup with tarragon and fresh vegetables. It’s light yet rich with an earthy depth just when the subtle tang of the lemon and mustard surprises you. The somewhat poetic description is fitting, this sophisticated little dish won’t hang around for long, guaranteed!
                     </p>
+                    <div th:if="${data.recipe.metadata.notes}">
+                        <div class="description-divider"></div>
+                        <p><b>Notes:</b></p>
+                        <p th:text="${data.recipe.metadata.notes}">
+                            Tips för att se om de är klara: kolla undersidan, den ska vara gyllenbrun.
+                        </p>
+                    </div>
                 </div>
                 <div class="col">
                     <img class="recipe-header-img" alt="Recipe image" th:src="@{${data.getPresentationImage()}}" src="https://i.imgur.com/8WGBArE.png">

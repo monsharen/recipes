@@ -6,6 +6,8 @@ Metadata
 - Name
 - Images
 - Description (may not work due to languages?)
+- estimatedPrepTime
+- servings
 
 Ingredients (autogenerate this from directions instead?)
 - item, amount, unit

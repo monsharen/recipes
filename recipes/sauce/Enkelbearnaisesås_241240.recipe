@@ -3,6 +3,9 @@ metadata:
   images:
     - https://i.imgur.com/uu7XWvg.png
   description: From https://www.matmalin.se/enkel-bearnaisesas-recept-pa-liten-sats/ 
+  notes: "Ett recept på supergod bearnaisesås för två personer, men du kan lätt dubbla receptet."
+  estimatedPrepTime: 15 min
+  servings: 2
 
 ingredients:
  - 75 g smör
