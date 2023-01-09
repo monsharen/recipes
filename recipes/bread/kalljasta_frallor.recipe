@@ -14,9 +14,14 @@ ingredients:
     - 1 dl mjöl (extra om det behövs)
 
 actions:
-    - free_text <b>På kvällen:</b> Använd en stor bunke och lös upp jästen <b>(25 g)</b> i vattnet <b>(5 dl)</b>, enklast är att lösa i en mindre mängd vatten och sedan tillsätta resten.
-    - free_text Tillsätt salt <b>(2 tsk)</b>, honung <b>(1 msk)</b>, Olivolja <b>(2 msk)</b> och rör om. Tillsätt sedan en del av mjölet <b>(7 dl)</b> och rör ihop, tillsätt successivt mer mjöl <b>(3-4 dl)</b> tills det blir en deg. Degen ska vara ganska seg & kladdig men börja släppa från kanterna. Pudra över lite mjöl på degen och plasta bunken.
-    - free_text Låt stå i rumstemperatur ca <b>30- 45 min</b>, kolla så att du ser att det börjar jäsa. Ställ bunken i kylen över natten <b>(8-12 tim)</b>.
-    - free_text <b>På morgonen:</b> Sätt på ugnen, <b>250 grader</b>. Ta ur bunken ur kylen, häll ut lite mjöl på bänken. Stjälp ut degen och skär med degskrapa eller kniv lite oregelbundna bitar, ca <b>10x10 cm</b>. Lägg på bakplåtspapper på plåt.
+    - free_text <b>På kvällen:</b> Använd en stor bunke och lös upp <b>25 g</b> jäst i <b>2 dl</b> kallt vatten. Tillsätt sedan ytterligare <b>3 dl</b> kallt vatten.
+    - free_text Tillsätt <b>2 tsk</b> salt, <b>1 msk</b> honung, <b>2 msk</b> olivolja och rör om.
+    - free_text Tillsätt sedan <b>7 dl</b> mjöl och rör ihop
+    - free_text Tillsätt successivt mer mjöl <b>(3-4 dl)</b> tills det blir en deg. Degen ska vara ganska seg & kladdig men börja släppa från kanterna.
+    - free_text Pudra över lite mjöl på degen och plasta bunken.
+    - free_text Låt stå i rumstemperatur ca <b>30-45 min</b>. Kolla så att du ser att det börjar jäsa.
+    - free_text Ställ bunken i kylen över natten <b>(8-12 tim)</b>.
+    - free_text <b>På morgonen:</b> Sätt ugnen på <b>250 grader</b>
+    - free_text Ta bunken ur kylen, häll ut lite mjöl på bänken. Stjälp ut degen och skär med degskrapa eller kniv lite oregelbundna bitar, ca <b>10x10 cm</b>. Lägg på bakplåtspapper på plåt.
     - free_text Grädda i ugn ca <b>12-15 min</b>.
     - free_text Låt svalna på galler och sedan är det bara till att hugga in!
