@@ -20,6 +20,12 @@ body {
 }
 
 .recipe-image-small {
+    width: 10em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.action-image-small {
     width: 2em;
     margin-top: 1em;
     margin-bottom: 1em;
