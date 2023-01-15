@@ -1,0 +1,23 @@
+metadata:
+  name: Ugnspannkaka
+  images:
+    - https://i.imgur.com/HvJ7UXb.png
+  description: From  
+
+ingredients:
+ - 2 dl vetemjöl
+ - 1 dl rågsikt
+ - 4 u ägg
+ - 1 u bacon
+ - 6 dl mjölk
+ - 50 g smör
+
+actions:
+ - free_text Sätt ugnen på 225 C
+ - free_text Skiva 1 paket bacon och lägg i en ugnsform tillsammans med 50 g smör
+ - free_text Ställ formen i ugnen i 10 min
+ - free_text Vispa 4 ägg, 2 dl mjöl, 1 dl rågsikt och 1 dl mjölk till en klumpfri smet
+ - free_text Vispa i resten av mjölken
+ - free_text Låt smeten vila tills den tjocknat en aning
+ - free_text Ta formen ur ugnen och häll i smeten. Blanda försiktigt ihop allt i formen så att baconen blir jämnt fördelat
+ - free_text Ställ tillbaka formen i ugnen i ytterligare 30 min
