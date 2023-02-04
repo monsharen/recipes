@@ -1,0 +1,14 @@
+metadata:
+  name: Gremolata
+  images:
+    - https://i.imgur.com/HvJ7UXb.png
+  description: From https://www.greatitalianchefs.com/recipes/ossobuco-alla-milanese-recipe 
+
+ingredients:
+ - 1 u bunch of parsley
+ - 2 u lemons, zested
+ - 2 u garlic cloves, grated
+
+actions:
+ - free_text Finely chop the parsley and place in a bowl
+ - free_text Add the garlic and lemon zest and mix together
