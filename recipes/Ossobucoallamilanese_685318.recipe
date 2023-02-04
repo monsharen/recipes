@@ -1,0 +1,28 @@
+metadata:
+  name: Ossobuco alla milanese
+  images:
+    - https://i.imgur.com/HvJ7UXb.png
+  description: From https://www.greatitalianchefs.com/recipes/ossobuco-alla-milanese-recipe 
+
+ingredients:
+ - 4 u cross-cut veal shank, 3cm thick
+ - 1 u flour, seasoned with salt and pepper
+ - 1 u olive oil
+ - 2 u onions, diced
+ - 2 u celery sticks, diced
+ - 1 u large carrot, diced
+ - 1 u garlic clove, sliced
+ - 1 u sprig of thyme
+ - 1 u bay leaf
+ - 2 tbsp of tomato purée
+ - 500 ml white wine
+ - 1 l chicken stock, hot
+ - 10 g dried porcini mushrooms
+ - 1 u salt
+ - 1 u pepper
+
+actions:
+ - free_text To begin, place a heavy-based saucepan over a high heat and add a splash of oil. Dust the pieces of veal in seasoned flour and fry until nicely browned on both sides. Remove from the pan and set aside
+ - free_text Turn the heat down and add another dash of oil with the onion, celery, carrot and garlic. Season with salt and sauté until softened
+ - free_text Add the thyme, bay leaf and tomato purée and stir for a further 2 minutes
+ - free_text Return the meat to the pan and pour in the wine. Reduce by a third then add the hot stock and dried mushrooms. Simmer for 2 hours, or until the meat is tender
