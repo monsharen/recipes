@@ -1,0 +1,21 @@
+metadata:
+  name: Kladdkaka Grande
+  images:
+    - https://i.imgur.com/HvJ7UXb.png
+  description: From https://www.mathem.se/recept/kladdkaka-grande?storeId=23&gclid=Cj0KCQiAofieBhDXARIsAHTTldrzLsPgSbXBKkUMHCIm4odjQRAir-YZ9Shpi-KfeqEYcC6S9wb7r4YaAv6oEALw_wcB 
+
+ingredients:
+ - 150 g smör
+ - 3 u Ägg
+ - 3 dl Strösocker
+ - 3.5 dl Vetemjöl
+ - 1 dl Kakao
+ - 1 tsp Vaniljsocker
+ - 1 u nypa Salt Fint
+
+actions:
+ - free_text Smörj form, cirka 22 cm i diameter, med smör och täck med kokosflingor
+ - free_text Smält smöret
+ - free_text Vispa ihop ägg och socker lätt och rör ner smöret.
+ - free_text Blanda mjöl, kakao, vaniljsocker och salt och rör ner i äggsmeten.
+ - free_text Häll smeten i formen och grädda kakan i nedre delen av ugnen i 200 grader i cirka 12 minuter
