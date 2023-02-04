@@ -14,6 +14,7 @@ ingredients:
  - 1 u nypa Salt Fint
 
 actions:
+ - free_text Sätt ugnen på 200 grader
  - free_text Smörj form, cirka 22 cm i diameter, med smör och täck med kokosflingor
  - free_text Smält smöret
  - free_text Vispa ihop ägg och socker lätt och rör ner smöret.
