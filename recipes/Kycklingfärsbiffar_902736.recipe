@@ -1,0 +1,22 @@
+metadata:
+  name: Kycklingfärsbiffar
+  images:
+    - https://i.imgur.com/HvJ7UXb.png
+  description: From https://fredriksfika.allas.se/fredriks-middagstips/kycklingfarsbiffar/ 
+
+ingredients:
+ - 450-500 g kycklingfärs
+ - 0,5 dl havregryn
+ - 0,5 dl mjölk
+ - 1 ägg
+ - 0,5 citron, saft och zest
+ - 0,5 tsk torkad timjan
+ - 0,5 tsk salt
+ - 1 krm svartpeppar
+
+actions:
+ - free_text Blanda samman havregryn, mjölk och ägg i en bunke och låt svälla 5 minuter.
+ - free_text  Blanda ner citronsaft, zest, timjan, salt och peppar.
+ - free_text Blanda sist i kycklingfärsen och blanda väl. Smeten ska vara lite lös.
+ - free_text Värm en stekpanna till medelvarmt.
+ - free_text Klicka ut smeten och forma till biffar med baksidan på en sked som du doppar i vatten mellan varven. Stek 3-4 minuter per sida tills de är genomstekta.
