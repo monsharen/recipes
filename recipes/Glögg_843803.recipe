@@ -1,0 +1,21 @@
+metadata:
+  name: Glögg
+  images:
+    - https://i.imgur.com/HvJ7UXb.png
+  description: From Http://google.se 
+
+ingredients:
+ - 5 u liter svagdricka Pripps
+ - 2 u påsar hela nejlikor
+ - 1 u påse kardemummakärnor
+ - 3 st kanelstänger
+ - 50 g färsk jäst
+ - 300 g russin
+ - 2 kg socker
+
+actions:
+ - free_text Blanda allt utom sockret
+ - free_text Rör ner 3 dl socker varje dag tills sockret är slut
+ - free_text Låt stå rumsvarmt i 5 veckor efter att allt sockret är tillsatt
+ - free_text Sila och häll på flaskor
+ - free_text Glöggen blir ca 18%
