@@ -2,7 +2,7 @@ metadata:
   name: Glögg
   images:
     - https://i.imgur.com/HvJ7UXb.png
-  description: From Http://google.se 
+  description: Glöggen blir ca 18%
 
 ingredients:
  - 5 u liter svagdricka Pripps
@@ -18,4 +18,3 @@ actions:
  - free_text Rör ner 3 dl socker varje dag tills sockret är slut
  - free_text Låt stå rumsvarmt i 5 veckor efter att allt sockret är tillsatt
  - free_text Sila och häll på flaskor
- - free_text Glöggen blir ca 18%
