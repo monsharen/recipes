@@ -14,7 +14,7 @@ ingredients:
  - 2 kg socker
 
 actions:
- - free_text Blanda <b>5 liter svagdricka</b>, <b>2 påsar nejlika</b>, <b>1 påse kardemummakärnor</b>, <b>3 kanelstänger</b>, <b>50 gram färsk jäst</b> och <b>300 gram russin</b>.
- - free_text Rör ner <b>3 dl socker</b> varje dag tills sockret är slut
+ - free_text Blanda <b>5 liter</b> svagdricka, <b>2 påsar</b> nejlika, <b>1 påse</b> kardemummakärnor, <b>3 st</b> kanelstänger, <b>50 gram</b> färsk jäst och <b>300 gram</b> russin.
+ - free_text Rör ner <b>3 dl</b> socker varje dag tills sockret är slut
  - free_text Låt stå rumsvarmt i <b>5 veckor</b> efter att allt sockret är tillsatt
  - free_text Sila och häll på flaskor
