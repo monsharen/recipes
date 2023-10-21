@@ -8,13 +8,13 @@ ingredients:
  - 5 u liter svagdricka Pripps
  - 2 u påsar hela nejlikor
  - 1 u påse kardemummakärnor
- - 3 u st kanelstänger
+ - 3 u kanelstänger
  - 50 g färsk jäst
  - 300 g russin
  - 2 kg socker
 
 actions:
- - free_text Blanda allt utom sockret
- - free_text Rör ner 3 dl socker varje dag tills sockret är slut
- - free_text Låt stå rumsvarmt i 5 veckor efter att allt sockret är tillsatt
+ - free_text Blanda <b>5 liter svagdricka</b>, <b>2 påsar nejlika</b>, <b>1 påse kardemummakärnor</b>, <b>3 kanelstänger</b>, <b>50 gram färsk jäst</b> och <b>300 gram russin</b>.
+ - free_text Rör ner <b>3 dl socker</b> varje dag tills sockret är slut
+ - free_text Låt stå rumsvarmt i <b>5 veckor</b> efter att allt sockret är tillsatt
  - free_text Sila och häll på flaskor
