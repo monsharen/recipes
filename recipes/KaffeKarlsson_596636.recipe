@@ -1,7 +1,7 @@
 metadata:
   name: Kaffe Karlsson
   images:
-    - https://i.imgur.com/HvJ7UXb.png
+    - https://assets.icanet.se/t_ICAseAbsoluteUrl/imagevaultfiles/id_193093/cf_259/kaffe_karlsson.jpg
   description: From  
 
 ingredients:
@@ -9,6 +9,7 @@ ingredients:
  - 3 cl Apelsinlikör (Triple sec)
  - 15 cl Kaffe
  - 1 u Grädde
+ - 1 u Apelsin (att rivas på)
  - 1 u Mörk choklad (att rivas på)
 
 actions:
@@ -16,4 +17,4 @@ actions:
  - free_text Häll 3 cl Baileys och 3 cl apelsinlikör i ett glas
  - free_text Tillsätt 15 cl kaffe och lämna ett par centimeter upp till kanten
  - free_text Häll försiktigt vispgrädden på en sked över ytan så att den lägger sig ovanpå drinken
- - free_text Garnera med riven choklad
+ - free_text Garnera med riven choklad och rivet apelsinskal
