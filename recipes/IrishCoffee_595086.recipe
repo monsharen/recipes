@@ -1,0 +1,17 @@
+metadata:
+  name: Irish Coffee
+  images:
+    - https://i.imgur.com/HvJ7UXb.png
+  description: From  
+
+ingredients:
+ - 2 dl kaffe
+ - 3 msk grädde
+ - 4 cl whiskey
+ - 2 tsk farinsocker
+
+actions:
+ - free_text Brygg kaffe och vispa grädde löst.
+ - free_text Blanda Wiskey och farinsocker i ett glas som tål värme.
+ - free_text Häll i kaffet, blanda och klicka försiktigt på grädden så att den bildar ett lock ovanpå kaffet.
+ - free_text Pudra eventuellt över lite kanel.
