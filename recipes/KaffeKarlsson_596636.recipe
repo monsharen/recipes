@@ -1,0 +1,19 @@
+metadata:
+  name: Kaffe Karlsson
+  images:
+    - https://i.imgur.com/HvJ7UXb.png
+  description: From  
+
+ingredients:
+ - 3 cl Baileys
+ - 3 cl Apelsinlikör (Triple sec)
+ - 15 cl Kaffe
+ - 1 u Grädde
+ - 1 u Mörk choklad (att rivas på)
+
+actions:
+ - free_text Brygg kaffe och vispa grädde löst och luftigt
+ - free_text Häll 3 cl Baileys och 3 cl apelsinlikör i ett glas
+ - free_text Tillsätt 15 cl kaffe och lämna ett par centimeter upp till kanten
+ - free_text Häll försiktigt vispgrädden på en sked över ytan så att den lägger sig ovanpå drinken
+ - free_text Garnera med riven choklad
