@@ -38,7 +38,7 @@ const app = new Vue({
                 }
 
                 // Check recipe types against search term
-                for (let i = 0; i < recipe.types.length; i++) {
+                for (let i = 0; i < recipe?.types?.length; i++) {
                     let type = recipe.types[i].toLowerCase();
                     let match = type.indexOf(searchTerm) > -1;
                     if (match) {
