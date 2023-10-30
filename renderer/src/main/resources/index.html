@@ -10,15 +10,13 @@
     <div class="content">
         <div class="container" id="recipeList">
 
-            <div class="row">
+            <div class="row" style="margin-bottom: 1em">
                 <div class="col">
-                    <form>
-                        <input class="form-control form-control-lg" type="text" placeholder="Filter" aria-label="filter" v-model="search">
-                    </form>
+                    <input class="form-control form-control-lg" type="text" placeholder="Filter" aria-label="filter" v-model="search">
                 </div>
             </div>
 
-            <div class="row">
+            <div class="row" style="margin-bottom: 1em">
                 <div class="col" v-for="(recipeType, index) in recipeTypes" style="flex: 0 0 0%; margin-bottom: 1em">
                     <input type="checkbox" class="btn-check" :id="'recipetype-' + index" :name="recipeType" v-model="checkedRecipeTypes" :value="recipeType" autocomplete="off">
                     <label class="btn btn-outline-primary" :for="'recipetype-' + index">{{recipeType}}</label>
@@ -46,13 +44,6 @@
                             </div>
                         </div>
                     </div>
-
-                    <!-- p>
-                        <img class="recipe-image-small" src="https://i.imgur.io/c5KrgGw_d.webp?maxwidth=640&amp;shape=thumb&amp;fidelity=medium" alt="Bearnaise">
-                        <a href="Bearnaise_776373.recipe.html">
-                            {{recipe.name}}
-                        </a>
-                    </p -->
                 </div>
             </div>
 
