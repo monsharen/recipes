@@ -1,5 +1,5 @@
 [
-  { "name": "Bearnaise", "types": ["Sauce"], "image": "https://i.imgur.io/c5KrgGw_d.webp?maxwidth=640&amp;shape=thumb&amp;fidelity=medium", "url": "Bearnaise_776373.recipe.html", "description": "From https://www.matmalin.se/enkel-bearnaisesas-recept-pa-liten-sats/" },
+  { "name": "Bearnaise", "estimatedPrepTime": "15 mins", "servings": "4", "types": ["Sauce"], "image": "https://i.imgur.io/c5KrgGw_d.webp?maxwidth=640&amp;shape=thumb&amp;fidelity=medium", "url": "Bearnaise_776373.recipe.html", "description": "From https://www.matmalin.se/enkel-bearnaisesas-recept-pa-liten-sats/" },
   { "name": "Chicken Ramen", "types": ["Soup"], "image": "https://i.imgur.com/Dmzj0mI.png", "url": "chicken_ramen.recipe.html" },
   { "name": "Enkel bearnaisesås", "types": ["Sauce", "Simple"], "image": "https://i.imgur.com/uu7XWvg.png", "url": "Enkelbearnaisesås_241240.recipe.html" },
   { "name": "Falukorvsgryta med Shiitake", "types": null, "image": "https://i.imgur.com/Z6ZFaER.png", "url": "falukorsgryta_med_shiitake.recipe.html" }

@@ -79,6 +79,8 @@ public class Main {
                 .image(recipe.getMetadata().getImages().get(0))
                 .types(recipe.getMetadata().getTypes())
                 .url(fileName)
+                .estimatedPrepTime(recipe.getMetadata().getEstimatedPrepTime())
+                .servings(recipe.getMetadata().getServings())
                 .build();
     }
 

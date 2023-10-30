@@ -36,8 +36,11 @@
                             </div>
                             <div class="col-md-8">
                                 <div class="card-body">
-                                    <h5 class="card-title">{{recipe.name}}</h5>
+                                    <h4 class="card-title">{{recipe.name}}</h4>
                                     <p class="card-text">{{recipe.description}}</p>
+                                    <p class="card-text" v-if="recipe.servings"><small>Servings: {{recipe.servings}}</small></p>
+                                    <p class="card-text" v-if="recipe.estimatedPrepTime"><small>Estimated time: {{recipe.estimatedPrepTime}}</small></p>
+                                    <br />
                                     <a :href="recipe.url" class="btn btn-primary">View Recipe</a>
                                 </div>
                             </div>

@@ -16,4 +16,6 @@ public class RecipeDTO {
     private final String image;
     private final String url;
     private final String description;
+    private final String servings;
+    private final String estimatedPrepTime;
 }
