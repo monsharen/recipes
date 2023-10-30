@@ -3,6 +3,7 @@ metadata:
   images:
     - https://i.imgur.com/8WGBArE.png
   description: A fragrant creamy chicken soup with tarragon and fresh vegetables. It’s light yet rich with an earthy depth just when the subtle tang of the lemon and mustard surprises you. The somewhat poetic description is fitting, this sophisticated little dish won’t hang around for long, guaranteed!
+  types: [Main,Stew]
 
 ingredients:
   - 400 g chicken breast

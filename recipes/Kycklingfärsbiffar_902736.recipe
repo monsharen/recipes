@@ -3,6 +3,7 @@ metadata:
   images:
     - https://i.imgur.io/zp1acaF_d.webp?maxwidth=640&shape=thumb&fidelity=medium
   description: From https://fredriksfika.allas.se/fredriks-middagstips/kycklingfarsbiffar/ 
+  types: [Main]
 
 ingredients:
  - 500 g kycklingfärs

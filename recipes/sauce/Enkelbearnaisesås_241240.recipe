@@ -6,6 +6,7 @@ metadata:
   notes: "Ett recept på supergod bearnaisesås för två personer, men du kan lätt dubbla receptet."
   estimatedPrepTime: 15 min
   servings: 2
+  types: [Sauce]
 
 ingredients:
  - 75 g smör

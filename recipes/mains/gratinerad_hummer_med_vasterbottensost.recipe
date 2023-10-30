@@ -3,6 +3,7 @@ metadata:
   images:
     - https://i.imgur.com/xNfwB6s.png
   description: En gratinerad hummer med Västerbottensost sätter guldkant på vilken nyårsmiddag som helst. Med några enkla knep tar du ut det delikata hummerköttet och fyller sedan skalen med hummer, gräslök och ostsås gjord på den smakrika Västerbottensosten.
+  types: [Starter]
 
 ingredients:
 - 1 tbsp smör

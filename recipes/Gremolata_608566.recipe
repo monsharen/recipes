@@ -3,6 +3,7 @@ metadata:
   images:
     - https://i.imgur.io/VNFlGHW_d.webp?maxwidth=640&shape=thumb&fidelity=medium
   description: From https://www.greatitalianchefs.com/recipes/ossobuco-alla-milanese-recipe 
+  types: [Side]
 
 ingredients:
  - 1 u bunch of parsley
