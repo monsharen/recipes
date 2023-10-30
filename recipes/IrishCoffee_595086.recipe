@@ -2,7 +2,8 @@ metadata:
   name: Irish Coffee
   images:
     - https://shared.cdn.smp.schibsted.com/v2/images/bca50e65-3e49-4e26-bfcf-d3b4f6db172b?fit=crop&h=750&w=1000&s=8ef7a8434f71259846b8c4e93cc5bb1c64cbc0a9
-  description: From  
+  description: From
+  types: [Drink]
 
 ingredients:
  - 2 dl kaffe

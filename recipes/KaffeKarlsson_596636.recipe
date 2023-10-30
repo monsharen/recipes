@@ -2,7 +2,8 @@ metadata:
   name: Kaffe Karlsson
   images:
     - https://assets.icanet.se/t_ICAseAbsoluteUrl/imagevaultfiles/id_193093/cf_259/kaffe_karlsson.jpg
-  description: From  
+  description: From
+  types: [Drink]
 
 ingredients:
  - 3 cl Baileys

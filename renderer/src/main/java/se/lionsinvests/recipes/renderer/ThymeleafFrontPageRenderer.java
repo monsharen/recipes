@@ -1,18 +1,19 @@
 package se.lionsinvests.recipes.renderer;
 
-import lombok.AllArgsConstructor;
+import java.io.File;
+import java.io.StringWriter;
+
 import org.thymeleaf.TemplateEngine;
 import org.thymeleaf.context.Context;
 import org.thymeleaf.templateresolver.FileTemplateResolver;
 import org.thymeleaf.templateresolver.ITemplateResolver;
+
+import lombok.AllArgsConstructor;
 import se.lionsinvests.recipes.renderer.dto.RecipePageDTO;
 import se.lionsinvests.recipes.sdk.Recipe;
 
-import java.io.File;
-import java.io.StringWriter;
-
 @AllArgsConstructor
-public class ThymeleafPageRenderer implements PageRenderer<Recipe> {
+public class ThymeleafFrontPageRenderer implements PageRenderer<Recipe> {
 
     private final ActionTranslator actionTranslator;
     private final UnitTranslator unitTranslator;

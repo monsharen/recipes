@@ -1,0 +1,63 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <title>Recipes</title>
+</head>
+<body>
+    <div class="content">
+        <div class="container" id="recipeList">
+
+            <div class="row">
+                <div class="col">
+                    <form>
+                        <input class="form-control form-control-lg" type="text" placeholder="Filter" aria-label="filter" v-model="search">
+                    </form>
+                </div>
+            </div>
+
+            <div class="row" style="margin-bottom: 2em">
+                <div class="col" v-for="(recipeType, index) in recipeTypes" style="flex: 0 0 0%">
+                    <input type="checkbox" class="btn-check" :id="'recipetype-' + index" :name="recipeType" v-model="checkedRecipeTypes" :value="recipeType" autocomplete="off">
+                    <label class="btn btn-outline-primary" :for="'recipetype-' + index">{{recipeType}}</label>
+                </div>
+            </div>
+
+            <div class="row" v-for="recipe in filteredRecipes">
+                <div class="col">
+
+                    <div class="card mb-3" >
+                        <div class="row g-0">
+
+                            <div class="col-md-4">
+                                <img :src="recipe.image" class="img-fluid rounded-start" :alt="recipe.name">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">{{recipe.name}}</h5>
+                                    <p class="card-text">{{recipe.description}}</p>
+                                    <a :href="recipe.url" class="btn btn-primary">View Recipe</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- p>
+                        <img class="recipe-image-small" src="https://i.imgur.io/c5KrgGw_d.webp?maxwidth=640&amp;shape=thumb&amp;fidelity=medium" alt="Bearnaise">
+                        <a href="Bearnaise_776373.recipe.html">
+                            {{recipe.name}}
+                        </a>
+                    </p -->
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.3/vue.js"></script>
+
+    <script type="module" src="recipes.js"></script>
+</body>
+</html>

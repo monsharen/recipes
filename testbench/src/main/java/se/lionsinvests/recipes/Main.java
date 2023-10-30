@@ -2,6 +2,7 @@ package se.lionsinvests.recipes;
 
 import se.lionsinvests.recipes.interpreter.Interpreter;
 import se.lionsinvests.recipes.renderer.*;
+import se.lionsinvests.recipes.renderer.dto.RecipeDTO;
 import se.lionsinvests.recipes.sdk.Recipe;
 
 import java.io.*;
@@ -38,16 +39,18 @@ public class Main {
 
         exportResource("/style.css", new File(outputFolder, "style.css"));
         exportResource("/empty.png", new File(outputFolder, "empty.png"));
+        exportResource("/index.html", new File(outputFolder, "index.html"));
+        exportResource("/recipes.js", new File(outputFolder, "recipes.js"));
         exportResource("/recipe.html", recipeTemplate);
 
-        List<HtmlFrontpageRenderer.RecipeLink> recipeLinkList = new ArrayList<>();
+        List<RecipeDTO> recipeList = new ArrayList<>();
 
         Interpreter interpreter = new Interpreter();
         UnitTranslator unitTranslator = new UnitTranslator();
         ActionTranslator actionTranslator = new ActionTranslator(unitTranslator);
 
         Path path = recipesFolder.toPath();
-        PageRenderer<Recipe> pageRenderer = new ThymeleafPageRenderer(actionTranslator, unitTranslator, recipeTemplate);
+        PageRenderer<Recipe> pageRenderer = new ThymeleafRecipePageRenderer(actionTranslator, unitTranslator, recipeTemplate);
 
         try (Stream<Path> pathStream = Files.find(path, Integer.MAX_VALUE, (filePath, fileAttr) -> fileAttr.isRegularFile())) {
             pathStream.forEach(recipeFile -> {
@@ -57,18 +60,26 @@ public class Main {
                 writeRecipeToFile(outputFolder, targetFileName, html);
                 System.out.println("rendered " + targetFileName);
 
-                HtmlFrontpageRenderer.RecipeLink recipeLink = new HtmlFrontpageRenderer.RecipeLink(
-                        targetFileName,
-                        recipe.getMetadata().getName(),
-                        recipe.getMetadata().getImages().get(0));
-                recipeLinkList.add(recipeLink);
+                RecipeDTO recipeDto = map(recipe, targetFileName);
+                recipeList.add(recipeDto);
             });
         }
 
-        HtmlFrontpageRenderer htmlFrontpageRenderer = new HtmlFrontpageRenderer(new HtmlTemplate("Recipes"), recipeLinkList);
-        String indexHtml = htmlFrontpageRenderer.render();
-        File index = new File(outputFolder, "index.html");
-        writeToFile(index, indexHtml);
+        // TODO: Generate recipes.json
+        JsonRenderer jsonRenderer = new JsonRenderer(recipeList);
+        String json = jsonRenderer.render();
+        File recipesJson = new File(outputFolder, "recipes.json");
+        writeToFile(recipesJson, json);
+    }
+
+    private static RecipeDTO map(Recipe recipe, String fileName) {
+        return RecipeDTO.builder()
+                .name(recipe.getMetadata().getName())
+                .description(recipe.getMetadata().getDescription())
+                .image(recipe.getMetadata().getImages().get(0))
+                .types(recipe.getMetadata().getTypes())
+                .url(fileName)
+                .build();
     }
 
     private static void writeRecipeToFile(File outputFolder, String targetFileName, String html) {

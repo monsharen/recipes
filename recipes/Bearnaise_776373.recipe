@@ -2,7 +2,8 @@ metadata:
   name: Bearnaise
   images:
     - https://i.imgur.io/c5KrgGw_d.webp?maxwidth=640&shape=thumb&fidelity=medium
-  description: From https://www.matmalin.se/enkel-bearnaisesas-recept-pa-liten-sats/ 
+  description: From https://www.matmalin.se/enkel-bearnaisesas-recept-pa-liten-sats/
+  types: [Sauce]
 
 ingredients:
  - 150 g smör
