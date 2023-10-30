@@ -34,6 +34,7 @@ actions:
  - free_text Knåda degen i minst 20-30 minuter för hand eller 15-20 minuter i maskin. Kör långsammare i början.
  - free_text Tillsätt saltet på slutet av knådningen.
  - free_text Låt degen vila i 30 minuter under plast eller handduk.
+ - set 220 C oven
  - free_text Häll upp på bakbord, använd gärna degskrapa. Dela i bitar om ca 60 gram. Forma till lussekatter.
  - free_text Garnera med russinen genom att trycka ner dem en bit så att de inte lossnar när bullarna blir stora i ugnen. 
  - free_text Låt jäsa övertäckta i minst 1 timme till dubbel storlek. Jästiden beror bland annat på hur varmt du har i rummet. Undvik luftdrag vid fönster och liknande.
