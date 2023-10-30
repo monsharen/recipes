@@ -4,6 +4,9 @@ metadata:
     - https://i.imgur.com/HvJ7UXb.png
   description: From https://www.juligen.se/ultimata-lussebullarna-med-fordeg/ 
   types: [Bread]
+  estimatedPrepTime: 10 h
+  servings: 30
+
 
 ingredients:
  - 5 dl mjölk (till fördeg)
