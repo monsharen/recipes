@@ -9,8 +9,8 @@ ingredients:
  - 1 g saffran (mortlat med lite socker och 1,5 msk rom eller annan sprit)
  - 40 g jäst (blå)
  - 600 g vetemjöl special (eller annat vetemjöl av bra kvalitet) (till fördeg)
- - 1 msk socker eller vaniljsocker
- - 4 msk russin (+ca 1 dl glögg)
+ - 1 tbsp socker eller vaniljsocker
+ - 4 tbsp russin (+ca 1 dl glögg)
  - 400 g vetemjöl special (eller annat vetemjöl av bra kvalitet)
  - 200 g smör (rumstempererat)
  - 1 u ägg (rumstempererat)
@@ -19,6 +19,7 @@ ingredients:
  - 1 u ägg + 2 msk vatten och en nypa salt till pensling
 
 actions:
+ - free_text Mortla saffran med lite socker och låt den dra i rom eller konjak för att lösa upp den ännu mer.
  - free_text Rör ut jästen med saffransblandningen, vaniljsocker och lite av mjölken.
  - free_text Tillsätt resten av mjölken och mjöl. Rör i några minuter. 
  - free_text Låt helst jäsa över natten i kylen. Tänk på att degen expanderar så ha gärna en ganska stor bunke.
