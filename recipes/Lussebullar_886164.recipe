@@ -1,0 +1,36 @@
+metadata:
+  name: Lussebullar
+  images:
+    - https://i.imgur.com/HvJ7UXb.png
+  description: From https://www.juligen.se/ultimata-lussebullarna-med-fordeg/ 
+
+ingredients:
+ - 5 dl mjölk (till fördeg)
+ - 1 g saffran (mortlat med lite socker och 1,5 msk rom eller annan sprit)
+ - 40 g jäst (blå)
+ - 600 g vetemjöl special (eller annat vetemjöl av bra kvalitet) (till fördeg)
+ - 1 msk socker eller vaniljsocker
+ - 4 msk russin (+ca 1 dl glögg)
+ - 400 g vetemjöl special (eller annat vetemjöl av bra kvalitet)
+ - 200 g smör (rumstempererat)
+ - 1 u ägg (rumstempererat)
+ - 200 g socker
+ - 5 g salt (0,75-1 tsk)
+ - 1 u ägg + 2 msk vatten och en nypa salt till pensling
+
+actions:
+ - free_text Rör ut jästen med saffransblandningen, vaniljsocker och lite av mjölken.
+ - free_text Tillsätt resten av mjölken och mjöl. Rör i några minuter. 
+ - free_text Låt helst jäsa över natten i kylen. Tänk på att degen expanderar så ha gärna en ganska stor bunke.
+ - free_text Ta ut smör och ägg ur kylen så att de är rumstempererade till nästa dag.
+ - free_text (DAG 2). Koka upp glögg, dra åt sidan och lägg i russinen.
+ - free_text Arbeta in smör, mjöl, ägg och socker i fördegen, men häll i lite i taget av mjölet. 
+ - free_text Degen ska kännas kladdig men släppa någorlunda från kanterna. Det är inte säkert att allt mjöl behövs.
+ - free_text Knåda degen i minst 20-30 minuter för hand eller 15-20 minuter i maskin. Kör långsammare i början.
+ - free_text Tillsätt saltet på slutet av knådningen.
+ - free_text Låt degen vila i 30 minuter under plast eller handduk.
+ - free_text Häll upp på bakbord, använd gärna degskrapa. Dela i bitar om ca 60 gram. Forma till lussekatter.
+ - free_text Garnera med russinen genom att trycka ner dem en bit så att de inte lossnar när bullarna blir stora i ugnen. 
+ - free_text Låt jäsa övertäckta i minst 1 timme till dubbel storlek. Jästiden beror bland annat på hur varmt du har i rummet. Undvik luftdrag vid fönster och liknande.
+ - free_text Grädda i ca 6-8 minuter i nedre delen av ugnen på 220 grader över- och undervärme. Temperaturen kan skilja från ugn till ugn så håll gärna koll på bullarna.
+ - free_text Pensla direkt med ägget uppvispat med vatten och en liten nypa salt. Ta bort bullarna från plåten så att de inte eftergräddas. Frys in så snart bullarna har kallnat.
