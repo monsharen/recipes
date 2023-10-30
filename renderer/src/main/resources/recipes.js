@@ -15,7 +15,6 @@ const app = new Vue({
 
                 return this.checkedRecipeTypes.every(type => {
                     let match = recipe?.types?.includes(type);
-                    console.log("recipe " + recipe.name + " includes " + type + ": " + match);
                     return match;
                 } );
             }).filter(recipe => {
