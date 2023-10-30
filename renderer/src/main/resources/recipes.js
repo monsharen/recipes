@@ -11,25 +11,13 @@ const app = new Vue({
     },
     computed: {
         filteredRecipes() {
-
             return this.recipes.filter(recipe => {
 
-                if (this.checkedRecipeTypes.length === 0) {
-                    return true;
-                }
-
-                // Check recipe types against checkboxes
-                for (let i = 0; i < recipe?.types?.length; i++) {
-                    let recipeType = recipe.types[i];
-                    let match = this.checkedRecipeTypes.includes(recipeType);
-                    //console.log("checkedRecipeTypes (" + this.checkedRecipeTypes + ") contains '" + recipeType + "': " + match);
-                    if (match) {
-                        return true;
-                    }
-                }
-
-                return false;
-
+                return this.checkedRecipeTypes.every(type => {
+                    let match = recipe?.types?.includes(type);
+                    console.log("recipe " + recipe.name + " includes " + type + ": " + match);
+                    return match;
+                } );
             }).filter(recipe => {
                 let searchTerm = this.search.toLowerCase();
 
