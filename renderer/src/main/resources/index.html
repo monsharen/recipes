@@ -18,8 +18,8 @@
                 </div>
             </div>
 
-            <div class="row" style="margin-bottom: 2em">
-                <div class="col" v-for="(recipeType, index) in recipeTypes" style="flex: 0 0 0%">
+            <div class="row">
+                <div class="col" v-for="(recipeType, index) in recipeTypes" style="flex: 0 0 0%; margin-bottom: 1em">
                     <input type="checkbox" class="btn-check" :id="'recipetype-' + index" :name="recipeType" v-model="checkedRecipeTypes" :value="recipeType" autocomplete="off">
                     <label class="btn btn-outline-primary" :for="'recipetype-' + index">{{recipeType}}</label>
                 </div>
