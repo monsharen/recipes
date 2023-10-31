@@ -14,7 +14,8 @@ ingredients:
  - 40 g jäst (blå)
  - 600 g vetemjöl special (eller annat vetemjöl av bra kvalitet) (till fördeg)
  - 1 tbsp socker eller vaniljsocker
- - 4 tbsp russin (+ca 1 dl glögg)
+ - 4 tbsp russin 
+ - 1 dl glögg
  - 400 g vetemjöl special (eller annat vetemjöl av bra kvalitet)
  - 200 g smör (rumstempererat)
  - 1 u ägg (rumstempererat)
@@ -23,19 +24,19 @@ ingredients:
  - 1 u ägg + 2 msk vatten och en nypa salt till pensling
 
 actions:
- - free_text Mortla saffran med lite socker och låt den dra i rom eller konjak för att lösa upp den ännu mer.
- - free_text Rör ut jästen med saffransblandningen, vaniljsocker och lite av mjölken.
- - free_text Tillsätt resten av mjölken och mjöl. Rör i några minuter. 
+ - free_text Mortla <b>1 g</b> saffran med lite socker och låt den dra i rom eller konjak för att lösa upp den ännu mer.
+ - free_text Rör ut <b>40 g</b> jäst med saffransblandningen, <b>1 msk</b> vaniljsocker och <b>2 dl</b> mjölk.
+ - free_text Tillsätt <b>3 dl</b> mjölk och <b>600 g</b> mjöl. Rör i några minuter. 
  - free_text Låt helst jäsa över natten i kylen. Tänk på att degen expanderar så ha gärna en ganska stor bunke.
- - free_text Ta ut smör och ägg ur kylen så att de är rumstempererade till nästa dag.
- - free_text (DAG 2). Koka upp glögg, dra åt sidan och lägg i russinen.
- - free_text Arbeta in smör, mjöl, ägg och socker i fördegen, men häll i lite i taget av mjölet. Degen ska kännas kladdig men släppa någorlunda från kanterna. Det är inte säkert att allt mjöl behövs.
- - free_text Knåda degen i minst 20-30 minuter för hand eller 15-20 minuter i maskin. Kör långsammare i början.
- - free_text Tillsätt saltet på slutet av knådningen.
- - free_text Låt degen vila i 30 minuter under plast eller handduk.
- - set 220 C oven
- - free_text Häll upp på bakbord, använd gärna degskrapa. Dela i bitar om ca 60 gram. Forma till lussekatter.
- - free_text Garnera med russinen genom att trycka ner dem en bit så att de inte lossnar när bullarna blir stora i ugnen. 
- - free_text Låt jäsa övertäckta i minst 1 timme till dubbel storlek. Jästiden beror bland annat på hur varmt du har i rummet. Undvik luftdrag vid fönster och liknande.
- - free_text Grädda i ca 6-8 minuter i nedre delen av ugnen på 220 grader över- och undervärme. Temperaturen kan skilja från ugn till ugn så håll gärna koll på bullarna.
+ - free_text Ta ut <b>200 g</b> smör och <b>2</b> ägg ur kylen så att de är rumstempererade till nästa dag.
+ - free_text (DAG 2). Koka upp <b>1 dl</b> glögg, dra åt sidan och lägg i <b>4 msk</b> russin.
+ - free_text Arbeta in <b>200 g</b> smör, <b>400 g</b> mjöl, <b>1</b> ägg och <b>200 g</b> socker i degen och <b>400 g</b> mjöl (lite i taget). Degen ska kännas kladdig men släppa någorlunda från kanterna. Det är inte säkert att allt mjöl behövs.
+ - free_text Knåda degen i minst <b>20-30 minuter</b> för hand eller <b>15-20 minuter</b> i maskin. Kör långsammare i början.
+ - free_text Tillsätt <b>5 g</b> salt på slutet av knådningen.
+ - free_text Låt degen vila i <b>30 minuter</b> under plast eller handduk.
+ - free_text Sätt ugnen på <b>220 C</b> med <b>över- och undervärme</b>.
+ - free_text Häll upp på bakbord, använd gärna degskrapa. Dela i bitar om <b>ca 60 gram</b>. Forma till lussekatter.
+ - free_text Garnera med russin genom att trycka ner dem en bit så att de inte lossnar när bullarna blir stora i ugnen. 
+ - free_text Låt jäsa övertäckta i minst <b>1 timme</b> till dubbel storlek. Jästiden beror bland annat på hur varmt du har i rummet. Undvik luftdrag vid fönster och liknande.
+ - free_text Grädda i ca <b>6-8 minuter</b> i nedre delen av ugnen. Temperaturen kan skilja från ugn till ugn så håll gärna koll på bullarna.
  - free_text Pensla direkt med ägget uppvispat med vatten och en liten nypa salt. Ta bort bullarna från plåten så att de inte eftergräddas. Frys in så snart bullarna har kallnat.
