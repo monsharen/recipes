@@ -34,15 +34,30 @@ public class RecipePageDTO {
     }
 
     public boolean isNumberedAction(Action action) {
-        if (ActionIdentifier.IMAGE.equals(action.getActionIdentifier())) {
-            return false;
-        }
-
-        if (ActionIdentifier.YOUTUBE.equals(action.getActionIdentifier())) {
+        if (
+                ActionIdentifier.IMAGE.equals(action.getActionIdentifier()) ||
+                ActionIdentifier.YOUTUBE.equals(action.getActionIdentifier()) ||
+                ActionIdentifier.DIVIDER.equals(action.getActionIdentifier())) {
             return false;
         }
 
         return true;
+    }
+
+    public String getActionClass(Action action) {
+
+        if (
+                ActionIdentifier.IMAGE.equals(action.getActionIdentifier()) ||
+                        ActionIdentifier.YOUTUBE.equals(action.getActionIdentifier()) ||
+                        ActionIdentifier.DIVIDER.equals(action.getActionIdentifier())) {
+            return "empty_action";
+        }
+
+        if (ActionIdentifier.SET.equals(action.getActionIdentifier())) {
+            return "action oven";
+        }
+
+        return "action";
     }
 
     public String getActionDescription(Action action) {

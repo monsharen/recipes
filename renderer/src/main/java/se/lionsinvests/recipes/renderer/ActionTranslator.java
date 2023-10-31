@@ -38,6 +38,8 @@ public class ActionTranslator implements Translator<Action> {
                 return new ImageActionTranslator();
             case YOUTUBE:
                 return new YoutubeActionTranslator();
+            case DIVIDER:
+                return new DividerActionTranslator();
         }
         return obj -> "unsupported action";
     }

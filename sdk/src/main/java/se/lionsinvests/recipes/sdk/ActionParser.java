@@ -37,7 +37,7 @@ public class ActionParser {
         for (int i = 0; i < parts.length; i++) {
 
             Ingredient ingredient;
-            if (ActionIdentifier.FREE_TEXT.equals(actionIdentifier)) {
+            if (ActionIdentifier.FREE_TEXT.equals(actionIdentifier) || ActionIdentifier.DIVIDER.equals(actionIdentifier)) {
                 ingredient = Ingredient.builder()
                         .description(instructionString)
                         .unit(Unit.QUANTITY)

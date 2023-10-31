@@ -24,6 +24,7 @@ ingredients:
  - 1 u ägg + 2 msk vatten och en nypa salt till pensling
 
 actions:
+ - divider Dag 1
  - free_text Mortla <b>1 g</b> saffran med lite socker och låt den dra i rom eller konjak för att lösa upp den ännu mer.
  - free_text Rör ut <b>40 g</b> jäst med saffransblandningen, <b>1 msk</b> vaniljsocker och <b>2 dl</b> mjölk.
  - image https://www.juligen.se/wp-content/uploads/2019/10/Lussebullar_fordeg1.jpg
@@ -32,8 +33,9 @@ actions:
  - free_text Tillsätt <b>3 dl</b> mjölk och <b>600 g</b> mjöl. Rör i några minuter. 
  - free_text Låt helst jäsa över natten i kylen. Tänk på att degen expanderar så ha gärna en ganska stor bunke.
  - free_text Ta ut <b>200 g</b> smör och <b>2</b> ägg ur kylen så att de är rumstempererade till nästa dag.
+ - divider Dag 2
  - image https://www.juligen.se/wp-content/uploads/2019/10/Lussebullsdeg_jasning.jpg, Dag 2 ser degen ut ungefär så här
- - free_text (DAG 2). Koka upp <b>1 dl</b> glögg, dra åt sidan och lägg i <b>4 msk</b> russin.
+ - free_text Koka upp <b>1 dl</b> glögg, dra åt sidan och lägg i <b>4 msk</b> russin.
  - free_text Arbeta in <b>200 g</b> smör, <b>400 g</b> mjöl, <b>1</b> ägg och <b>200 g</b> socker i degen och <b>400 g</b> mjöl (lite i taget). Degen ska kännas kladdig men släppa någorlunda från kanterna. Det är inte säkert att allt mjöl behövs.
  - free_text Knåda degen i minst <b>20-30 minuter</b> för hand eller <b>15-20 minuter</b> i maskin. Kör långsammare i början.
  - free_text Tillsätt <b>5 g</b> salt på slutet av knådningen.

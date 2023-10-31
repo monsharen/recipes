@@ -8,12 +8,15 @@ public class ImageActionTranslator implements Translator<Action> {
     @Override
     public String translate(Action action) {
         Ingredient[] ingredients = action.getIngredients();
-        String html = "<img src=\"" +  ingredients[0].description + "\" class='img-fluid rounded mx-auto d-block' alt='" + ingredients[0].description + "' /><br/> ";
+        String caption = "";
 
         if (ingredients.length == 2) {
-            html += ingredients[1].description;
+            caption = ingredients[1].description;
         }
 
-        return html;
+        return "<figure class=\"figure\">\n" +
+                "  <img src=\"" + ingredients[0].description + "\" class=\"figure-img img-fluid rounded\" alt=\"image\">\n" +
+                "  <figcaption class=\"figure-caption\">" + caption + "</figcaption>\n" +
+                "</figure>";
     }
 }
