@@ -37,7 +37,8 @@ actions:
  - free_text Arbeta in <b>200 g</b> smör, <b>400 g</b> mjöl, <b>1</b> ägg och <b>200 g</b> socker i degen och <b>400 g</b> mjöl (lite i taget). Degen ska kännas kladdig men släppa någorlunda från kanterna. Det är inte säkert att allt mjöl behövs.
  - free_text Knåda degen i minst <b>20-30 minuter</b> för hand eller <b>15-20 minuter</b> i maskin. Kör långsammare i början.
  - free_text Tillsätt <b>5 g</b> salt på slutet av knådningen.
- - image https://www.juligen.se/wp-content/uploads/2019/10/Glutentest.jpg
+ - image https://www.juligen.se/wp-content/uploads/2019/10/Glutentest.jpg, Gör glutentestet för att ta reda på om degen är färdig. Se video för instruktioner.
+ - youtube https://www.youtube.com/embed/0CFXLJpTPb0?si=bh60sx3nyH-UaYau
  - free_text Låt degen vila i <b>30 minuter</b> under plast eller handduk.
  - free_text Sätt ugnen på <b>220 C</b> med <b>över- och undervärme</b>.
  - free_text Häll upp på bakbord, använd gärna degskrapa. Dela i bitar om <b>ca 60 gram</b>. Forma till lussekatter.

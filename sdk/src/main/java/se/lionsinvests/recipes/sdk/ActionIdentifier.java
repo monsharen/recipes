@@ -10,5 +10,5 @@ public enum ActionIdentifier {
     BAKE,
     SET,
     IMAGE,
-    VIDEO
+    YOUTUBE
 }

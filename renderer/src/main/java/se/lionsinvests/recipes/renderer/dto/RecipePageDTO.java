@@ -38,7 +38,7 @@ public class RecipePageDTO {
             return false;
         }
 
-        if (ActionIdentifier.VIDEO.equals(action.getActionIdentifier())) {
+        if (ActionIdentifier.YOUTUBE.equals(action.getActionIdentifier())) {
             return false;
         }
 

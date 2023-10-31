@@ -9,14 +9,35 @@ public class ActionParser {
         String instructionString = value.substring(actionString.length() + 1);
 
         ActionIdentifier actionIdentifier = ActionIdentifier.valueOf(actionString);
+        String[] parts = instructionString.split(",");
+
+        if (ActionIdentifier.IMAGE.equals(actionIdentifier)) {
+            Ingredient url = Ingredient.builder()
+                    .description(parts[0])
+                    .unit(Unit.QUANTITY)
+                    .quantity(0)
+                    .build();
+            String descriptionString = "";
+            if (parts.length > 1) {
+                descriptionString = instructionString.substring(instructionString.indexOf(" "));
+            }
+
+            Ingredient description = Ingredient.builder()
+                    .description(descriptionString)
+                    .unit(Unit.QUANTITY)
+                    .quantity(0)
+                    .build();
+            Ingredient[] ingredients = { url, description };
+            return new Action(ActionIdentifier.IMAGE, ingredients);
+        }
+
         Ingredient[] ingredients;
 
-        String[] parts = instructionString.split(",");
         ingredients = new Ingredient[parts.length];
         for (int i = 0; i < parts.length; i++) {
 
             Ingredient ingredient;
-            if (actionIdentifier == ActionIdentifier.FREE_TEXT) {
+            if (ActionIdentifier.FREE_TEXT.equals(actionIdentifier)) {
                 ingredient = Ingredient.builder()
                         .description(instructionString)
                         .unit(Unit.QUANTITY)

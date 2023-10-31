@@ -36,6 +36,8 @@ public class ActionTranslator implements Translator<Action> {
                 return new RoastActionTranslator(unitTranslator);
             case IMAGE:
                 return new ImageActionTranslator();
+            case YOUTUBE:
+                return new YoutubeActionTranslator();
         }
         return obj -> "unsupported action";
     }
