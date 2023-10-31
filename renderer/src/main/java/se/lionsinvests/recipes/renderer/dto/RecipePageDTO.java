@@ -18,6 +18,7 @@ public class RecipePageDTO {
     private final Recipe recipe;
     private final UnitTranslator unitTranslator;
     private final ActionTranslator actionTranslator;
+    private int actionCounter = 0;
 
     public String getAmountAndUnit(Ingredient ingredient) {
         if (ingredient == null) {
@@ -25,6 +26,23 @@ public class RecipePageDTO {
         }
         String unit = unitTranslator.translate(ingredient.unit);
         return String.format("%.0f", ingredient.quantity) + " " + unit;
+    }
+
+    public int nextActionCount() {
+        actionCounter += 1;
+        return actionCounter;
+    }
+
+    public boolean isNumberedAction(Action action) {
+        if (ActionIdentifier.IMAGE.equals(action.getActionIdentifier())) {
+            return false;
+        }
+
+        if (ActionIdentifier.VIDEO.equals(action.getActionIdentifier())) {
+            return false;
+        }
+
+        return true;
     }
 
     public String getActionDescription(Action action) {

@@ -77,11 +77,14 @@
                         <h1>Instructions</h1>
                     </div>
                     <div class="actions">
-                        <div th:each="action, iter : ${data.recipe.actions}" th:class="${data.hasActionIcon(action) ? 'action oven' : 'action'}">
+                        <div th:each="action : ${data.recipe.actions}" th:class="${data.hasActionIcon(action) ? 'action oven' : 'action'}">
                             <div class="container">
                                 <div class="row">
-                                    <div class="col-11">
-                                        <b><span th:text="${iter.index + 1}">1.</span></b>&nbsp;&nbsp;&nbsp;<span th:utext="${data.getActionDescription(action)}">Chop the onions</span>
+                                    <div class="col-11" th:if="${data.isNumberedAction(action)}">
+                                        <b><span th:text="${data.nextActionCount()}">1.</span></b>&nbsp;&nbsp;&nbsp;<span th:utext="${data.getActionDescription(action)}">Chop the onions</span>
+                                    </div>
+                                    <div class="col-11" th:unless="${data.isNumberedAction(action)}">
+                                        <span th:utext="${data.getActionDescription(action)}">Chop the onions</span>
                                     </div>
                                     <div class="col-1" th:if="${data.hasActionIcon(action)}" style="padding: 0">
                                         <img src="https://cdn-icons-png.flaticon.com/512/2378/2378252.png" alt="Set oven temperature" class="action-image-small" />
