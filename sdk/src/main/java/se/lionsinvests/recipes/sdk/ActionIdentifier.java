@@ -8,5 +8,7 @@ public enum ActionIdentifier {
     COMBINE,
     MIX,
     BAKE,
-    SET
+    SET,
+    IMAGE,
+    VIDEO
 }
