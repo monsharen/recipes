@@ -1,5 +1,5 @@
 # Welcome
-Live demo: http://lionsinvests.gitlab.io/recipes
+Live demo: http://monsharen.gitlab.io/recipes
 
 # Syntax
 Metadata
