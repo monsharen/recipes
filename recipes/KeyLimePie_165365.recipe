@@ -18,7 +18,6 @@ ingredients:
  - 10 u thin lime slices
 
 actions:
- - divider Make the crust
  - free_text Preheat oven to 190 C and set an oven rack in the middle position.
  - free_text In a medium bowl, combine the graham cracker crumbs, brown sugar, and melted butter; stir with a fork first, and then your hands until the mixture is well combined.
  - free_text Using your fingers and the bottom of a measuring cup or glass, press the crumbs firmly into the bottom and up the sides of a 9-in deep-dish pie pan. The crust should be about 1/4-in thick. (Hint: do the sides first.)
