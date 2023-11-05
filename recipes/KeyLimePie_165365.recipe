@@ -18,8 +18,9 @@ ingredients:
  - 10 u thin lime slices
 
 actions:
- - free_text Add brown sugar, graham cracker crumbs and butter in mixing bowl
- - free_text Combine the graham cracker crumbs, brown sugar and melted butter in a mixing bowl. Stir with a fork first, and then your hands until the mixture is well combined.
+ - divider Make the crust
+ - free_text Preheat oven to 190 C and set an oven rack in the middle position.
+ - free_text In a medium bowl, combine the graham cracker crumbs, brown sugar, and melted butter; stir with a fork first, and then your hands until the mixture is well combined.
  - free_text Using your fingers and the bottom of a measuring cup or glass, press the crumbs firmly into the bottom and up the sides of a 9-in deep-dish pie pan. The crust should be about 1/4-in thick. (Hint: do the sides first.)
  - free_text Bake the crust for 10 minutes, or until lightly browned. Then let the crust cool a bit while you make the filling.
  - free_text Make the Filling: zest the limes
