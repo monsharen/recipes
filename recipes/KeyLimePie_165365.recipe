@@ -1,0 +1,33 @@
+metadata:
+  name: Key Lime Pie
+  images:
+    - https://i.imgur.com/HvJ7UXb.png
+  description: From https://www.onceuponachef.com/recipes/key-lime-pie.html 
+
+ingredients:
+ - 3.5 dl finely crushed graham cracker crumbs, from about 12 whole graham crackers
+ - 0.75 dl packed light brown sugar
+ - 4 tbsp unsalted butter, melted
+ - 8 dl sweetened condensed milk
+ - 2.36 dl Greek yogurt (2% or whole milk)
+ - 1 tbsp grated lime zest
+ - 1.75 dl fresh lime juice
+ - 2.36 dl cold heavy cream
+ - 2 tbsp confectioners' sugar
+ - 1 tsp grated lime zest
+ - 10 u thin lime slices
+
+actions:
+ - free_text Add brown sugar, graham cracker crumbs and butter in mixing bowl
+ - free_text Combine the graham cracker crumbs, brown sugar and melted butter in a mixing bowl. Stir with a fork first, and then your hands until the mixture is well combined.
+ - free_text Using your fingers and the bottom of a measuring cup or glass, press the crumbs firmly into the bottom and up the sides of a 9-in deep-dish pie pan. The crust should be about 1/4-in thick. (Hint: do the sides first.)
+ - free_text Bake the crust for 10 minutes, or until lightly browned. Then let the crust cool a bit while you make the filling.
+ - free_text Make the Filling: zest the limes
+ - free_text Juice the limes using a citrus reamer, then combine the juice with the sweetened condensed milk, yogurt, and lime zest.
+ - free_text Adf yogurt, lime juice, lime zest, and condensed milk in mixing bowl and whisk to combine.
+ - free_text Whisk to combine.
+ - free_text Pour the filling into the cooked graham cracker crust.
+ - free_text Bake for about 15 minutes, or until the filling is almost set.
+ - free_text Let the pie cool at room temperature for 30 minutes, then place in the refrigerator to chill thoroughly, about 3 hours.
+ - free_text Step 3: Make the Topping
+ - free_text In the bowl of an electric mixer fitted with the whisk attachment (or beaters), beat the heavy cream until soft peaks form. Add the confectioners’ sugar and beat until medium peaks form. (Alternatively, the cream can be beaten by hand with a whisk.) Top the chilled pie with whipped cream and decorate with lime slices and zest.
