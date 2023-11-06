@@ -3,6 +3,7 @@ metadata:
   images:
     - https://i.imgur.com/AiEGgwk.jpg
   description: From Great British Bake-off https://www.bbc.co.uk/food/recipes/key_lime_pie_53484 
+  types: Dessert
 
 ingredients:
  - 400 g plain flour
