@@ -61,7 +61,11 @@ public class RecipePageDTO {
     }
 
     public String getActionDescription(Action action) {
-        return actionTranslator.translate(action);
+        try {
+            return actionTranslator.translate(action);
+        } catch (Exception e) {
+            throw new IllegalStateException("failed to translate action " + action + " (" + actionCounter + ") for recipe " + recipe);
+        }
     }
 
     public boolean hasActionIcon(Action action) {

@@ -19,15 +19,16 @@ ingredients:
 
 actions:
  - free_text Preheat oven to 190 C and set an oven rack in the middle position.
+ - divider Make the crust
  - free_text In a medium bowl, combine the graham cracker crumbs, brown sugar, and melted butter; stir with a fork first, and then your hands until the mixture is well combined.
- - free_text Using your fingers and the bottom of a measuring cup or glass, press the crumbs firmly into the bottom and up the sides of a 9-in deep-dish pie pan. The crust should be about 1/4-in thick. (Hint: do the sides first.)
+ - free_text Using your fingers and the bottom of a measuring cup or glass, press the crumbs firmly into the bottom and up the sides of a 9-in deep-dish pie pan. The crust should be about 1/4-in thick. Do the sides first.
  - free_text Bake the crust for 10 minutes, or until lightly browned. Then let the crust cool a bit while you make the filling.
- - free_text Make the Filling: zest the limes
- - free_text Juice the limes using a citrus reamer, then combine the juice with the sweetened condensed milk, yogurt, and lime zest.
- - free_text Adf yogurt, lime juice, lime zest, and condensed milk in mixing bowl and whisk to combine.
- - free_text Whisk to combine.
+ - divider Make the filling
+ - free_text Zest and juice the limes using a citrus reamer, then combine juice and zest with the sweetened condensed milk and yogurt. Whisk to combine.
  - free_text Pour the filling into the cooked graham cracker crust.
+ - divider Bake the pie
  - free_text Bake for about 15 minutes, or until the filling is almost set.
  - free_text Let the pie cool at room temperature for 30 minutes, then place in the refrigerator to chill thoroughly, about 3 hours.
- - free_text Step 3: Make the Topping
- - free_text In the bowl of an electric mixer fitted with the whisk attachment (or beaters), beat the heavy cream until soft peaks form. Add the confectioners’ sugar and beat until medium peaks form. (Alternatively, the cream can be beaten by hand with a whisk.) Top the chilled pie with whipped cream and decorate with lime slices and zest.
+ - divider Make the topping
+ - free_text In the bowl of an electric mixer fitted with the whisk attachment (or beaters), beat the heavy cream until soft peaks form. Add the confectioners’ sugar and beat until medium peaks form. (Alternatively, the cream can be beaten by hand with a whisk.)
+ - free_text Top the chilled pie with whipped cream and decorate with lime slices and zest.
