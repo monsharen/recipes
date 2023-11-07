@@ -1,19 +1,27 @@
 metadata:
   name: Kokostoppar med saffran
   images:
-    - https://i.imgur.com/HvJ7UXb.png
-  description: From https://www.juligen.se/kokostoppar-med-saffran/ 
+    - https://i.imgur.com/mm0n4NM.png
+  description: Fantastiskt goda kokostoppar med smak av saffran och apelsin! Välj om du vill doppa dem i ljus eller mörk choklad. Tänk på att gräddningstiden i ugnen beror på hur stora toppar du gör. Från https://www.juligen.se/kokostoppar-med-saffran/ 
 
 ingredients:
- - https://i.imgur.com/mm0n4NM.png
+ - 60 g smör
+ - 0.5 g saffran
+ - 2 u ägg
+ - 1 dl socker
+ - 200 g riven kokos
+ - 0.5 tsp vaniljsocker
+ - 1 u apelsin (rivet skal och 2-3 msk saft)
+ - 200 g mörk eller ljus choklad
+ - 1 tbsp Cointreau
 
 actions:
- - free_text 60 g smör
- - free_text 0.5 g saffran
- - free_text 2 u ägg
- - free_text 1 dl socker
- - free_text 200 g riven kokos
- - free_text 0.5 tsp vaniljsocker
- - free_text 1 u apelsin (rivet skal och 2-3 msk saft)
- - free_text 200 g mörk eller ljus choklad
- - free_text 1 tbsp Cointreau
+ - free_text Smält smöret och tillsätt saffran (mortla ev. saffran med 0,5 tsk socker innan). Låt svalna lite.
+ - free_text Rör ihop ägg, socker, vaniljsocker, riven kokos och apelsinskal samt apelsinsaft i en bunke.
+ - free_text Rör ner smör- och saffransblandningen. Låt smeten svälla i 20-30 minuter.
+ - image https://i.imgur.com/Buml5aU.png
+ - free_text Forma till toppar med händerna och placera på bakplåtspapper.
+ - image https://i.imgur.com/gnPv4Ro.png
+ - free_text Grädda mitt i ugnen på 165-175˚C i ca 12-16 minuter beroende på storlek. Ta ut ur ugnen och låt svalna.
+ - free_text Smält chokladen försiktigt på låg värme i tjockbottnad kastrull alternativt i varmt vattenbad. Låt chokladen svalna något så att den tjocknar lite. Doppa kokostopparna och låt svalna. Doppa igen om du vill ha ett tjockare lager med choklad.
+ - image https://i.imgur.com/O0xt8XN.png
