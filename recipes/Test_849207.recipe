@@ -1,0 +1,18 @@
+metadata:
+  name: Test
+  images:
+    - https://i.imgur.com/mm0n4NM.png
+  description: From http://www.google.com 
+  types: [Bacon,Nice]
+  estimatedPrepTime: 30 min
+  servings: 5
+
+ingredients:
+ - 60 g smör
+ - 0.5 g saffran
+ - 2 u ägg
+
+actions:
+ - free_text Step 1
+ - free_text Step 2
+ - free_text Step 3
