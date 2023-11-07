@@ -1,0 +1,19 @@
+metadata:
+  name: Kokostoppar med saffran
+  images:
+    - https://i.imgur.com/HvJ7UXb.png
+  description: From https://www.juligen.se/kokostoppar-med-saffran/ 
+
+ingredients:
+ - https://i.imgur.com/mm0n4NM.png
+
+actions:
+ - free_text 60 g smör
+ - free_text 0.5 g saffran
+ - free_text 2 u ägg
+ - free_text 1 dl socker
+ - free_text 200 g riven kokos
+ - free_text 0.5 tsp vaniljsocker
+ - free_text 1 u apelsin (rivet skal och 2-3 msk saft)
+ - free_text 200 g mörk eller ljus choklad
+ - free_text 1 tbsp Cointreau
