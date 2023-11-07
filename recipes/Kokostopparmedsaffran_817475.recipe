@@ -3,6 +3,9 @@ metadata:
   images:
     - https://i.imgur.com/mm0n4NM.png
   description: Fantastiskt goda kokostoppar med smak av saffran och apelsin! Välj om du vill doppa dem i ljus eller mörk choklad. Tänk på att gräddningstiden i ugnen beror på hur stora toppar du gör. Från https://www.juligen.se/kokostoppar-med-saffran/ 
+  types: [Pastry,Dessert]
+  estimatedPrepTime: 1 h
+  servings: 15-20
 
 ingredients:
  - 60 g smör
