@@ -17,14 +17,17 @@ ingredients:
  - 1 u apelsin (rivet skal och 2-3 msk saft)
  - 200 g mörk eller ljus choklad
  - 1 tbsp Cointreau
+ - 1 tbsp konjak eller rom
 
 actions:
- - free_text Smält smöret och tillsätt saffran (mortla ev. saffran med 0,5 tsk socker innan). Låt svalna lite.
- - free_text Rör ihop ägg, socker, vaniljsocker, riven kokos och apelsinskal samt apelsinsaft i en bunke.
- - free_text Rör ner smör- och saffransblandningen. Låt smeten svälla i 20-30 minuter.
+ - free_text Mortla <b>0.5 g</b> saffran med lite socker och låt den dra i <b>1 msk</b> rom eller konjak för att lösa upp den ännu mer.
+ - free_text Smält <b>60 g</b> smör och tillsätt saffran. Låt svalna lite.
+ - free_text Rör ihop <b>2</b> ägg, <b>1 dl</b> socker, <b>0.5 tsk</b> vaniljsocker, <b>200 g</b> riven kokos och apelsinskal samt <b>2-3 msk</b> apelsinsaft i en bunke.
+ - free_text Rör ner smör- och saffransblandningen. Låt smeten svälla i <b>20-30 minuter</b>.
  - image https://i.imgur.com/Buml5aU.png
  - free_text Forma till toppar med händerna och placera på bakplåtspapper.
  - image https://i.imgur.com/gnPv4Ro.png
- - free_text Grädda mitt i ugnen på 165-175˚C i ca 12-16 minuter beroende på storlek. Ta ut ur ugnen och låt svalna.
- - free_text Smält chokladen försiktigt på låg värme i tjockbottnad kastrull alternativt i varmt vattenbad. Låt chokladen svalna något så att den tjocknar lite. Doppa kokostopparna och låt svalna. Doppa igen om du vill ha ett tjockare lager med choklad.
+ - free_text Grädda mitt i ugnen på <b>165-175˚C</b> i ca <b>12-16 minuter</b> beroende på storlek. Ta ut ur ugnen och låt svalna.
+ - free_text Smält <b>200 g</b> choklad försiktigt på låg värme i tjockbottnad kastrull alternativt i varmt vattenbad. Låt chokladen svalna något så att den tjocknar lite.
+ - free_text Doppa kokostopparna och låt svalna. Doppa igen om du vill ha ett tjockare lager med choklad.
  - image https://i.imgur.com/O0xt8XN.png
