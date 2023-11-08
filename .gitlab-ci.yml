@@ -21,3 +21,9 @@ addrecipe:
     - mvn test -pl testbench -Dtest=ImportRecipeTest
   rules:
     - if: '$TRIGGER_PAYLOAD'
+
+generate_meal_plan:
+  script:
+    - echo "This job runs every Sunday at noon"
+  only:
+    - schedules
