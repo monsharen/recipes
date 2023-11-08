@@ -13,6 +13,9 @@ pages:
   script:
     - mvn clean install
     - mv recipes-rendered public
+  only:
+    - main
+    - triggers
   artifacts:
     paths:
       - public
