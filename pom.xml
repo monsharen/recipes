@@ -19,6 +19,7 @@
         <module>renderer</module>
         <module>parser</module>
         <module>testbench</module>
+        <module>mealplan</module>
     </modules>
 
     <dependencyManagement>

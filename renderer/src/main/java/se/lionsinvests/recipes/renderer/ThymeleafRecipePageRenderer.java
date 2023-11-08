@@ -7,6 +7,7 @@ import org.thymeleaf.templateresolver.FileTemplateResolver;
 import org.thymeleaf.templateresolver.ITemplateResolver;
 import se.lionsinvests.recipes.renderer.dto.RecipePageDTO;
 import se.lionsinvests.recipes.sdk.Recipe;
+import se.lionsinvests.recipes.sdk.UnitTranslator;
 
 import java.io.File;
 import java.io.StringWriter;

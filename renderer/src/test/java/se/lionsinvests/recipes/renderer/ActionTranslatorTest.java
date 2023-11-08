@@ -2,10 +2,7 @@ package se.lionsinvests.recipes.renderer;
 
 import org.junit.Before;
 import org.junit.Test;
-import se.lionsinvests.recipes.sdk.Action;
-import se.lionsinvests.recipes.sdk.ActionIdentifier;
-import se.lionsinvests.recipes.sdk.Ingredient;
-import se.lionsinvests.recipes.sdk.Unit;
+import se.lionsinvests.recipes.sdk.*;
 
 import static org.junit.Assert.assertEquals;
 

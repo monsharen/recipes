@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import se.lionsinvests.recipes.renderer.translation.*;
 import se.lionsinvests.recipes.sdk.Action;
 import se.lionsinvests.recipes.sdk.ActionIdentifier;
+import se.lionsinvests.recipes.sdk.UnitTranslator;
 
 @AllArgsConstructor
 public class ActionTranslator implements Translator<Action> {

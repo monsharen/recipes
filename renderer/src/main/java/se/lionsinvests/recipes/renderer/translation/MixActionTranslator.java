@@ -2,7 +2,7 @@ package se.lionsinvests.recipes.renderer.translation;
 
 import lombok.AllArgsConstructor;
 import se.lionsinvests.recipes.renderer.Translator;
-import se.lionsinvests.recipes.renderer.UnitTranslator;
+import se.lionsinvests.recipes.sdk.UnitTranslator;
 import se.lionsinvests.recipes.sdk.Action;
 import se.lionsinvests.recipes.sdk.Ingredient;
 

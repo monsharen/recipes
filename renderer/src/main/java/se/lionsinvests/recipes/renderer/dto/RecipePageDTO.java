@@ -4,7 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import se.lionsinvests.recipes.renderer.ActionTranslator;
-import se.lionsinvests.recipes.renderer.UnitTranslator;
+import se.lionsinvests.recipes.sdk.UnitTranslator;
 import se.lionsinvests.recipes.sdk.Action;
 import se.lionsinvests.recipes.sdk.ActionIdentifier;
 import se.lionsinvests.recipes.sdk.Ingredient;

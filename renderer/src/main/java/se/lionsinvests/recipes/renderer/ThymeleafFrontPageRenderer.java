@@ -11,6 +11,7 @@ import org.thymeleaf.templateresolver.ITemplateResolver;
 import lombok.AllArgsConstructor;
 import se.lionsinvests.recipes.renderer.dto.RecipePageDTO;
 import se.lionsinvests.recipes.sdk.Recipe;
+import se.lionsinvests.recipes.sdk.UnitTranslator;
 
 @AllArgsConstructor
 public class ThymeleafFrontPageRenderer implements PageRenderer<Recipe> {
