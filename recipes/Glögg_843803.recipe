@@ -16,6 +16,6 @@ ingredients:
 
 actions:
  - free_text Blanda <b>5 liter</b> svagdricka, <b>2 påsar</b> nejlika, <b>1 påse</b> kardemummakärnor, <b>3 st</b> kanelstänger, <b>50 gram</b> färsk jäst och <b>300 gram</b> russin.
- - free_text Rör ner <b>3 dl</b> socker varje dag tills sockret är slut
- - free_text Låt stå rumsvarmt i <b>5 veckor</b> efter att allt sockret är tillsatt
- - free_text Sila och häll på flaskor
+ - free_text Rör ner <b>3 dl</b> socker varje dag tills sockret är slut.
+ - free_text Låt stå rumsvarmt i <b>5 veckor</b> efter att allt sockret är tillsatt.
+ - free_text Sila och häll på flaskor.

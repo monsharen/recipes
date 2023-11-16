@@ -59,7 +59,7 @@ public class Main {
 
         Path path = recipesFolder.toPath();
         PageRenderer<Recipe> pageRenderer = new ThymeleafRecipePageRenderer(actionTranslator, unitConverter, recipeTemplate);
- 
+
         try (Stream<Path> pathStream = Files.find(path, Integer.MAX_VALUE, (filePath, fileAttr) -> fileAttr.isRegularFile())) {
             pathStream.forEach(recipeFile -> {
                 Recipe recipe = getRecipe(interpreter, recipeFile);
