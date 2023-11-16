@@ -1,15 +1,15 @@
 image: maven:3.6-jdk-11
 
-stages:
-  - build
-  - scheduled
+#stages:
+#  - build
+#  - scheduled
 
 workflow:
   rules:
     - if: '$CI_COMMIT_BRANCH'
 
 pages:
-  stage: build
+#  stage: build
   script:
     - mvn clean install
     - mv recipes-rendered public
@@ -18,24 +18,24 @@ pages:
       - public
   rules:
     - if: '$CI_COMMIT_BRANCH == "main"'
-      changes:
-        compare_to: 'refs/heads/main'
-        paths:
-          - '*'
+#      changes:
+#        compare_to: 'refs/heads/main'
+#        paths:
+#          - '*'
 
 
 addrecipe:
-  stage: build
+#  stage: build
   script:
     - echo "Add recipe $RECIPE_URL"
     - mvn test -pl testbench -Dtest=ImportRecipeTest
   rules:
     - if: '$TRIGGER_PAYLOAD'
 
-generate_meal_plan:
-  stage: scheduled
-  script:
-    - echo "This job runs every Sunday at noon"
-    - mvn test -pl testbench -Dtest=ImportRecipeTest
-  only:
-    - schedules
+#generate_meal_plan:
+#  stage: scheduled
+#  script:
+#    - echo "This job runs every Sunday at noon"
+#    - mvn test -pl testbench -Dtest=ImportRecipeTest
+#  only:
+#    - schedules
