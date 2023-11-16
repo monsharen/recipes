@@ -15,6 +15,7 @@ public class Metadata {
     private String notes;
     private String servings;
     private String estimatedPrepTime;
+    private String language;
     private List<String> types;
     private List<String> images;
 }

@@ -36,5 +36,6 @@ generate_meal_plan:
   stage: scheduled
   script:
     - echo "This job runs every Sunday at noon"
+    - mvn test -pl testbench -Dtest=ImportRecipeTest
   only:
     - schedules

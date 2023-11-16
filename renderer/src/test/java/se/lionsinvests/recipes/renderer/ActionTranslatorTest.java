@@ -3,17 +3,20 @@ package se.lionsinvests.recipes.renderer;
 import org.junit.Before;
 import org.junit.Test;
 import se.lionsinvests.recipes.sdk.*;
+import se.lionsinvests.recipes.sdk.unitconversion.SwedishUnitTranslator;
+import se.lionsinvests.recipes.sdk.unitconversion.UnitConverter;
 
 import static org.junit.Assert.assertEquals;
 
 public class ActionTranslatorTest {
 
-    private UnitTranslator unitTranslator = new UnitTranslator();
     private ActionTranslator instance;
 
     @Before
     public void before() {
-        instance = new ActionTranslator(unitTranslator);
+        SwedishUnitTranslator unitTranslator = new SwedishUnitTranslator();
+        UnitConverter unitConverter = new UnitConverter(unitTranslator);
+        instance = new ActionTranslator(unitConverter);
     }
 
     @Test
@@ -26,7 +29,7 @@ public class ActionTranslatorTest {
                         Ingredient.builder().description("nuts").build()
                 })
                 .build();
-        String actualText = instance.translate(action);
+        String actualText = instance.translate(null, action);
         String expectedText = "Combine garlic, tomato and nuts in a bowl";
         assertEquals(expectedText, actualText);
     }
@@ -39,8 +42,8 @@ public class ActionTranslatorTest {
                         Ingredient.builder().description("pasta").quantity(200).unit(Unit.GRAM).build()
                 })
                 .build();
-        String actualText = instance.translate(action);
-        String expectedText = "Boil 200.0 grams of pasta";
+        String actualText = instance.translate(null, action);
+        String expectedText = "Boil 200.0 gram of pasta";
         assertEquals(expectedText, actualText);
     }
 }

@@ -1,34 +1,29 @@
-package se.lionsinvests.recipes.renderer;
+package se.lionsinvests.recipes.mealplan;
 
 import lombok.AllArgsConstructor;
 import org.thymeleaf.TemplateEngine;
 import org.thymeleaf.context.Context;
 import org.thymeleaf.templateresolver.FileTemplateResolver;
 import org.thymeleaf.templateresolver.ITemplateResolver;
-import se.lionsinvests.recipes.renderer.dto.RecipePageDTO;
-import se.lionsinvests.recipes.sdk.Recipe;
-import se.lionsinvests.recipes.sdk.unitconversion.UnitConverter;
+import se.lionsinvests.recipes.mealplan.dto.EmailDTO;
+import se.lionsinvests.recipes.mealplan.dto.RecipeDTO;
 
 import java.io.File;
 import java.io.StringWriter;
+import java.util.List;
 
 @AllArgsConstructor
-public class ThymeleafRecipePageRenderer implements PageRenderer<Recipe> {
-
-    private final ActionTranslator actionTranslator;
-    private final UnitConverter unitConverter;
+public class ThymeleafHtmlRenderer {
     private final File thymeleafTemplate;
 
-    @Override
-    public String render(Recipe recipe) {
-        RecipePageDTO recipePageDTO = RecipePageDTO.builder()
-                .recipe(recipe)
-                .unitConverter(unitConverter)
-                .actionTranslator(actionTranslator)
+    public String render(List<RecipeDTO> recipes, List<String> ingredients) {
+        EmailDTO emailDTO = EmailDTO.builder()
+                .recipes(recipes)
+                .ingredients(ingredients)
                 .build();
 
         Context context = new Context();
-        context.setVariable("data", recipePageDTO);
+        context.setVariable("data", emailDTO);
         StringWriter stringWriter = new StringWriter();
         TemplateEngine templateEngine = new TemplateEngine();
         ITemplateResolver templateResolver = new FileTemplateResolver();

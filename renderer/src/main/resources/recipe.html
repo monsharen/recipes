@@ -14,7 +14,7 @@
                     <nav>
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item">
-                                <a href="index.html">Home</a>
+                                <a href="index.html">Hem</a>
                             </li>
                             <li class="breadcrumb-item active" th:text="${data.recipe.metadata.name}">
                                 Chicken Ragout Soup
@@ -37,10 +37,10 @@
             <div class="row">
                 <div class="col">
                     <div th:if="${data.recipe.metadata.getServings()}">
-                        <b>Servings:</b> <p th:text="${data.recipe.metadata.getServings()}">10-12 st</p>
+                        <b>Portioner:</b> <p th:text="${data.recipe.metadata.getServings()}">10-12 st</p>
                     </div>
                     <div th:if="${data.recipe.metadata.getEstimatedPrepTime()}">
-                        <b>Estimated prep time:</b> <p th:text="${data.recipe.metadata.getEstimatedPrepTime()}">30 min</p>
+                        <b>Tillagningstid:</b> <p th:text="${data.recipe.metadata.getEstimatedPrepTime()}">30 min</p>
                     </div>
                     <div class="description-divider"></div>
                     <p th:text="${data.recipe.metadata.description}">
@@ -48,7 +48,7 @@
                     </p>
                     <div th:if="${data.recipe.metadata.notes}">
                         <div class="description-divider"></div>
-                        <p><b>Notes:</b></p>
+                        <p><b>Information:</b></p>
                         <p th:text="${data.recipe.metadata.notes}">
                             Tips för att se om de är klara: kolla undersidan, den ska vara gyllenbrun.
                         </p>
@@ -61,13 +61,13 @@
             <div class="row">
                 <div class="col">
                     <div>
-                        <h1>Ingredients</h1>
+                        <h1>Ingredienser</h1>
                         <div class="description-divider"></div>
                     </div>
                     <div>
                         <ul class="ingredients">
                             <li class="ingredient" th:each="ingredient : ${data.recipe.ingredients}">
-                                <span class="quantity" th:text="${data.getAmountAndUnit(ingredient)}">400.0 grams</span>
+                                <span class="quantity" th:text="${data.getIngredientListAmountAndUnit(ingredient)}">400.0 grams</span>
                                 <span th:text="${ingredient.description}">chicken-breast</span>
                             </li>
                         </ul>
@@ -75,7 +75,7 @@
                 </div>
                 <div class="col">
                     <div>
-                        <h1>Instructions</h1>
+                        <h1>Instruktioner</h1>
                         <div class="description-divider"></div>
                     </div>
                     <div class="actions">

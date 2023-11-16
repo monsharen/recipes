@@ -11,20 +11,20 @@ import org.thymeleaf.templateresolver.ITemplateResolver;
 import lombok.AllArgsConstructor;
 import se.lionsinvests.recipes.renderer.dto.RecipePageDTO;
 import se.lionsinvests.recipes.sdk.Recipe;
-import se.lionsinvests.recipes.sdk.UnitTranslator;
+import se.lionsinvests.recipes.sdk.unitconversion.UnitConverter;
 
 @AllArgsConstructor
 public class ThymeleafFrontPageRenderer implements PageRenderer<Recipe> {
 
     private final ActionTranslator actionTranslator;
-    private final UnitTranslator unitTranslator;
+    private final UnitConverter unitConverter;
     private final File thymeleafTemplate;
 
     @Override
     public String render(Recipe recipe) {
         RecipePageDTO recipePageDTO = RecipePageDTO.builder()
                 .recipe(recipe)
-                .unitTranslator(unitTranslator)
+                .unitConverter(unitConverter)
                 .actionTranslator(actionTranslator)
                 .build();
 

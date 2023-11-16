@@ -2,14 +2,14 @@ package se.lionsinvests.recipes.renderer.translation;
 
 import lombok.AllArgsConstructor;
 import se.lionsinvests.recipes.renderer.Translator;
-import se.lionsinvests.recipes.sdk.UnitTranslator;
+import se.lionsinvests.recipes.sdk.unitconversion.UnitConverter;
 import se.lionsinvests.recipes.sdk.Action;
 import se.lionsinvests.recipes.sdk.Ingredient;
 
 @AllArgsConstructor
 public class BakeActionTranslator implements Translator<Action> {
 
-    private final UnitTranslator unitTranslator;
+    private final UnitConverter unitConverter;
 
     @Override
     public String translate(Action action) {
@@ -17,6 +17,6 @@ public class BakeActionTranslator implements Translator<Action> {
         Ingredient utility = action.getIngredients()[1];
         return "Bake " + ingredient.getDescription() +
                 " in " +
-                utility.getDescription() + " at " + utility.getQuantity() + " " + unitTranslator.translate(utility.getUnit());
+                utility.getDescription() + " at " + utility.getQuantity() + " " + unitConverter.getUnitDisplayName(utility.getUnit());
     }
 }

@@ -1,5 +1,7 @@
 package se.lionsinvests.recipes.sdk;
 
+import se.lionsinvests.recipes.sdk.unitconversion.UnitConverter;
+
 import java.util.Locale;
 
 public class ActionParser {
@@ -64,7 +66,7 @@ public class ActionParser {
         Unit unit;
         String identifier;
         if (parts.length == 3) {
-            unit = Unit.parse(parts[1]);
+            unit = UnitConverter.parse(parts[1]);
             identifier = parts[2];
         } else {
             unit = Unit.QUANTITY;

@@ -4,7 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import se.lionsinvests.recipes.renderer.ActionTranslator;
-import se.lionsinvests.recipes.sdk.UnitTranslator;
+import se.lionsinvests.recipes.sdk.unitconversion.UnitConverter;
 import se.lionsinvests.recipes.sdk.Action;
 import se.lionsinvests.recipes.sdk.ActionIdentifier;
 import se.lionsinvests.recipes.sdk.Ingredient;
@@ -16,16 +16,15 @@ import se.lionsinvests.recipes.sdk.Recipe;
 public class RecipePageDTO {
 
     private final Recipe recipe;
-    private final UnitTranslator unitTranslator;
+    private final UnitConverter unitConverter;
     private final ActionTranslator actionTranslator;
     private int actionCounter = 0;
 
-    public String getAmountAndUnit(Ingredient ingredient) {
+    public String getIngredientListAmountAndUnit(Ingredient ingredient) {
         if (ingredient == null) {
             return "";
         }
-        String unit = unitTranslator.translate(ingredient.unit);
-        return String.format("%.0f", ingredient.quantity) + " " + unit;
+        return unitConverter.getUnitDisplayName(ingredient.unit, ingredient.quantity);
     }
 
     public int nextActionCount() {
@@ -62,7 +61,7 @@ public class RecipePageDTO {
 
     public String getActionDescription(Action action) {
         try {
-            return actionTranslator.translate(action);
+            return actionTranslator.translate(recipe, action);
         } catch (Exception e) {
             throw new IllegalStateException("failed to translate action " + action + " (" + actionCounter + ") for recipe " + recipe);
         }

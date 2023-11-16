@@ -4,7 +4,8 @@ import se.lionsinvests.recipes.interpreter.Interpreter;
 import se.lionsinvests.recipes.renderer.*;
 import se.lionsinvests.recipes.renderer.dto.RecipeDTO;
 import se.lionsinvests.recipes.sdk.Recipe;
-import se.lionsinvests.recipes.sdk.UnitTranslator;
+import se.lionsinvests.recipes.sdk.unitconversion.SwedishUnitTranslator;
+import se.lionsinvests.recipes.sdk.unitconversion.UnitConverter;
 
 import java.io.*;
 import java.nio.file.Files;
@@ -13,6 +14,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 import java.util.stream.Stream;
+
+import static se.lionsinvests.recipes.FileUtil.exportResource;
+import static se.lionsinvests.recipes.FileUtil.writeToFile;
 
 public class Main {
 
@@ -46,19 +50,22 @@ public class Main {
 
         List<RecipeDTO> recipeList = new ArrayList<>();
 
+
         Interpreter interpreter = new Interpreter();
-        UnitTranslator unitTranslator = new UnitTranslator();
-        ActionTranslator actionTranslator = new ActionTranslator(unitTranslator);
+
+        SwedishUnitTranslator unitTranslator = new SwedishUnitTranslator();
+        UnitConverter unitConverter = new UnitConverter(unitTranslator);
+        ActionTranslator actionTranslator = new ActionTranslator(unitConverter);
 
         Path path = recipesFolder.toPath();
-        PageRenderer<Recipe> pageRenderer = new ThymeleafRecipePageRenderer(actionTranslator, unitTranslator, recipeTemplate);
+        PageRenderer<Recipe> pageRenderer = new ThymeleafRecipePageRenderer(actionTranslator, unitConverter, recipeTemplate);
 
         try (Stream<Path> pathStream = Files.find(path, Integer.MAX_VALUE, (filePath, fileAttr) -> fileAttr.isRegularFile())) {
             pathStream.forEach(recipeFile -> {
                 Recipe recipe = getRecipe(interpreter, recipeFile);
                 String html = pageRenderer.render(recipe);
                 String targetFileName = getTargetFileName(recipeFile.toFile().getName());
-                writeRecipeToFile(outputFolder, targetFileName, html);
+                writeToFile(outputFolder, targetFileName, html);
                 System.out.println("rendered " + targetFileName);
 
                 RecipeDTO recipeDto = map(recipe, targetFileName);
@@ -85,14 +92,7 @@ public class Main {
                 .build();
     }
 
-    private static void writeRecipeToFile(File outputFolder, String targetFileName, String html) {
-        File file = new File(outputFolder, targetFileName);
-        try {
-            writeToFile(file, html);
-        } catch (IOException e) {
-            throw new IllegalStateException("failed to render file " + file.getAbsolutePath(), e);
-        }
-    }
+
 
     private static Recipe getRecipe(Interpreter interpreter, Path path) {
         try {
@@ -104,26 +104,5 @@ public class Main {
 
     private static String getTargetFileName(String originalFileName) {
         return originalFileName + ".html";
-    }
-
-    private static void writeToFile(File file, String content) throws IOException {
-        try (FileOutputStream outputStream = new FileOutputStream(file)) {
-            byte[] strToBytes = content.getBytes();
-            outputStream.write(strToBytes);
-        }
-    }
-
-    private static void exportResource(String resourceName, File outputFile) throws Exception {
-        try (InputStream stream = Main.class.getResourceAsStream(resourceName);
-             OutputStream resStreamOut = new FileOutputStream(outputFile)) {
-            int readBytes;
-            byte[] buffer = new byte[4096];
-
-            while (true) {
-                assert stream != null;
-                if (!((readBytes = stream.read(buffer)) > 0)) break;
-                resStreamOut.write(buffer, 0, readBytes);
-            }
-        }
     }
 }

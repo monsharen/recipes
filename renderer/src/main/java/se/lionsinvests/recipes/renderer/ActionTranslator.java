@@ -1,47 +1,50 @@
 package se.lionsinvests.recipes.renderer;
 
-import lombok.AllArgsConstructor;
 import se.lionsinvests.recipes.renderer.translation.*;
 import se.lionsinvests.recipes.sdk.Action;
 import se.lionsinvests.recipes.sdk.ActionIdentifier;
-import se.lionsinvests.recipes.sdk.UnitTranslator;
+import se.lionsinvests.recipes.sdk.Recipe;
+import se.lionsinvests.recipes.sdk.unitconversion.UnitConverter;
 
-@AllArgsConstructor
-public class ActionTranslator implements Translator<Action> {
+import java.util.HashMap;
+import java.util.Map;
 
-    private final UnitTranslator unitTranslator;
+import static se.lionsinvests.recipes.sdk.ActionIdentifier.*;
 
-    @Override
-    public String translate(Action action) {
-        Translator<Action> translator = getTranslator(action.getActionIdentifier());
+
+public class ActionTranslator {
+
+    private Map<ActionIdentifier, Translator<Action>> TRANSLATORS = new HashMap<>();
+
+    public ActionTranslator(UnitConverter unitConverter) {
+        TRANSLATORS.put(SET, new SetActionTranslator(unitConverter));
+        TRANSLATORS.put(BAKE, new BakeActionTranslator(unitConverter));
+        TRANSLATORS.put(MIX, new MixActionTranslator(unitConverter));
+        TRANSLATORS.put(COMBINE, new CombineActionTranslator());
+        TRANSLATORS.put(BOIL, new BoilActionTranslator(unitConverter));
+        TRANSLATORS.put(CHOP, new ChopActionTranslator());
+        TRANSLATORS.put(ROAST, new RoastActionTranslator(unitConverter));
+        TRANSLATORS.put(IMAGE, new ImageActionTranslator());
+        TRANSLATORS.put(YOUTUBE, new YoutubeActionTranslator());
+        TRANSLATORS.put(DIVIDER, new DividerActionTranslator());
+    }
+
+    public String translate(Recipe recipe, Action action) {
+        Translator<Action> translator = getTranslator(action.getActionIdentifier(), recipe);
         return translator.translate(action);
     }
 
-    private Translator<Action> getTranslator(ActionIdentifier actionIdentifier) {
-        switch (actionIdentifier) {
-            case FREE_TEXT:
-                return new FreeTextActionTranslator();
-            case SET:
-                return new SetActionTranslator(unitTranslator);
-            case BAKE:
-                return new BakeActionTranslator(unitTranslator);
-            case MIX:
-                return new MixActionTranslator(unitTranslator);
-            case COMBINE:
-                return new CombineActionTranslator();
-            case BOIL:
-                return new BoilActionTranslator(unitTranslator);
-            case CHOP:
-                return new ChopActionTranslator();
-            case ROAST:
-                return new RoastActionTranslator(unitTranslator);
-            case IMAGE:
-                return new ImageActionTranslator();
-            case YOUTUBE:
-                return new YoutubeActionTranslator();
-            case DIVIDER:
-                return new DividerActionTranslator();
+    private Translator<Action> getTranslator(ActionIdentifier actionIdentifier, Recipe recipe) {
+
+        if (FREE_TEXT.equals(actionIdentifier)) {
+            return new FreeTextActionTranslator(recipe);
         }
-        return obj -> "unsupported action";
+
+        Translator<Action> actionTranslator = TRANSLATORS.get(actionIdentifier);
+        if (actionTranslator == null) {
+            throw new IllegalArgumentException("unsupported action identifier: " + actionIdentifier);
+        }
+
+        return actionTranslator;
     }
 }

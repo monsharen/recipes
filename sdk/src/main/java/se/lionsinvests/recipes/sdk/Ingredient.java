@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import se.lionsinvests.recipes.sdk.unitconversion.UnitConverter;
 
 @NoArgsConstructor
 @AllArgsConstructor
@@ -23,7 +24,7 @@ public class Ingredient {
             this.unit = Unit.QUANTITY;
             this.description = parts[1];
         } else {
-            this.unit = Unit.parse(parts[1]);
+            this.unit = UnitConverter.parse(parts[1]);
             this.description = data.substring(parts[0].length() + 1 + parts[1].length() + 1);
         }
     }

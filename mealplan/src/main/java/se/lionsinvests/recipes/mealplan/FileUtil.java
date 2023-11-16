@@ -1,4 +1,4 @@
-package se.lionsinvests.recipes;
+package se.lionsinvests.recipes.mealplan;
 
 import java.io.*;
 import java.nio.file.Files;

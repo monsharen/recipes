@@ -1,9 +1,6 @@
 package se.lionsinvests.recipes.sdk;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.util.List;
 
@@ -11,6 +8,7 @@ import java.util.List;
 @AllArgsConstructor
 @Data
 @Builder
+@ToString
 public class Recipe {
     private Metadata metadata;
     private List<Ingredient> ingredients;

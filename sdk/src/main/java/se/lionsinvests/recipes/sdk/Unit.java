@@ -3,7 +3,9 @@ package se.lionsinvests.recipes.sdk;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
+import java.util.HashMap;
 import java.util.Locale;
+import java.util.Map;
 
 @Getter
 @AllArgsConstructor
@@ -17,18 +19,19 @@ public enum Unit {
     CENTILITRE("cl", "centilitres"),
     GRAM("g", "grams"),
     KILOGRAM("kg", "kilograms"),
-    QUANTITY("u", "units");
+    CUPS("cups", "Cups"),
+
+    PINCH("cups", "Cups"),
+    QUANTITY("u", "units"),
+
+    PIECE("piece", "piece"),
+    CLOVE("clove", "Cloves"),
+    CAN("can", "can" ),
+    JAR("jar", "jar" ),
+    PACKET("packet","packet" ),
+    DASH("dash","dash" ),
+    BOTTLE("bottle", "bottle");
 
     private final String unit;
     private final String displayName;
-
-    public static Unit parse(String value) {
-        String lowercaseValue = value.toLowerCase(Locale.ROOT);
-        for (Unit u : Unit.values()) {
-            if (u.unit.toLowerCase(Locale.ROOT).equals(lowercaseValue)) {
-                return u;
-            }
-        }
-        throw new IllegalStateException("unsupported unit '" + value + "'");
-    }
 }
