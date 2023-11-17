@@ -56,6 +56,7 @@ public class UnitConverter {
         put("nypa", Unit.DASH);
         put("nypor", Unit.DASH);
         put("flaska", Unit.BOTTLE);
+        put("klick", TABLESPOON);
     }};
 
     private final UnitTranslator unitTranslator;
