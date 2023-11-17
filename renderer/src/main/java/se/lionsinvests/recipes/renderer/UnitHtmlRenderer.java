@@ -13,11 +13,13 @@ public class UnitHtmlRenderer {
     private final UnitTranslator unitTranslator;
 
     private final Pattern quantityUnitPattern;
+    private final Pattern timePattern;
 
     public UnitHtmlRenderer(UnitTranslator unitTranslator) {
         this.unitTranslator = unitTranslator;
         String regex = getQuantityUnitRegularExpression();
         quantityUnitPattern = Pattern.compile(regex);
+        timePattern = Pattern.compile("\\b\\d+\\s+(s|minuter|minutes|min|h|timmar|hours|hrs|sekunder|seconds|sec)(?=\\s|\\.|,|;|!|\\?|\\n)");
     }
 
     public String reformatQuantitiesAndUnits(String sentence) {
@@ -33,6 +35,40 @@ public class UnitHtmlRenderer {
             double amount = Double.parseDouble(quantity);
 
             String unitDisplayName = "<span class=\"quantity\">" + unitTranslator.getUnitDisplayName(unit, amount) + "</span>";
+
+            matcher.appendReplacement(reformattedSentence, unitDisplayName);
+        }
+        matcher.appendTail(reformattedSentence);
+
+        return reformattedSentence.toString();
+    }
+
+    public String reformatTimes(String sentence) {
+        Matcher matcher = timePattern.matcher(sentence);
+        StringBuilder reformattedSentence = new StringBuilder();
+
+        while (matcher.find()) {
+            String time = matcher.group(0);
+
+            String unitDisplayName = "<span class=\"time\">" + time + "</span>";
+
+            matcher.appendReplacement(reformattedSentence, unitDisplayName);
+        }
+        matcher.appendTail(reformattedSentence);
+
+        return reformattedSentence.toString();
+    }
+
+    public String reformatTemperature(String sentence) {
+        Matcher matcher = timePattern.matcher(sentence);
+        StringBuilder reformattedSentence = new StringBuilder();
+
+        while (matcher.find()) {
+            String temperature = matcher.group(0);
+
+            // Calculate Farenheit/C/etc
+
+            String unitDisplayName = "<span class=\"temperature\">" + temperature + "</span>";
 
             matcher.appendReplacement(reformattedSentence, unitDisplayName);
         }

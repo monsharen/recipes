@@ -56,11 +56,15 @@ body {
 }
 
 .instruction .quantity {
-    background-color: #f9f5f5;
     font-weight: 600;
-    margin: 0.2em;
-    border-radius: 2rem;
-    padding: 0.2em 0.5em;
+}
+
+.instruction .temperature {
+    font-weight: 600;
+}
+
+.instruction .time {
+    font-weight: 600;
 }
 
 .actions {

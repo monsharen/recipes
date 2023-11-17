@@ -15,7 +15,7 @@ import static org.junit.jupiter.api.Assertions.assertFalse;
 public class UnitConverterTest {
 
     @Test
-    public void test() {
+    public void testSentence() {
         UnitTranslator unitTranslator = new SwedishUnitTranslator();
         UnitHtmlRenderer unitConverter = new UnitHtmlRenderer(unitTranslator);
         String sentence = "Koka upp 2 st citroner, 0.5 krm sten, 3 krm salt, 1 dl vatten, 3msk vinäger och 1 schalottenlök. Reducera till ca 1 msk återstår. 10x10 cm";
@@ -35,7 +35,7 @@ public class UnitConverterTest {
     }
 
     @Test
-    public void test2() {
+    public void testDecimals() {
         boolean result = SwedishUnitTranslator.hasMoreThanOneDecimal(0.9);
         assertFalse(result);
 
@@ -47,11 +47,26 @@ public class UnitConverterTest {
     }
 
     @Test
-    public void test3() {
+    public void testUnits() {
         String result = SwedishUnitTranslator.getUnitInMl(0.5, Unit.PINCH);
         assertEquals(" (0,15 ml)", result);
 
         result = SwedishUnitTranslator.getUnitInMl(3, Unit.PINCH);
         assertEquals(" (0,9 ml)", result);
+    }
+
+    @Test
+    public void testTime() {
+        UnitTranslator unitTranslator = new SwedishUnitTranslator();
+        UnitHtmlRenderer unitConverter = new UnitHtmlRenderer(unitTranslator);
+
+        String actual = unitConverter.reformatTimes("20 min.");
+        assertEquals("<span class=\"time\">20 min</span>.", actual);
+
+        actual = unitConverter.reformatTimes("20 minutes.");
+        assertEquals("<span class=\"time\">20 minutes</span>.", actual);
+
+        actual = unitConverter.reformatTimes("20 minuter ");
+        assertEquals("<span class=\"time\">20 minuter</span> ", actual);
     }
 }

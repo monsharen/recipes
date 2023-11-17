@@ -12,7 +12,10 @@ public class FreeTextActionTranslator implements Translator<Action> {
     private final UnitHtmlRenderer unitHtmlRenderer;
     public String translate(Action action) {
         Ingredient[] ingredients = action.getIngredients();
-        return unitHtmlRenderer.reformatQuantitiesAndUnits(ingredients[0].description);
+        String result = unitHtmlRenderer.reformatQuantitiesAndUnits(ingredients[0].description);
+        result = unitHtmlRenderer.reformatTimes(result);
+
+        return result;
     }
 
 }
