@@ -26,7 +26,7 @@ ingredients:
 actions:
   - free_text Fry chicken in oil in a pan
   - free_text Cut onion and add to pan until lightly translucent
-  - free_text Add curry paste, mashed garlic and let it fry for <b>2 mins</b>
+  - free_text Add curry paste, mashed garlic and let it fry for 2 mins
   - free_text Add peppers and turmeric
-  - free_text Add coconut milk, celery, fish sauce, chili and let it simmer for <b>10 mins</b>
+  - free_text Add coconut milk, celery, fish sauce, chili and let it simmer for 10 mins
   - free_text Add lime and coriander. Serve!

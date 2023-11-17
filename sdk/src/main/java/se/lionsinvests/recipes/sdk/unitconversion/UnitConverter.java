@@ -1,17 +1,15 @@
 package se.lionsinvests.recipes.sdk.unitconversion;
 
-import lombok.AllArgsConstructor;
+import lombok.extern.java.Log;
 import se.lionsinvests.recipes.sdk.Unit;
 
-import java.util.HashMap;
-import java.util.Locale;
-import java.util.Map;
-import java.util.regex.Matcher;
+import java.util.*;
 import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 
 import static se.lionsinvests.recipes.sdk.Unit.*;
 
-@AllArgsConstructor
+@Log
 public class UnitConverter {
 
     private static final Map<String, Unit> UNIT_KEYWORDS = new HashMap<>()
@@ -49,7 +47,7 @@ public class UnitConverter {
         put("msk", TABLESPOON);
         put("tsk", TEASPOON);
         put("krm", Unit.PINCH);
-        put("st", Unit.PIECE);
+        put("st", QUANTITY);
         put("klyfta", Unit.CLOVE);
         put("klyftor", Unit.CLOVE);
         put("burk", Unit.CAN);
@@ -60,10 +58,15 @@ public class UnitConverter {
         put("flaska", Unit.BOTTLE);
     }};
 
-
-    private static final Pattern QUANTITY_UNIT_PATTERN = Pattern.compile("(\\d+\\.?\\d*)\\s*(dl|msk)");
-
     private final UnitTranslator unitTranslator;
+
+    public UnitConverter(UnitTranslator unitTranslator) {
+        this.unitTranslator = unitTranslator;
+    }
+
+    public static Set<String> getAllUnits() {
+        return UNIT_KEYWORDS.keySet();
+    }
 
     public static Unit parse(String value) {
         String lowercaseValue = value.toLowerCase(Locale.ROOT);
@@ -85,24 +88,5 @@ public class UnitConverter {
         return getUnitDisplayName(unit,0);
     }
 
-    public String reformatQuantitiesAndUnits(String sentence) {
-        Matcher matcher = QUANTITY_UNIT_PATTERN.matcher(sentence);
-        StringBuilder reformattedSentence = new StringBuilder();
 
-        while (matcher.find()) {
-            String quantity = matcher.group(1);
-            String unitString = matcher.group(2);
-
-            Unit unit = UnitConverter.parse(unitString);
-
-            double amount = Double.parseDouble(quantity);
-
-            String unitDisplayName = unitTranslator.getUnitDisplayName(unit, amount);
-
-            matcher.appendReplacement(reformattedSentence, unitDisplayName);
-        }
-        matcher.appendTail(reformattedSentence);
-
-        return reformattedSentence.toString();
-    }
 }

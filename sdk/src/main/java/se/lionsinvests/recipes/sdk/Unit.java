@@ -20,10 +20,8 @@ public enum Unit {
     GRAM("g", "grams"),
     KILOGRAM("kg", "kilograms"),
     CUPS("cups", "Cups"),
-
     PINCH("cups", "Cups"),
     QUANTITY("u", "units"),
-
     PIECE("piece", "piece"),
     CLOVE("clove", "Cloves"),
     CAN("can", "can" ),

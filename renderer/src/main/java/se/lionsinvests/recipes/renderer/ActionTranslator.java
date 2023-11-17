@@ -16,7 +16,8 @@ public class ActionTranslator {
 
     private Map<ActionIdentifier, Translator<Action>> TRANSLATORS = new HashMap<>();
 
-    public ActionTranslator(UnitConverter unitConverter) {
+    public ActionTranslator(UnitConverter unitConverter, UnitHtmlRenderer unitHtmlRenderer) {
+        TRANSLATORS.put(FREE_TEXT, new FreeTextActionTranslator(unitHtmlRenderer));
         TRANSLATORS.put(SET, new SetActionTranslator(unitConverter));
         TRANSLATORS.put(BAKE, new BakeActionTranslator(unitConverter));
         TRANSLATORS.put(MIX, new MixActionTranslator(unitConverter));
@@ -35,10 +36,6 @@ public class ActionTranslator {
     }
 
     private Translator<Action> getTranslator(ActionIdentifier actionIdentifier, Recipe recipe) {
-
-        if (FREE_TEXT.equals(actionIdentifier)) {
-            return new FreeTextActionTranslator(recipe);
-        }
 
         Translator<Action> actionTranslator = TRANSLATORS.get(actionIdentifier);
         if (actionTranslator == null) {

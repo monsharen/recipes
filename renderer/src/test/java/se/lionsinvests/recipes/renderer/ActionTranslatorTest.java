@@ -16,7 +16,8 @@ public class ActionTranslatorTest {
     public void before() {
         SwedishUnitTranslator unitTranslator = new SwedishUnitTranslator();
         UnitConverter unitConverter = new UnitConverter(unitTranslator);
-        instance = new ActionTranslator(unitConverter);
+        UnitHtmlRenderer unitHtmlRenderer = new UnitHtmlRenderer(unitTranslator);
+        instance = new ActionTranslator(unitConverter, unitHtmlRenderer);
     }
 
     @Test

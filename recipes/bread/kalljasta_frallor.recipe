@@ -18,14 +18,16 @@ ingredients:
     - 1 dl mjöl (extra om det behövs)
 
 actions:
-    - free_text <b>På kvällen:</b> Använd en stor bunke och lös upp <b>25 g</b> jäst i <b>2 dl</b> kallt vatten. Tillsätt sedan ytterligare <b>3 dl</b> kallt vatten.
-    - free_text Tillsätt <b>2 tsk</b> salt, <b>1 msk</b> honung, <b>2 msk</b> olivolja och rör om.
-    - free_text Tillsätt sedan <b>7 dl</b> mjöl och rör ihop
-    - free_text Tillsätt successivt mer mjöl <b>(3-4 dl)</b> tills det blir en deg. Degen ska vara ganska seg & kladdig men börja släppa från kanterna.
+    - divider På Kvällen
+    - free_text Använd en stor bunke och lös upp 25 g jäst i 2 dl kallt vatten. Tillsätt sedan ytterligare 3 dl kallt vatten.
+    - free_text Tillsätt 2 tsk salt, 1 msk honung, 2 msk olivolja och rör om.
+    - free_text Tillsätt sedan 7 dl mjöl och rör ihop
+    - free_text Tillsätt successivt mer mjöl (3-4 dl) tills det blir en deg. Degen ska vara ganska seg & kladdig men börja släppa från kanterna.
     - free_text Pudra över lite mjöl på degen och plasta bunken.
-    - free_text Låt stå i rumstemperatur ca <b>30-45 min</b>. Kolla så att du ser att det börjar jäsa.
-    - free_text Ställ bunken i kylen över natten <b>(8-12 tim)</b>.
-    - free_text <b>På morgonen:</b> Sätt ugnen på <b>250 grader</b>
-    - free_text Ta bunken ur kylen, häll ut lite mjöl på bänken. Stjälp ut degen och skär med degskrapa eller kniv lite oregelbundna bitar, ca <b>10x10 cm</b>. Lägg på bakplåtspapper på plåt.
-    - free_text Grädda i ugn ca <b>12-15 min</b>.
+    - free_text Låt stå i rumstemperatur ca 30-45 min. Kolla så att du ser att det börjar jäsa.
+    - free_text Ställ bunken i kylen över natten (8-12 tim).
+    - divider På morgonen
+    - free_text Sätt ugnen på 250 grader
+    - free_text Ta bunken ur kylen, häll ut lite mjöl på bänken. Stjälp ut degen och skär med degskrapa eller kniv lite oregelbundna bitar, ca 10x10 cm. Lägg på bakplåtspapper på plåt.
+    - free_text Grädda i ugn ca 12-15 min.
     - free_text Låt svalna på galler och sedan är det bara till att hugga in!

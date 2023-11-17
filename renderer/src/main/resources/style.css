@@ -55,6 +55,14 @@ body {
     font-weight: 600;
 }
 
+.instruction .quantity {
+    background-color: #f9f5f5;
+    font-weight: 600;
+    margin: 0.2em;
+    border-radius: 2rem;
+    padding: 0.2em 0.5em;
+}
+
 .actions {
 
 }
@@ -64,10 +72,8 @@ body {
     background-color: white;
     border-radius: 0.25rem;
     list-style: none;
-    margin: 0.25em;
-    margin-bottom: 1em;
-    padding: 0.75em;
-    padding-left: 1.2em;
+    margin: 0.25em 0.25em 1em;
+    padding: 0.75em 0.75em 0.75em 1.2em;
     box-shadow: 0 0.0625rem 0.125rem 0 rgb(0 0 0 / 6%);
     font-size: 1.1em;
 }
@@ -76,10 +82,8 @@ body {
     background-clip: border-box;
     border-radius: 0.25rem;
     list-style: none;
-    margin: 0.25em;
-    margin-bottom: 1em;
-    padding: 0.75em;
-    padding-left: 1.2em;
+    margin: 0.25em 0.25em 1em;
+    padding: 0.75em 0.75em 0.75em 1.2em;
     font-size: 1.1em;
 }
 

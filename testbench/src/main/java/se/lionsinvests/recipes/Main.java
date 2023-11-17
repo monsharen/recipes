@@ -55,7 +55,8 @@ public class Main {
 
         SwedishUnitTranslator unitTranslator = new SwedishUnitTranslator();
         UnitConverter unitConverter = new UnitConverter(unitTranslator);
-        ActionTranslator actionTranslator = new ActionTranslator(unitConverter);
+        UnitHtmlRenderer unitHtmlRenderer = new UnitHtmlRenderer(unitTranslator);
+        ActionTranslator actionTranslator = new ActionTranslator(unitConverter, unitHtmlRenderer);
 
         Path path = recipesFolder.toPath();
         PageRenderer<Recipe> pageRenderer = new ThymeleafRecipePageRenderer(actionTranslator, unitConverter, recipeTemplate);
