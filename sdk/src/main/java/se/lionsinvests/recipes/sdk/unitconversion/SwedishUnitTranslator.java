@@ -90,20 +90,36 @@ public class SwedishUnitTranslator implements UnitTranslator {
         return unit.getDisplayName();
     }
 
-    private static String getUnitInMl(double quantity, Unit unit) {
+    public static String getUnitInMl(double quantity, Unit unit) {
         Double ml = UNIT_ML_CONVERSION.get(unit);
 
         if (ml != null) {
-            double amount = quantity * ml;
+            double result = Math.round(quantity * ml * 100.0) / 100.0;
 
-            if (hasFractionalPart(amount)) {
-                return String.format(" (%.1f ml)", amount);
+            if (hasFractionalPart(result)) {
+
+                if (hasMoreThanOneDecimal(result)) {
+                    return String.format(" (%.2f ml)", result);
+                }
+
+                return String.format(" (%.1f ml)", result);
             }
 
-            return String.format(" (%.0f ml)", amount);
+            return String.format(" (%.0f ml)", result);
         }
 
         return "";
+    }
+
+    public static boolean hasMoreThanOneDecimal(double number) {
+        // Multiply by 10 and cast to int to truncate after one decimal place
+        int truncated = (int)(number * 10);
+
+        // Divide by 10.0 to get back to the original scale
+        double oneDecimalNumber = truncated / 10.0;
+
+        // Compare with the original number
+        return number != oneDecimalNumber;
     }
 
     private static boolean hasFractionalPart(double value) {

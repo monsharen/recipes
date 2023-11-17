@@ -42,7 +42,10 @@ public class UnitHtmlRenderer {
     }
 
     private String getQuantityUnitRegularExpression() {
-        return "(\\d+\\.?\\d*)\\s*(" +
+
+        String numberPattern = "(\\d+[,.]?\\d*)";
+
+        return numberPattern + "\\s*(" +
                 UnitConverter.getAllUnits().stream()
                         .map(Pattern::quote) // Quote each key to handle special regex characters
                         .collect(Collectors.joining("|"))

@@ -1,9 +1,15 @@
 package se.lionsinvests.recipes.renderer;
 
 import lombok.extern.java.Log;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import se.lionsinvests.recipes.sdk.Unit;
 import se.lionsinvests.recipes.sdk.unitconversion.SwedishUnitTranslator;
 import se.lionsinvests.recipes.sdk.unitconversion.UnitTranslator;
+
+import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 
 @Log
 public class UnitConverterTest {
@@ -12,10 +18,40 @@ public class UnitConverterTest {
     public void test() {
         UnitTranslator unitTranslator = new SwedishUnitTranslator();
         UnitHtmlRenderer unitConverter = new UnitHtmlRenderer(unitTranslator);
-        String sentence = "Koka upp 2 st citroner, 3 krm salt, 1 dl vatten, 3msk vinäger och 1 schalottenlök. Reducera till ca 1 msk återstår. 10x10 cm";
-        String result = unitConverter.reformatQuantitiesAndUnits(sentence);
+        String sentence = "Koka upp 2 st citroner, 0.5 krm sten, 3 krm salt, 1 dl vatten, 3msk vinäger och 1 schalottenlök. Reducera till ca 1 msk återstår. 10x10 cm";
+        String actual = unitConverter.reformatQuantitiesAndUnits(sentence);
 
+        String expected = "Koka upp " +
+                "<span class=\"quantity\">2 st</span>citroner, " +
+                "<span class=\"quantity\">0,5 kryddmått (0,15 ml)</span>sten, " +
+                "<span class=\"quantity\">3 kryddmått (0,9 ml)</span>salt, " +
+                "<span class=\"quantity\">1 deciliter (100 ml)</span>vatten, " +
+                "<span class=\"quantity\">3 matskedar (45 ml)</span>vinäger " +
+                "och 1 schalottenlök. Reducera till ca " +
+                "<span class=\"quantity\">1 matsked (15 ml)</span>återstår. 10x10 cm";
+        assertEquals(expected, actual);
         log.info(sentence);
-        log.info(result);
+        log.info(actual);
+    }
+
+    @Test
+    public void test2() {
+        boolean result = SwedishUnitTranslator.hasMoreThanOneDecimal(0.9);
+        assertFalse(result);
+
+        result = SwedishUnitTranslator.hasMoreThanOneDecimal(0);
+        assertFalse(result);
+
+        result = SwedishUnitTranslator.hasMoreThanOneDecimal(0.91);
+        Assertions.assertTrue(result);
+    }
+
+    @Test
+    public void test3() {
+        String result = SwedishUnitTranslator.getUnitInMl(0.5, Unit.PINCH);
+        assertEquals(" (0,15 ml)", result);
+
+        result = SwedishUnitTranslator.getUnitInMl(3, Unit.PINCH);
+        assertEquals(" (0,9 ml)", result);
     }
 }
