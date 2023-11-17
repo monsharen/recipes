@@ -15,11 +15,14 @@ public class UnitHtmlRenderer {
     private final Pattern quantityUnitPattern;
     private final Pattern timePattern;
 
+    private final Pattern temperaturePattern;
+
     public UnitHtmlRenderer(UnitTranslator unitTranslator) {
         this.unitTranslator = unitTranslator;
         String regex = getQuantityUnitRegularExpression();
         quantityUnitPattern = Pattern.compile(regex);
         timePattern = Pattern.compile("\\b\\d+\\s+(s|minuter|minutes|min|h|timmar|hours|hrs|sekunder|seconds|sec)(?=\\s|\\.|,|;|!|\\?|\\n)");
+        temperaturePattern = Pattern.compile("\\b\\d+\\s*°?\\s*(C|Celsius|F|Fahrenheit)\\b(?=\\s|\\.|,|;|!|\\?|\\n)");
     }
 
     public String reformatQuantitiesAndUnits(String sentence) {
@@ -60,13 +63,13 @@ public class UnitHtmlRenderer {
     }
 
     public String reformatTemperature(String sentence) {
-        Matcher matcher = timePattern.matcher(sentence);
+        Matcher matcher = temperaturePattern.matcher(sentence);
         StringBuilder reformattedSentence = new StringBuilder();
 
         while (matcher.find()) {
             String temperature = matcher.group(0);
 
-            // Calculate Farenheit/C/etc
+            // Recalculate Farenheit/C/etc
 
             String unitDisplayName = "<span class=\"temperature\">" + temperature + "</span>";
 

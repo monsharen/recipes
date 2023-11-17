@@ -14,8 +14,7 @@ public class FreeTextActionTranslator implements Translator<Action> {
         Ingredient[] ingredients = action.getIngredients();
         String result = unitHtmlRenderer.reformatQuantitiesAndUnits(ingredients[0].description);
         result = unitHtmlRenderer.reformatTimes(result);
-
-        return result;
+        return unitHtmlRenderer.reformatTemperature(result);
     }
 
 }

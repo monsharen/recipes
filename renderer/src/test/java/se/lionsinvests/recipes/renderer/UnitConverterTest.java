@@ -7,7 +7,6 @@ import se.lionsinvests.recipes.sdk.Unit;
 import se.lionsinvests.recipes.sdk.unitconversion.SwedishUnitTranslator;
 import se.lionsinvests.recipes.sdk.unitconversion.UnitTranslator;
 
-import static org.junit.Assert.assertTrue;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 
@@ -68,5 +67,20 @@ public class UnitConverterTest {
 
         actual = unitConverter.reformatTimes("20 minuter ");
         assertEquals("<span class=\"time\">20 minuter</span> ", actual);
+    }
+
+    @Test
+    public void testTemperature() {
+        UnitTranslator unitTranslator = new SwedishUnitTranslator();
+        UnitHtmlRenderer unitConverter = new UnitHtmlRenderer(unitTranslator);
+
+        String actual = unitConverter.reformatTemperature("200 C.");
+        assertEquals("<span class=\"temperature\">200 C</span>.", actual);
+
+        actual = unitConverter.reformatTemperature("200 Celsius.");
+        assertEquals("<span class=\"temperature\">200 Celsius</span>.", actual);
+
+        actual = unitConverter.reformatTemperature("200 F ");
+        assertEquals("<span class=\"temperature\">200 F</span> ", actual);
     }
 }
