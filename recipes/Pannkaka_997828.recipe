@@ -1,0 +1,23 @@
+metadata:
+  name: Pannkaka
+  images:
+    - https://static.cdn-expressen.se/images/30/98/3098601fa0f3495594bf1b45be21c882/1x1/1920@80.jpg
+  description: From https://www.ica.se/recept/pannkakor-grundsmet-2083/ 
+  types: [Main]
+  estimatedPrepTime: 30 min
+  servings: 8 pannkakor
+
+ingredients:
+ - 2.5 dl vetemjöl
+ - 0.5 tsk salt
+ - 6 dl mjölk
+ - 3 u ägg
+ - 50 g smör
+
+actions:
+ - free_text Smält 50 g smör i en stekpanna.
+ - free_text Blanda 2.5 dl mjöl, 0.5 tsk salt, 3 st ägg och 1 dl mjölk i en bunke. 
+ - free_text Vispa tills smeten är slät. 
+ - free_text Häll i 5 dl mjölk, det smälta smöret och vispa tills väl blandat.
+ - free_text Låt smeten vila ca 10 minuter.
+ - free_text Stek pannkakorna
