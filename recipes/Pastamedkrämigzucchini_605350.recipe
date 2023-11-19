@@ -1,0 +1,27 @@
+metadata:
+  name: Pasta med krämig zucchini
+  images:
+    - https://d2emrwntfjrhkd.cloudfront.net/content/uploads/2016/04/141_003090-e1459968014322.jpg
+  description: From https://ekoladan.se/recept/pasta-med-kramig-zucchini 
+  types: [Main,Pasta]
+  estimatedPrepTime: 30 min
+  servings: 2 portioner
+
+ingredients:
+ - 400 g pasta, t ex penne eller spaghetti
+ - 1 u stor zucchini
+ - 1 u vitlöksklyfta
+ - 1 msk smör
+ - 2 msk crème fraiche eller grädde
+ - 1 nypa salt
+ - 1 nypa peppar
+ - 1 dl riven parmesanost
+
+actions:
+ - free_text Koka pastan “al dente” enligt förpackningens anvisningar.
+ - free_text Riv zucchinin grovt på ett rivjärn och hacka vitlöken. 
+ - free_text Fräs zucchiniraspet och vitlöken i smör tills de är mjuka och har fått lite färg. 
+ - free_text Vänd ner så mycket crème fraiche att zucchinin binds ihop till en krämig sås. 
+ - free_text Värm och smaksätt med salt och peppar. 
+ - free_text Vänd ner såsen i den avrunna pastan.
+ - free_text Servera med parmesanost.
