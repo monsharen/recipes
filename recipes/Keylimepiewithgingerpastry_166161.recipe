@@ -6,36 +6,45 @@ metadata:
   types: [Dessert]
 
 ingredients:
- - 400 g plain flour
- - 80 g icing sugar
- - 4 tsp ground ginger
- - 1 u pinch salt
- - 250 g cold unsalted butter, cut into cubes
- - 3 u free-range eggs, yolks only
- - 50 ml ice cold water
- - 1 tbsp olive oil (if needed)
- - 800 g condensed milk
- - 240 ml freshly squeezed lime juice (about 7 limes)
- - 4 tsp grated lime zest (about 7 limes), plus extra for garnish
- - 4 u eggs, separated
- - 225 g sugar
- - 3 u lumps of stem ginger, chopped
- - 1 u lime, very thinly sliced
- - 1 tsp grated plain chocolate
- - 6 u sprigs mint
- - 1 u icing sugar
+ - 400 g mjöl
+ - 80 g florsocker
+ - 1 u florsocker (extra om det behövs)
+ - 4 tsp riven ingefära
+ - 3 u skivad syltad ingefära
+ - 1 nypa salt
+ - 250 g osaltat smör, kuber
+ - 3 u ägggulor
+ - 50 ml iskallt vatten
+ - 1 tbsp olivolja (om det behövs)
+ - 800 g kondenserad mjölk
+ - 240 ml färskpressad limejuice (ca 7 limes)
+ - 4 tsp rivet limeskal (ca 7 limes), plus extra för garnering
+ - 1 u lime, tunt skivad
+ - 4 u äggvitor
+ - 225 g socker
+ - 1 tsp riven choklad
+ - 6 u mynta, kvistar med blad
+
 
 actions:
- - free_text For the sweet ginger pastry, sift the flour, icing sugar, ground ginger and salt into a large mixing bowl. Rub in the cubed butter until the mixture resembles breadcrumbs.
- - free_text Mix the egg yolk into the water and add into the flour mixture, stirring with your hands until the mixture just comes together as a dough. Add olive oil if the dough is a little dry. Wrap the pastry in cling film and set aside in the fridge for 20-30 minutes.
- - free_text Preheat the oven to 200C/400F/Gas 6.
- - free_text Roll out the dough on a lightly floured surface to the thickness of a pound coin. Drape the dough over the rolling pin and use it to transfer the pastry to a 30cm/12in tart case. Press the pastry into the tin, ensuring there are no gaps in the corner. Allow the excess pastry to overhang the tin. Cover with clingfilm and chill for 20 minutes.
- - free_text Prick the bottom of the pastry case with a fork. Line the case with baking paper and weigh it down with baking beans, rice or lentils. Bake blind for 15 minutes, then remove the baking beans and paper and bake for a further 5-10 minutes. Set aside to cool on a rack.
- - free_text Reduce the oven temperature to 170C/325F/Gas 3.
- - free_text For the lime filling, in a large mixing bowl whisk together the condensed milk with the lime juice, lime zest and egg yolks until the mixture thickens. Stir in the chopped stem ginger. Taste the filling, and fold in some icing sugar, if needed.
- - free_text Pour mixture into the pie crust, smooth the top with a palette knife and bake for 15-20 minutes. The pie is ready when the filling has a slight wobble or when the temperature in the centre has reached 70C when checked with a probe thermometer.
- - free_text Set aside to cool for half an hour in the baking tin, then chill the pie in a refrigerator for as long as possible.
- - free_text Place the sugar in a heavy-based deep saucepan with six tablespoons water over a medium heat. Bring the mixture to the boil without stirring, brushing down any sugar crystals on the side of the pan with a wet pastry brush. Remove the syrup from the heat when it reaches 120C/248F (the firm ball stage).
- - free_text In a free-standing mixer, whisk the egg whites until stiff peaks form when the whisk is removed. While whisking, pour the boiling syrup onto the egg whites in a thin, steady stream, being careful not to pour the syrup on to the whisk as it may splash onto your hands. Continue to whisk the egg whites until the mixture is stiff, shiny and stable.
- - free_text Place the meringue into a piping bag fitted with a 1.5cm round nozzle.
- - free_text Once the pie is chilled, sprinkle the reserved lime zest and grated chocolate over the top of the pie. Pipe the meringue around the edge of the pie in generous swirls. Using a cook’s blowtorch, gently caramelise the meringue so that the top is light golden-brown. Finish by placing the lime slices and mint sprigs on the meringue and dust over some icing sugar.
+ - divider Pajbotten
+ - free_text Sikta 400 g mjöl, 80 g florsocker, 4 tsk riven ingefära och en nypa salt i en stor mixerskål. Blanda i det tärnade smöret tills blandningen liknar brödsmulor.
+ - free_text Blanda ner 3 äggulor i 50 ml iskallt vatten och tillsätt i mjölblandningen. Rör om med händerna tills blandningen precis går ihop till en deg. Tillsätt 1 tbsp olivolja om degen är lite torr. Slå in degen i matfilm och ställ i kylen i 20-30 minuter.
+ - free_text Sätt ugnen på 200 C.
+ - free_text Kavla ut degen på en lätt mjölad yta till ca 3 mm tjocklek. Drapera degen över kaveln och använd den för att överföra degen till en 30 cm tårtform. Tryck ut degen i formen, se till att det inte finns några luckor i hörnet. Låt överskottet av degen hänga över formen. 
+ - free_text Täck med plastfilm och kyl i 20 minuter.
+ - free_text Nagga botten på formen med en gaffel. Klä formen med bakplåtspapper och väg ner den med bakbönor, ris eller linser. Grädda blindt i 15 minuter, ta sedan bort bakbönor och papper och grädda i ytterligare 5-10 minuter. Ställ åt sidan för att svalna på galler.
+ - free_text Sänk ugnstemperaturen till 170 C.
+ - divider Fyllning
+ - free_text Vispa ihop 800 g kondenserad mjölk med 240 ml limejuice, 4 tsp rivet limeskal och 4 äggulor tills blandningen tjocknar i en stor bunke. Rör ner 4 tsp riven ingefära. Smaka av fyllningen och vänd i lite florsocker om det behövs.
+ - divider Komponera botten
+ - free_text Häll blandningen i pajskalet, jämna till toppen med en palettkniv och grädda i 15-20 minuter. Pajen är klar när fyllningen har en liten vinkling eller när temperaturen i mitten har nått 70C vid kontroll med en sondtermometer.
+ - free_text Ställ åt sidan för att svalna 30 min i bakformen. Kyl sedan pajen i kylen så länge som möjligt.
+ - divider Maräng
+ - free_text Häll sockret i en tjock djup kastrull med 6 tbsp vatten och värm på medelhög värme. Koka upp blandningen utan att röra om, borsta ner eventuella sockerkristaller på sidan av pannan med en våt bakelseborste. Ta bort sirapen från värmen när den når 120 C (det fasta kulstadiet).
+ - free_text Vispa 4 äggvitor i en fristående mixer tills det bildas styva toppar när visp tas bort. Under vispningen häller du den kokande sirapen på äggvitorna i en tunn, jämn stråle. Fortsätt att vispa äggvitorna tills blandningen är styv, blank och stabil.
+ - free_text Lägg marängen i en spritspåse försedd med ett 1.5 cm runt munstycke.
+ - divider Bygg ihop pajen
+ - free_text När pajen har svalnat, strö det reserverade limeskalet och riven choklad över toppen av pajen. 
+ - free_text Sprid marängen runt kanten på pajen i generösa virvlar. Använd en köksbrännare och karamellisera försiktigt marängen så att toppen blir ljust gyllenbrun.
+ - free_text Avsluta med att lägga limeskivorna och myntakvistarna på marängen och pudra över lite florsocker.
