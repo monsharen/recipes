@@ -1,0 +1,22 @@
+metadata:
+  name: Gin Cosmopolitan
+  images:
+    - https://ik.imagekit.io/bhug69xts/tr:h-1200,w-1200/cosmopolitan.png
+  description: From https://www.callmepmc.com/gin-cosmopolitan/ 
+  types: [Drink]
+  estimatedPrepTime: 5 mins
+  servings: 1 serving
+
+ingredients:
+ - 45 ml St. Giles gin
+ - 30 ml Cointreau
+ - 15 ml Lime juice
+ - 30 ml Cranberry juice
+ - 1 s Lime wheel for garnish
+ - 1 s salt for glasses
+
+actions:
+ - free_text Combine lime juice, cranberry juice, gin and cointreau in an ice-filled cocktail shaker
+ - free_text Shake until outside of shaker gets cold. Strain into chilled martini glass
+ - free_text Twist citrus peel over glass and dip rim in salt.
+ - free_text Garnish the glass with a lime wedge
