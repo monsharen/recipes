@@ -1,0 +1,25 @@
+metadata:
+  name: Kavring
+  images:
+    - https://images.recept.se/images/recipes/lattbakat-kavring_7780.jpg?fit=crop&crop=focalpoint&auto=format&fp-x=0.5&fp-y=0.59088165030992&fp-z=1&w=800&h=570&auto=format
+  description: From Https://www.google.se 
+  types: [Bread]
+  estimatedPrepTime: 1 h
+  servings: 1 bröd
+
+ingredients:
+ - 100 g fint rågmjöl
+ - 240 g vetemjöl
+ - 2 tsk bikarbonat
+ - 0.5 tsk salt
+ - 3 dl naturell filmjölk
+ - 2 dl mörk sirap
+
+actions:
+ - free_text Sätt ugnen på 175 C, över- och undervärme
+ - free_text Blanda ihop alla torra ingredienser i en bunke
+ - free_text Tillsätt filmjölk och sirap och rör om till en tjock smet
+ - free_text Sätt ett bakplåtspapper i en avlång limpform som rymmer minst 1.2 liter
+ - free_text Häll över smeten i formen och jämna ut
+ - free_text Ställ in formen mitt i ugnen och grädda i 55 min
+ - free_text Låt svalna innan det äts
