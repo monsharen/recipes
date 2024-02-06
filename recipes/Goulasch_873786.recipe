@@ -14,9 +14,9 @@ ingredients:
  - 3 st selleristjälkar
  - 3 st rotselleri (parsnip)
  - 1 st färsk spansk peppar
- - 2 tsk brödkummin
- - 1.5 msk paprikapulver
- - 2 msk tomatpuré
+ - 2 tsp brödkummin
+ - 1.5 tbsp paprikapulver
+ - 2 tbsp tomatpuré
  - 600 ml buljong
  - 400 g chopped tomatoes
  - 5 st röda paprikor
@@ -25,10 +25,10 @@ ingredients:
  - 1 st salt
  - 1 st svartpeppar
  - 2 st lagerblad
- - 
 
 actions:
  - free_text Skär köttet i 3 cm stora tärningar. Grovhacka lök, vitlök, selleri och chilifrukt (behåll kärnorna om du vill ha en extra stark gryta) och fräs tillsammans med köttbitarna i olja i en tjockbottnad gryta.
  - free_text När köttet brynts och löken mjuknat tillsätter du kummin, lagerblad, paprikapulver och tomatpuré och späder sedan med buljongen.
  - free_text Rensa paprikorna och dela hälften i små tärningar, hälften i lite större bitar. Lägg de små tärningarna i grytan och låt allt sjuda under lock i ca en timme.
- - free_text Skala och skiva potatisen i kuber. Lägg i potatisen och de större paprikabitarna och sjud i ytterligare 30 minuter. Smaka av med salt och svartpeppar.
+ - free_text Skala och skiva potatisen i kuber. Lägg i potatisen och de större paprikabitarna och sjud i ytterligare 30 minuter.
+ - free_text Smaka av med salt och svartpeppar.
