@@ -64,7 +64,13 @@ public class Main {
         try (Stream<Path> pathStream = Files.find(path, Integer.MAX_VALUE, (filePath, fileAttr) -> fileAttr.isRegularFile())) {
             pathStream.forEach(recipeFile -> {
                 Recipe recipe = getRecipe(interpreter, recipeFile);
-                String html = pageRenderer.render(recipe);
+                String html;
+                try {
+                    html = pageRenderer.render(recipe);
+                } catch (Exception e) {
+                    throw new IllegalStateException("failed to render recipe " + recipeFile.toFile().getName(), e);
+                }
+
                 String targetFileName = getTargetFileName(recipeFile.toFile().getName());
                 writeToFile(outputFolder, targetFileName, html);
                 System.out.println("rendered " + targetFileName);
