@@ -37,8 +37,6 @@ merge_request:
     - git checkout main
     - git merge --no-ff "$CI_COMMIT_REF_NAME" || exit 0
     - git push origin main
-  only:
-    - branches
   rules:
     - if: '$CI_PIPELINE_SOURCE == "push" && $CI_COMMIT_BRANCH != "main" && $CI_COMMIT_BRANCH != $CI_DEFAULT_BRANCH && $CI_PIPELINE_SOURCE != "web"'
   after_script:
