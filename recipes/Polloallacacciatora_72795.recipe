@@ -2,7 +2,7 @@ metadata:
   name: Pollo alla cacciatora
   images:
     - https://www.bjarefagel.se/wp-content/uploads/2020/07/Pollo-alla-Cacciatora-%E2%80%93-Toscanajagarens-kyckling_web.jpg
-  description: From https://www.bjarefagel.se/recept/pollo-alla-cacciatora/ 
+  description:  Servera med bred bandpasta, parmesan och bröd. From https://www.bjarefagel.se/recept/pollo-alla-cacciatora/ 
   types: [Main]
   estimatedPrepTime: 1 h
   servings: 4
@@ -22,6 +22,7 @@ ingredients:
  - 1 nypa salt
  - 5 pepparkorn
  - 1 tsk harissa
+ - 1 st riven parmesan till servering
 
 actions:
  - free_text Ta två-tre rejäla kvistar av din rosmarin och stöt tillsammans med vitlöken och svartpepparkorn. Häll olivolja i massan, riv i lite citronskal och salta.
