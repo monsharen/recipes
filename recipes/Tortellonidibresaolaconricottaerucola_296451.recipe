@@ -1,0 +1,27 @@
+metadata:
+  name: Tortelloni di bresaola con ricotta e rucola
+  images:
+    - https://i.imgur.com/v53Dgf9.jpeg
+  description: From https://blog.giallozafferano.it/rossellainpadella/ricetta-tortelloni-di-bresaola-con-ricotta-e-rucola/ 
+  types: [Starter]
+  estimatedPrepTime: 20 min
+  servings: 12 portioner
+
+ingredients:
+ - 100 g bresaola (a fette)
+ - 40 g ruccola
+ - 1 u salt
+ - 1 u muskot
+ - 1 u rivet citronskal
+ - 500 g ricotta
+ - 30 g finriven grana padano 
+ - 20 g grovriven grana padano för dekoration
+ - 1 u peppar
+ - 1 u olivolja
+
+actions:
+ - free_text Tvätta 40 g ruccolasallad och klappa den torr med absorberande papper, och hacka den till sist med en kniv.
+ - free_text Blanda 500 g ricotta med 30 g finriven parmesan, en nypa salt, peppar och muskotnöt och den hackade ruccolan i en skål.
+ - free_text Lägg en sked smet på varje skiva bresaola, stäng skivan i två delar genom att trycka på kanterna så att de fäster. Stäng sedan inåt på fyllningssidan och försegla förslutningen. Det ska se ut som en tortellino/tortellone.
+ - free_text Lägg upp all tortellon på ett fat, dekorera med parmesanflingor, en näve hackad rucola, rivet citronskal och en klick extra virgin olivolja.
+ - free_text Låt den om möjligt vila några minuter i kylen innan servering.
