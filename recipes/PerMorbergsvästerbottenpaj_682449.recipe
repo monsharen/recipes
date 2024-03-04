@@ -1,0 +1,28 @@
+metadata:
+  name: Per Morbergs västerbottenpaj
+  images:
+    - https://i.imgur.com/eRhZ5BM.png
+  description: From  
+  types: [Main]
+  estimatedPrepTime: 45 min
+  servings: 4
+
+ingredients:
+ - 100 g smör
+ - 100 g vetemjöl (1 2/3 dl)
+ - 2 msk kallt vatten
+ - 200 g västerbottensost, grovriven
+ - 2 ägg
+ - 2 dl mjölk eller vispgrädde
+ - 1 st Salt och nymalen peppar
+
+actions:
+ - free_text Värm ugnen till 200 C. 
+ - free_text Gör pajdeg
+ - free_text Hacka samman 100 g smör och 100 g mjöl till en smulig massa, eller mixa i en matberedare.
+ - free_text Tillsätt 2 msk vatten och blanda snabbt ihop till en deg.
+ - free_text Tryck ut degen i en pajform, ca 24 cm i diameter, och ställ den i kylen i 30 min.
+ - free_text Bygg ihop pajen
+ - free_text Picka pajskalet med en gaffel och förgrädda det mitt i ugnen i ca 10 minuter. Låt svalna.
+ - free_text Fördela 200 g västerbottensost i pajskalet.
+ - free_text Blanda 2 ägg, 2 dl mjölk, salt och peppar, häll det över osten och grädda pajen mitt i ugnen i ca 30 minuter.
