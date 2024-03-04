@@ -18,11 +18,11 @@ ingredients:
 
 actions:
  - free_text Värm ugnen till 200 C. 
- - free_text Gör pajdeg
+ - divider Gör pajdeg
  - free_text Hacka samman 100 g smör och 100 g mjöl till en smulig massa, eller mixa i en matberedare.
  - free_text Tillsätt 2 msk vatten och blanda snabbt ihop till en deg.
  - free_text Tryck ut degen i en pajform, ca 24 cm i diameter, och ställ den i kylen i 30 min.
- - free_text Bygg ihop pajen
+ - divider Bygg ihop pajen
  - free_text Picka pajskalet med en gaffel och förgrädda det mitt i ugnen i ca 10 minuter. Låt svalna.
  - free_text Fördela 200 g västerbottensost i pajskalet.
  - free_text Blanda 2 ägg, 2 dl mjölk, salt och peppar, häll det över osten och grädda pajen mitt i ugnen i ca 30 minuter.
