@@ -1,0 +1,46 @@
+metadata:
+  name: Prinsesstårta med choklad, pistasch, kardemumma och hallon
+  images:
+    - https://i.imgur.com/skoEzB2.png
+  description: From https://www.dn.se/mat-dryck/recept/prinsesstarta-med-choklad-pistasch-kardemumma-och-hallon/ 
+  types: [Dessert]
+  estimatedPrepTime: 1 tim 30 min
+  servings: 10 bitar
+
+ingredients:
+ - 4 st äggvitor
+ - 4 st äggulor
+ - 1 st ägg
+ - 1.5 dl socker
+ - 1.5 dl vetemjöl
+ - 1 tsk stött kardemumma
+ - 150 g mörk choklad
+ - 4 dl grädde 
+ - 300 g färska eller tinade hallon
+ - 2 dl grädde
+ - 250 g vit marsipan och eventuellt 1 tsk florsocker
+ - 1 st Hackade pistaschnötter 
+
+actions:
+ - free_text Gör Botten
+ - free_text Värm ugnen till 200 C
+ - free_text Vispa 4 st äggulor, 1 helt ägg och 1.5 dl socker i en egen bunke tills smeten blir porös.
+ - free_text Blanda ner 1.5 dl vetemjöl, därefter 1 tsk stött kardemumma.
+ - free_text Vispa 4 st äggvitorna till hårt skum. 
+ - free_text Vänd ner äggvitorna i blandningen och rör om försiktigt. Inte för hårt och inte för länge.
+ - free_text Grädda i 20 minuter i en smord, rund form (ca 20 centimeter i diameter).
+ - free_text Stjälp upp kakan och låt den svalna under bakduk.
+ - free_text Gör mousse
+ - free_text Smält 150 g mörk choklad i vattenbad eller i mikrovågsugn.
+ - free_text Värm 1.5 dl grädde till 65 grader och blanda i chokladen. Låt blandningen svalna.
+ - free_text Vispa 2.5 dl grädde hårt.
+ - free_text Blanda ner den svala chokladgräddsmeten i den hårt vispade grädden och låt den stå i kylen tills du ska använda den.
+ - free_text Bygg ihop tårtan
+ - free_text Dela den svalnade kakan så att du får två bottnar.
+ - free_text Täck hela den första botten med 150 g färska eller tinade hallon.
+ - free_text Lägg på ett tjockt lager chokladmousse.
+ - free_text Lägg på nästa botten och täck igen med hallon. Toppa med ganska hårt vispad grädde. 
+ - free_text Kavla ut 150 g marsipan och använd florsocker så att marsipanen inte fastnar på bord eller kavel. Täck hela kakan med marsipan. 
+ - free_text Skär med en vass kniv längst ner runt hela tårtan och skjut in kanterna på marsipanen. 
+ - free_text Hacka pistaschnötter och strö dem över marsipantäcket. 
+ - free_text Låt tårtan stå kallt tills servering.
