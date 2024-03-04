@@ -1,0 +1,19 @@
+metadata:
+  name: Kycklingmarinad
+  images:
+    - https://i.imgur.com/ZZYo2QX.png
+  description: From  
+  types: [Marinade]
+  estimatedPrepTime: 2 h
+  servings: Till 1 kg kyckling
+
+ingredients:
+ - 2 st vitlöksklyftor
+ - 1 msk riven ingefära
+ - 0.5 dl japansk soja
+ - 0.5 dl flytande honung
+ - 2 msk olja
+
+actions:
+ - free_text Blanda alla ingredienser
+ - free_text Låt stå i minst 2 timmar
