@@ -1,0 +1,36 @@
+metadata:
+  name: Grillad ananas med rom & vit chokladmousse
+  images:
+    - https://i.imgur.com/Y8uxwxS.png
+  description: From  
+  types: [Dessert]
+  estimatedPrepTime: 1 h
+  servings: 4 st
+
+ingredients:
+ - 1 st ananas, eller burkananas
+ - 1 dl ljus sirap
+ - 2 msk mörk rom
+ - 100 g vit choklad
+ - 1.5 dl vispgrädde
+ - 0.5 st kruka mynta
+ - 2 msk strösocker
+ - 10 st grillspett
+
+actions:
+ - divider Chokladmousse
+ - free_text Hacka 100 g vit choklad och smält den över vattenbad eller i mikro. 
+ - free_text Vispa 1.5 dl grädde och vänd ner 0.5 dl av den vispade grädden i den smälta chokladen.
+ - free_text Vänd sedan ner resten av grädden och blanda runt. 
+ - free_text Ställ moussen i kylen ca 1 timme.
+ - divider Romsås
+ - free_text Blanda sirap och rom.
+ - free_text Myntasocker 
+ - free_text Mortla samman mynta och socker.
+ - divider Grillad ananas
+ - free_text Skala ananasen och skär bort den grova stocken i mitten. Skär ananasen i klyftor. 
+ - free_text Trä upp dem på spett. 
+ - free_text Grilla ananasspetten ca 2-3 min på varje sida, tills de fått färg. 
+ - free_text Lägg dem på ett fat och ringla över romsirapen. 
+ - free_text Strö på myntasockret. 
+ - free_text Servera med den vita chokladmoussen.
