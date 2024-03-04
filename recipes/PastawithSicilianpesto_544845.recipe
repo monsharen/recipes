@@ -1,0 +1,27 @@
+metadata:
+  name: Pasta with Sicilian pesto
+  images:
+    - https://i.imgur.com/m9ctrbW.png
+  description: From  
+  types: [Pasta,Main]
+  estimatedPrepTime: 30 min
+  servings: 4
+
+ingredients:
+ - 50 g sliced sundried tomatoes
+ - 2 st fresh tomatoes
+ - 40 g basil
+ - 70 g of extra virgin olive oil
+ - 1 st handful of toasted almonds
+ - 0.5 st handful of raisins
+ - 1 st clove of garlic
+ - 200 g ricotta
+ - 40 g parmesan cheese
+ - 400 g pasta Strozzapreti or similar
+
+actions:
+ - free_text Koka pastavatten
+ - free_text Rosta en handful mandlar i stekpanna
+ - free_text Rosta 1 vitlöksklyfta i stekpanna
+ - free_text Blanda alla ingredienser väl i en bunke. 
+ - free_text Smaka av med salt o peppar
