@@ -22,7 +22,7 @@ ingredients:
  - 1 st Hackade pistaschnötter 
 
 actions:
- - free_text Gör Botten
+ - divider Gör Botten
  - free_text Värm ugnen till 200 C
  - free_text Vispa 4 st äggulor, 1 helt ägg och 1.5 dl socker i en egen bunke tills smeten blir porös.
  - free_text Blanda ner 1.5 dl vetemjöl, därefter 1 tsk stött kardemumma.
@@ -30,12 +30,12 @@ actions:
  - free_text Vänd ner äggvitorna i blandningen och rör om försiktigt. Inte för hårt och inte för länge.
  - free_text Grädda i 20 minuter i en smord, rund form (ca 20 centimeter i diameter).
  - free_text Stjälp upp kakan och låt den svalna under bakduk.
- - free_text Gör mousse
+ - divider Gör mousse
  - free_text Smält 150 g mörk choklad i vattenbad eller i mikrovågsugn.
- - free_text Värm 1.5 dl grädde till 65 grader och blanda i chokladen. Låt blandningen svalna.
+ - free_text Värm 1.5 dl grädde till 65 C och blanda i chokladen. Låt blandningen svalna.
  - free_text Vispa 2.5 dl grädde hårt.
  - free_text Blanda ner den svala chokladgräddsmeten i den hårt vispade grädden och låt den stå i kylen tills du ska använda den.
- - free_text Bygg ihop tårtan
+ - divider Bygg ihop tårtan
  - free_text Dela den svalnade kakan så att du får två bottnar.
  - free_text Täck hela den första botten med 150 g färska eller tinade hallon.
  - free_text Lägg på ett tjockt lager chokladmousse.
