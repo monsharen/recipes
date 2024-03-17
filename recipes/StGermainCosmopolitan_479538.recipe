@@ -1,0 +1,20 @@
+metadata:
+  name: St Germain Cosmopolitan
+  images:
+    - https://mojo.generalmills.com/api/public/content/QdQ9AU1brE2-x_X-0PKStg_gmi_hi_res_jpeg.jpeg?v=3a8229b6&t=466b54bb264e48b199fc8e83ef1136b4
+  description: From  
+  types: [Drink]
+  estimatedPrepTime: 5 mins
+  servings: 1 drink
+
+ingredients:
+ - 30 ml vodka
+ - 30 ml 100% cranberry juice
+ - 15 ml St. Germain
+ - 15 ml lemon juice
+ - 5 ml simple syrup (or pure maple syrup)
+ - 1 st Lemon wheel, for the garnish ​
+
+actions:
+ - free_text Mix all ingredients in shaker and shake well
+ - free_text Garnish with lemon wheel
