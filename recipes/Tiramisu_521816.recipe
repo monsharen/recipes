@@ -1,0 +1,31 @@
+metadata:
+  name: Tiramisu
+  images:
+    - https://i.imgur.com/0warSBp.png
+  description: From https://www.recepten.se/recept/tiramisu.html 
+  types: [Dessert]
+  estimatedPrepTime: 30 mins + 1 h
+  servings: 6 portioner
+
+ingredients:
+ - 2 st ägg
+ - 4 msk strösocker
+ - 2 msk amaretto
+ - 225 g mascarpone
+ - 12 st savoiardikex
+ - 1.5 dl kaffe
+ - 1 msk kakao
+ - 1 msk kakao
+
+actions:
+ - free_text Ta fram en form som passar att lägga ut 6 st savoiardikex bredvid varandra, ca 15 x 20 cm, eller större (dessa antal och mått gäller en sats Tiramisu). Tiramisu-smeten ska inte flyta ut om man gör allt rätt, men om det ändå flyter ut så är det bra om man använt en form som inte är för stor för då flyter det inte iväg så långt.
+ - free_text Dela äggen. Häll äggvitorna i en vispskål. Lägg äggulorna i en annan vispskål och tillsätt sockret.
+ - free_text Vispa äggulor och socker till en jämn och ljusgul smet.
+ - free_text Tillsätt mascarpone och amaretto och rör försiktigt till en jämn blandning. Använd sked eller elvisp på lägsta hastighet.
+ - free_text Vispa äggvitorna till ett fast skum och vänd försiktigt ner dessa och rör till en jämn smet. Nu är mascarponesmeten klar.
+ - free_text Brygg kaffet eller blanda vatten med snabbkaffepulver. Häll kaffet i en vid djup tallrik som är minst lika bred som kexen (så att du kan doppa hela undersidan av kexet).
+ - free_text Så här doppar du kexen:  Doppa undersidan av kexen ett i taget i kaffet och lägg sedan det blöta kexet i en form. OBS! När du doppar, doppa bara en jättekort stund, ca 1-2 sekunder och bara på undersidan av kexet. Det bör suga upp genom halva kexet på undersidan. Det ska inte bli genomblött. Kexet suger snabbt åt sig vätskan. (Undersidan av kexet är den minst sockriga.) Om du doppar kexen lagom mycket så blir får varje kex ungefär lika stor mängd kaffe i sig och mängden kaffe är precis lagom till alla kex. Sista kexet suger upp sista droppen kaffe.
+ - free_text Lägg de 6 första doppade kexen (om du gör en sats) på botten av formen. Bred ut hälften av mascarponesmeten ovanpå. Sikta över kakao. Lägg på de sista 6 kexen och bred på sista hälften av mascarponesmeten.
+ - free_text Doppa den andra hälften av kexen och lägg dem ovanpå. Bred därefter på sista hälften av mascarponesmeten.
+ - free_text Låt stå i kylskåp till serveringen, minst 1 timme men gärna längre. Den blir bara godare av att stå ett tag så att göra tiramisun dagen innan servering passar bra. 
+ - free_text Vid servering:  Precis innan servering siktar du över resten av kakaon.
