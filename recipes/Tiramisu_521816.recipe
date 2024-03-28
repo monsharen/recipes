@@ -2,7 +2,7 @@ metadata:
   name: Tiramisu
   images:
     - https://i.imgur.com/0warSBp.png
-  description: From https://www.recepten.se/recept/tiramisu.html 
+  description: Från https://www.recepten.se/recept/tiramisu.html. Tänk på att inte doppa kexen för länge i vätskan för då blir de för blöta. Sedan så är det bara att följa instruktionerna, särskilt viktigt att vispa äggvitorna och sedan vända ner dem direkt i smeten och inte låta dem stå för då löses äggviteskummet upp och det blir för mycket vätska som gör att tiramisun flyter ut.
   types: [Dessert]
   estimatedPrepTime: 30 mins + 1 h
   servings: 6 portioner
