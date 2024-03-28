@@ -41,4 +41,4 @@ actions:
  - free_text Låt stå i kylskåp till serveringen. Minst 1 timme men gärna längre. Den blir bara godare av att stå ett tag så att göra tiramisun dagen innan servering passar bra.
  - divider Vid servering
  - free_text Precis innan servering siktar du över resten av kakaon.
- - imgae https://i.imgur.com/4OqBUFe.jpeg
+ - image https://i.imgur.com/4OqBUFe.jpeg
