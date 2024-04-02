@@ -60,10 +60,10 @@ public class UnitConverterTest {
     @Test
     public void testUnits() {
         String result = WeightUnitConverter.getVolume(0.5, Unit.PINCH);
-        assertEquals(" (0,15 ml)", result);
+        assertEquals("0,15 ml", result);
 
         result = WeightUnitConverter.getVolume(3, Unit.PINCH);
-        assertEquals(" (0,9 ml)", result);
+        assertEquals("0,9 ml", result);
     }
 
     @Test
@@ -105,8 +105,8 @@ public class UnitConverterTest {
         String expected =
                 "<span class=\"quantity\">0,5 kryddmått (0,15 ml)</span> sten, " +
                 "<span class=\"quantity\">3 kryddmått (0,9 ml)</span> salt, " +
-                "<span class=\"quantity\">1 deciliter (100 ml, 100 g)</span> vatten, " +
-                "<span class=\"quantity\">3 matskedar (45 ml, 45 g)</span> vinäger.";
+                "<span class=\"quantity\">1 deciliter (100 ml, 100 g)</span> <span class=\"ingredientName\">vatten</span>, " +
+                "<span class=\"quantity\">3 matskedar (45 ml, 45 g)</span> <span class=\"ingredientName\">vinäger</span>.";
         assertEquals(expected, actual);
         log.info(sentence);
         log.info(actual);
@@ -115,7 +115,7 @@ public class UnitConverterTest {
     @Test
     public void shouldTranslateCorrectly() {
         String actual = unitConverter.reformatTimes("20 min.");
-        assertEquals("Sätt ugnen på 200 grader", actual);
+        assertEquals("<span class=\"time\">20 min</span>.", actual);
 
         actual = unitConverter.reformatTimes("20 minutes.");
         assertEquals("<span class=\"time\">20 minutes</span>.", actual);

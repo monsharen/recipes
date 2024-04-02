@@ -7,8 +7,6 @@ import se.lionsinvests.recipes.sdk.Ingredient;
 public class DividerActionTranslator implements Translator<Action> {
     @Override
     public String translate(Action action) {
-        Ingredient[] ingredients = action.getIngredients();
-
-        return "<b>" + ingredients[0].description + "</b>";
+        return "<b>" + action.getDescription() + "</b>";
     }
 }

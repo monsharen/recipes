@@ -67,6 +67,10 @@ body {
     font-weight: 600;
 }
 
+.instruction .ingredientName {
+    font-weight: 600;
+}
+
 .actions {
 
 }

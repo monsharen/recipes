@@ -49,13 +49,24 @@ public class UnitHtmlRenderer {
 
             String weightAndVolume = getWeightAndVolume(ingredientId, unit, amount);
 
-            String unitDisplayName = "<span class=\"quantity\">" + unitTranslator.getUnitDisplayName(unit, amount) + weightAndVolume + "</span>" + (ingredientId != null ? " " + ingredientId : "") + punctuation;
+            String unitDisplayName = "<span class=\"quantity\">" + unitTranslator.getUnitDisplayName(unit, amount) + weightAndVolume + "</span>" +
+                    getIngredientName(ingredientId) +
+                    punctuation;
 
             matcher.appendReplacement(reformattedSentence, unitDisplayName);
         }
         matcher.appendTail(reformattedSentence);
 
         return reformattedSentence.toString();
+    }
+
+    private String getIngredientName(String ingredientId) {
+
+        if (ingredientId == null ||  ingredientId.isBlank()) {
+            return "";
+        }
+
+        return " <span class=\"ingredientName\">" + ingredientId + "</span>";
     }
 
     private String getWeightAndVolume(String ingredientId, Unit unit, double amount) {

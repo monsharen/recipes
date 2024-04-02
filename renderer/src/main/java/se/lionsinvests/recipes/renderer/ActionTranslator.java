@@ -19,12 +19,6 @@ public class ActionTranslator {
     public ActionTranslator(UnitConverter unitConverter, UnitHtmlRenderer unitHtmlRenderer) {
         TRANSLATORS.put(FREE_TEXT, new FreeTextActionTranslator(unitHtmlRenderer));
         TRANSLATORS.put(SET, new SetActionTranslator(unitConverter));
-        TRANSLATORS.put(BAKE, new BakeActionTranslator(unitConverter));
-        TRANSLATORS.put(MIX, new MixActionTranslator(unitConverter));
-        TRANSLATORS.put(COMBINE, new CombineActionTranslator());
-        TRANSLATORS.put(BOIL, new BoilActionTranslator(unitConverter));
-        TRANSLATORS.put(CHOP, new ChopActionTranslator());
-        TRANSLATORS.put(ROAST, new RoastActionTranslator(unitConverter));
         TRANSLATORS.put(IMAGE, new ImageActionTranslator());
         TRANSLATORS.put(YOUTUBE, new YoutubeActionTranslator());
         TRANSLATORS.put(DIVIDER, new DividerActionTranslator());

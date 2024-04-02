@@ -24,6 +24,7 @@ public class WeightUnitConverter {
     }};
 
     public static final Map<String, Double> INGREDIENT_DECILITER_WEIGHT_CONVERSION = new HashMap<>() {{
+        put("kallt vatten", 100.0);
         put("vatten", 100.0);
         put("vinäger", 100.0);
         put("socker", 80.0);

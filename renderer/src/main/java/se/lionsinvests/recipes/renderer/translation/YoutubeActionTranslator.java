@@ -7,10 +7,8 @@ import se.lionsinvests.recipes.sdk.Ingredient;
 public class YoutubeActionTranslator implements Translator<Action> {
     @Override
     public String translate(Action action) {
-        Ingredient[] ingredients = action.getIngredients();
-
         return "<iframe width=\"100%\" height=\"400\" " +
-                "src=\"" + ingredients[0].description + "\" " +
+                "src=\"" + action.getDescription() + "\" " +
                 "title=\"YouTube video player\" " +
                 "frameborder=\"0\" " +
                 "allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" " +

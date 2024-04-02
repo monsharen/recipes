@@ -30,7 +30,7 @@ public class ActionParser {
                     .quantity(0)
                     .build();
             Ingredient[] ingredients = { url, description };
-            return new Action(ActionIdentifier.IMAGE, ingredients);
+            return new Action(ActionIdentifier.IMAGE, ingredients, "");
         }
 
         Ingredient[] ingredients;
@@ -52,7 +52,7 @@ public class ActionParser {
             ingredients[i] = ingredient;
         }
 
-        return new Action(actionIdentifier, ingredients);
+        return new Action(actionIdentifier, ingredients, instructionString);
     }
 
     private static Ingredient parseIngredient(String value) {

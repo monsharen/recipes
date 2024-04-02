@@ -32,21 +32,15 @@ public class FreeTextActionTranslatorTest {
     public void testTranslate() {
         Action action = Action.builder()
                 .actionIdentifier(ActionIdentifier.FREE_TEXT)
-                .ingredients(new Ingredient[] {
-                        Ingredient.builder().description(
-                                "Sätt ugnen på 200 grader").build()
-                })
+                .description("Sätt ugnen på 200 grader")
                 .build();
         String actualText = instance.translate(action);
-        String expectedText = "Sätt ugnen på <span class=\"temperature\">200 grader</span>";
+        String expectedText = "Sätt ugnen på <span class=\"temperature\">200 grader</span>.";
         assertEquals(expectedText, actualText);
 
         action = Action.builder()
                 .actionIdentifier(ActionIdentifier.FREE_TEXT)
-                .ingredients(new Ingredient[] {
-                        Ingredient.builder().description(
-                                "Sätt ugnen på 200 grader i cirka 12 minuter.").build()
-                })
+                .description("Sätt ugnen på 200 grader i cirka 12 minuter.")
                 .build();
 
         actualText = instance.translate(action);
