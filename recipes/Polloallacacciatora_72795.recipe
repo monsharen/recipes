@@ -26,7 +26,7 @@ ingredients:
 
 actions:
  - divider Marinera kycklingen
- - free_text Ta 3 st rejäla kvistar rosmarin och stöt tillsammans med 2 st vitlöksklyftor och 5 svartpepparkorn
+ - free_text Ta 3 st rejäla kvistar rosmarin och stöt tillsammans med 2 st vitlöksklyftor och 5 st svartpepparkorn
  - free_text Häll 2 msk olivolja i massan, blanda i rivet citronskal från 1 citron och salta.
  - free_text Gnid in kycklinglåren i massan och låt vila i rumstemperatur i 30 minuter.
  - divider Tillagning
