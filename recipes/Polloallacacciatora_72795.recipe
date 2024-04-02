@@ -14,20 +14,26 @@ ingredients:
  - 1 st citron
  - 2 msk tomatpuré
  - 1.5 dl vitt torrt vin
- - 1 st rågad matsked sardellcrème
+ - 1 msk sardellcrème
  - 1 dl svarta oliver
  - 2 msk kapris
  - 1 st mindre knippa bladpersilja
- - 1 st olivolja
+ - 4 msk olivolja. 2 msk till marinad + 2 msk till stekning
  - 1 nypa salt
- - 5 pepparkorn
+ - 5 st svartpepparkorn
  - 1 tsk harissa
  - 1 st riven parmesan till servering
 
 actions:
- - free_text Ta två-tre rejäla kvistar av din rosmarin och stöt tillsammans med vitlöken och svartpepparkorn. Häll olivolja i massan, riv i lite citronskal och salta.
- - free_text Gnid in kycklinglåren i massan och låt vila i rumstemperatur dryga halvtimmen.
- - free_text Hetta upp generöst med olivolja i pannan och stek kycklingen så att skinnet blir skönt knaprigt.
- - free_text Under tiden så rör du samman ett par matskedar citronsaft med tomatpurén, harissan och vinet. Häll mixen över kycklingarna och låt sjuda runt 15 minuter.
- - free_text Därefter lägger du i sardellcrèmen, kaprisen och oliverna och låter det hela sjuda ytterligare fem minuter. När färdigt så rör du ner en generös mängd finhackad bladpersilja och saltar och pepprar efter behag.
- - free_text Gott till är en bredare bandpasta som fångar upp den fina såsen från kycklingen när du lägger upp. Riven parmesan fulländar och så glöm inte brödet som fångar up
+ - divider Marinera kycklingen
+ - free_text Ta 3 st rejäla kvistar rosmarin och stöt tillsammans med 2 st vitlöksklyftor och 5 svartpepparkorn
+ - free_text Häll 2 msk olivolja i massan, blanda i rivet citronskal från 1 citron och salta.
+ - free_text Gnid in kycklinglåren i massan och låt vila i rumstemperatur i 30 minuter.
+ - divider Tillagning
+ - free_text Hetta upp generöst med olivolja i pannan och stek kycklingen så att skinnet blir knaprigt.
+ - free_text Rör samman 2 msk citronsaft med 2 msk tomatpuré, 1 tsk harissa och 1.5 dl vitt vin.
+ - free_text Häll mixen över kycklingarna och låt sjuda ca 15 minuter.
+ - free_text Lägg i 1 msk sardellcrème, 2 msk kapris och 1 dl svarta oliver och låt sjuda ytterligare 5 minuter.
+ - free_text Rör ner 1 knippa finhackad bladpersilja och salta och peppra efter behag.
+ - divider Servering
+ - free_text Servera med bred bandpasta. Riv parmesan över och servera med bröd.
