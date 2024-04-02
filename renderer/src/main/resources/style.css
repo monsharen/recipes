@@ -57,17 +57,14 @@ body {
 
 .instruction .quantity {
     font-weight: 600;
-    padding-right: 0.3em;
 }
 
 .instruction .temperature {
     font-weight: 600;
-    padding-right: 0.3em;
 }
 
 .instruction .time {
     font-weight: 600;
-    padding-right: 0.3em;
 }
 
 .actions {

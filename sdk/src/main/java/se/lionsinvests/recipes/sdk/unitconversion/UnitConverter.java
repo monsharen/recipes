@@ -4,8 +4,6 @@ import lombok.extern.java.Log;
 import se.lionsinvests.recipes.sdk.Unit;
 
 import java.util.*;
-import java.util.regex.Pattern;
-import java.util.stream.Collectors;
 
 import static se.lionsinvests.recipes.sdk.Unit.*;
 
@@ -15,7 +13,7 @@ public class UnitConverter {
     private static final Map<String, Unit> UNIT_KEYWORDS = new HashMap<>()
     {{
         // English
-        put("c", DEGREES_CELSIUS);
+        //put("c", DEGREES_CELSIUS);
         put("tbsp", TABLESPOON);
         put("tsp", TEASPOON);
         put("l", Unit.LITRE);
@@ -67,6 +65,12 @@ public class UnitConverter {
 
     public static Set<String> getAllUnits() {
         return UNIT_KEYWORDS.keySet();
+    }
+
+    public static Set<String> getAllUnitsMinusTemperature() {
+        Set<String> allUnits = getAllUnits();
+        //allUnits.remove(DEGREES_CELSIUS.getUnit());
+        return allUnits;
     }
 
     public static Unit parse(String value) {

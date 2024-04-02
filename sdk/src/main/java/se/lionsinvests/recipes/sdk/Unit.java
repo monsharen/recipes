@@ -10,7 +10,7 @@ import java.util.Map;
 @Getter
 @AllArgsConstructor
 public enum Unit {
-    DEGREES_CELSIUS("C", "°C"),
+    //DEGREES_CELSIUS("C", "°C"),
     TABLESPOON("tbsp", "tablespoon"),
     TEASPOON("tsp", "teaspoon"),
     LITRE("l", "litres"),

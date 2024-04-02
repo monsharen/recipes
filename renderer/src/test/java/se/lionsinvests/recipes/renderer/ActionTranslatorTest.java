@@ -2,9 +2,15 @@ package se.lionsinvests.recipes.renderer;
 
 import org.junit.Before;
 import org.junit.Test;
-import se.lionsinvests.recipes.sdk.*;
+import se.lionsinvests.recipes.sdk.Action;
+import se.lionsinvests.recipes.sdk.ActionIdentifier;
+import se.lionsinvests.recipes.sdk.Ingredient;
+import se.lionsinvests.recipes.sdk.Unit;
 import se.lionsinvests.recipes.sdk.unitconversion.SwedishUnitTranslator;
 import se.lionsinvests.recipes.sdk.unitconversion.UnitConverter;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import static org.junit.Assert.assertEquals;
 
@@ -16,7 +22,8 @@ public class ActionTranslatorTest {
     public void before() {
         SwedishUnitTranslator unitTranslator = new SwedishUnitTranslator();
         UnitConverter unitConverter = new UnitConverter(unitTranslator);
-        UnitHtmlRenderer unitHtmlRenderer = new UnitHtmlRenderer(unitTranslator);
+        List<String> supportedIngredients = new ArrayList<>();
+        UnitHtmlRenderer unitHtmlRenderer = new UnitHtmlRenderer(unitTranslator, supportedIngredients);
         instance = new ActionTranslator(unitConverter, unitHtmlRenderer);
     }
 

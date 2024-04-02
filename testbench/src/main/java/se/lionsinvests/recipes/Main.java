@@ -6,8 +6,9 @@ import se.lionsinvests.recipes.renderer.dto.RecipeDTO;
 import se.lionsinvests.recipes.sdk.Recipe;
 import se.lionsinvests.recipes.sdk.unitconversion.SwedishUnitTranslator;
 import se.lionsinvests.recipes.sdk.unitconversion.UnitConverter;
+import se.lionsinvests.recipes.sdk.unitconversion.WeightUnitConverter;
 
-import java.io.*;
+import java.io.File;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.ArrayList;
@@ -55,7 +56,8 @@ public class Main {
 
         SwedishUnitTranslator unitTranslator = new SwedishUnitTranslator();
         UnitConverter unitConverter = new UnitConverter(unitTranslator);
-        UnitHtmlRenderer unitHtmlRenderer = new UnitHtmlRenderer(unitTranslator);
+        List<String> supportedIngredients = WeightUnitConverter.getSupportedIngredients();
+        UnitHtmlRenderer unitHtmlRenderer = new UnitHtmlRenderer(unitTranslator, supportedIngredients);
         ActionTranslator actionTranslator = new ActionTranslator(unitConverter, unitHtmlRenderer);
 
         Path path = recipesFolder.toPath();

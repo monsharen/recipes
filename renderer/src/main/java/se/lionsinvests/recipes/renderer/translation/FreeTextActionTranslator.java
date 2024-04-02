@@ -12,9 +12,21 @@ public class FreeTextActionTranslator implements Translator<Action> {
     private final UnitHtmlRenderer unitHtmlRenderer;
     public String translate(Action action) {
         Ingredient[] ingredients = action.getIngredients();
-        String result = unitHtmlRenderer.reformatQuantitiesAndUnits(ingredients[0].description);
+
+        String result = addLineEnding(ingredients[0].description);
+
         result = unitHtmlRenderer.reformatTimes(result);
-        return unitHtmlRenderer.reformatTemperature(result);
+        result = unitHtmlRenderer.reformatQuantitiesAndUnits(result);
+        result = unitHtmlRenderer.reformatTemperature(result);
+        return result;
+    }
+
+    private String addLineEnding(String value) {
+        if (!value.endsWith(".")) {
+            return value + ".";
+        }
+
+        return value;
     }
 
 }
