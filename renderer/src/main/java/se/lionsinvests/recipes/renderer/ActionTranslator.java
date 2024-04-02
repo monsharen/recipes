@@ -16,9 +16,8 @@ public class ActionTranslator {
 
     private Map<ActionIdentifier, Translator<Action>> TRANSLATORS = new HashMap<>();
 
-    public ActionTranslator(UnitConverter unitConverter, UnitHtmlRenderer unitHtmlRenderer) {
+    public ActionTranslator(UnitHtmlRenderer unitHtmlRenderer) {
         TRANSLATORS.put(FREE_TEXT, new FreeTextActionTranslator(unitHtmlRenderer));
-        TRANSLATORS.put(SET, new SetActionTranslator(unitConverter));
         TRANSLATORS.put(IMAGE, new ImageActionTranslator());
         TRANSLATORS.put(YOUTUBE, new YoutubeActionTranslator());
         TRANSLATORS.put(DIVIDER, new DividerActionTranslator());

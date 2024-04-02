@@ -58,7 +58,7 @@ public class Main {
         UnitConverter unitConverter = new UnitConverter(unitTranslator);
         List<String> supportedIngredients = WeightUnitConverter.getSupportedIngredients();
         UnitHtmlRenderer unitHtmlRenderer = new UnitHtmlRenderer(unitTranslator, supportedIngredients);
-        ActionTranslator actionTranslator = new ActionTranslator(unitConverter, unitHtmlRenderer);
+        ActionTranslator actionTranslator = new ActionTranslator(unitHtmlRenderer);
 
         Path path = recipesFolder.toPath();
         PageRenderer<Recipe> pageRenderer = new ThymeleafRecipePageRenderer(actionTranslator, unitConverter, recipeTemplate);

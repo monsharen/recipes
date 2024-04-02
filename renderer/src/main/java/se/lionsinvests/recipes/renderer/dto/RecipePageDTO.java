@@ -52,10 +52,6 @@ public class RecipePageDTO {
             return "empty_action";
         }
 
-        if (ActionIdentifier.SET.equals(action.getActionIdentifier())) {
-            return "action oven";
-        }
-
         return "action";
     }
 
@@ -65,14 +61,6 @@ public class RecipePageDTO {
         } catch (Exception e) {
             throw new IllegalStateException("failed to translate action " + action + " (" + actionCounter + ") for recipe " + recipe);
         }
-    }
-
-    public boolean hasActionIcon(Action action) {
-        if (ActionIdentifier.SET.equals(action.getActionIdentifier())) {
-            return true;
-        }
-
-        return false;
     }
 
     public String getPresentationImage() {
