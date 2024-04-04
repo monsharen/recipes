@@ -26,6 +26,11 @@ public class Main {
 
     public static void main(String[] args) throws Exception {
         Objects.requireNonNull(args);
+        if (args.length < 1) {
+            log.info("Usage: java -jar testbench-1.0-SNAPSHOT.jar <recipes-folder> <output-folder> [--dry-run]");
+            return;
+        }
+
         Objects.requireNonNull(args[0], "missing recipes folder argument");
 
         File recipesFolder = new File(args[0]);
