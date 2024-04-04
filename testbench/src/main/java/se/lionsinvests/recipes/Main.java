@@ -1,5 +1,7 @@
 package se.lionsinvests.recipes;
 
+import se.lionsinvests.recipes.files.FileManager;
+import se.lionsinvests.recipes.files.RealFileManager;
 import se.lionsinvests.recipes.interpreter.Interpreter;
 import se.lionsinvests.recipes.renderer.*;
 import se.lionsinvests.recipes.renderer.dto.RecipeDTO;
@@ -16,9 +18,6 @@ import java.util.List;
 import java.util.Objects;
 import java.util.stream.Stream;
 
-import static se.lionsinvests.recipes.FileUtil.exportResource;
-import static se.lionsinvests.recipes.FileUtil.writeToFile;
-
 public class Main {
 
     public static void main(String[] args) throws Exception {
@@ -31,23 +30,25 @@ public class Main {
         File recipeTemplate = File.createTempFile("recipes-", ".html");
         recipeTemplate.deleteOnExit();
 
+        FileManager fileManager = new RealFileManager();
+
         if (!recipesFolder.exists() || !recipesFolder.isDirectory()) {
             throw new IllegalStateException("could not find recipes folder or is not a folder");
         }
 
         if (outputFolder.exists()) {
-            FileUtil.deleteDirectoryStream(outputFolder.toPath());
+            fileManager.deleteDirectoryStream(outputFolder.toPath());
         }
 
         if (!outputFolder.mkdir()) {
             throw new IllegalStateException("failed to create output folder '" + outputFolder.getAbsolutePath() + "'");
         }
 
-        exportResource("/style.css", new File(outputFolder, "style.css"));
-        exportResource("/empty.png", new File(outputFolder, "empty.png"));
-        exportResource("/index.html", new File(outputFolder, "index.html"));
-        exportResource("/recipes.js", new File(outputFolder, "recipes.js"));
-        exportResource("/recipe.html", recipeTemplate);
+        fileManager.exportResource("/style.css", new File(outputFolder, "style.css"));
+        fileManager.exportResource("/empty.png", new File(outputFolder, "empty.png"));
+        fileManager.exportResource("/index.html", new File(outputFolder, "index.html"));
+        fileManager.exportResource("/recipes.js", new File(outputFolder, "recipes.js"));
+        fileManager.exportResource("/recipe.html", recipeTemplate);
 
         List<RecipeDTO> recipeList = new ArrayList<>();
 
@@ -74,7 +75,7 @@ public class Main {
                 }
 
                 String targetFileName = getTargetFileName(recipeFile.toFile().getName());
-                writeToFile(outputFolder, targetFileName, html);
+                fileManager.writeToFile(outputFolder, targetFileName, html);
                 System.out.println("rendered " + targetFileName);
 
                 RecipeDTO recipeDto = map(recipe, targetFileName);
@@ -86,7 +87,7 @@ public class Main {
         JsonRenderer jsonRenderer = new JsonRenderer(recipeList);
         String json = jsonRenderer.render();
         File recipesJson = new File(outputFolder, "recipes.json");
-        writeToFile(recipesJson, json);
+        fileManager.writeToFile(recipesJson, json);
     }
 
     private static RecipeDTO map(Recipe recipe, String fileName) {

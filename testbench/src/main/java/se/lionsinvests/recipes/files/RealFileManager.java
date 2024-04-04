@@ -1,20 +1,24 @@
-package se.lionsinvests.recipes;
+package se.lionsinvests.recipes.files;
+
+import se.lionsinvests.recipes.Main;
 
 import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.Comparator;
+import java.util.stream.Stream;
 
-public class FileUtil {
+public class RealFileManager implements FileManager {
 
-    public static void deleteDirectoryStream(Path path) throws IOException {
-        Files.walk(path)
-                .sorted(Comparator.reverseOrder())
-                .map(Path::toFile)
-                .forEach(File::delete);
+    public void deleteDirectoryStream(Path path) throws IOException {
+        try (Stream<Path> walk = Files.walk(path)) {
+            walk.sorted(Comparator.reverseOrder())
+                    .map(Path::toFile)
+                    .forEach(File::delete);
+        }
     }
 
-    public static void writeToFile(File outputFolder, String targetFileName, String html) {
+    public void writeToFile(File outputFolder, String targetFileName, String html) {
         File file = new File(outputFolder, targetFileName);
         try {
             writeToFile(file, html);
@@ -23,14 +27,14 @@ public class FileUtil {
         }
     }
 
-    public static void writeToFile(File file, String content) throws IOException {
+    public void writeToFile(File file, String content) throws IOException {
         try (FileOutputStream outputStream = new FileOutputStream(file)) {
             byte[] strToBytes = content.getBytes();
             outputStream.write(strToBytes);
         }
     }
 
-    public static void exportResource(String resourceName, File outputFile) throws Exception {
+    public void exportResource(String resourceName, File outputFile) throws Exception {
         try (InputStream stream = Main.class.getResourceAsStream(resourceName);
              OutputStream resStreamOut = new FileOutputStream(outputFile)) {
             int readBytes;
