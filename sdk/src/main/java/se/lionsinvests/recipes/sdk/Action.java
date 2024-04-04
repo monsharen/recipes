@@ -13,13 +13,6 @@ public class Action {
 
     private ActionIdentifier actionIdentifier;
     private Ingredient[] ingredients;
-
     private String description;
 
-    public Action(String value) {
-        Action action = ActionParser.parse(value);
-        this.actionIdentifier = action.getActionIdentifier();
-        this.ingredients = action.ingredients;
-        this.description = action.description;
-    }
 }

@@ -7,7 +7,6 @@ import se.lionsinvests.recipes.sdk.unitconversion.UnitTranslator;
 import se.lionsinvests.recipes.sdk.unitconversion.WeightUnitConverter;
 
 import java.util.List;
-import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -16,18 +15,14 @@ import static se.lionsinvests.recipes.sdk.unitconversion.UnitConverter.getAllUni
 @Log
 public class UnitHtmlRenderer {
 
-
-    private final UnitTranslator unitTranslator;
-
     private final Pattern quantityUnitPattern;
     private final Pattern timePattern;
-
     private final Pattern temperaturePattern;
+    private final UnitTranslator unitTranslator;
 
     public UnitHtmlRenderer(UnitTranslator unitTranslator, List<String> supportedIngredients) {
         this.unitTranslator = unitTranslator;
         String regex = getQuantityUnitRegularExpression(supportedIngredients);
-        log.info(regex);
         quantityUnitPattern = Pattern.compile(regex);
         timePattern = Pattern.compile("\\b\\d+\\s+(s|minuter|minutes|min|h|timme|timmar|hours|hrs|sekunder|seconds|sec)(?=\\s|\\.|,|;|!|\\?|\\n)");
         temperaturePattern = Pattern.compile("\\b\\d+\\s*°?\\s*(C(?!\\w)|Celsius|F(?!\\w)|Fahrenheit|grader)\\b(?=\\s|[.,;!?]|\\n|$)");
