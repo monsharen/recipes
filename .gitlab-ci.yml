@@ -7,7 +7,7 @@ workflow:
 pages:
   script:
     - mvn clean install
-    - java -jar testbench/target/testbench-1.0-SNAPSHOT.jar recipes
+    - java -jar testbench/target/testbench-1.0-SNAPSHOT.jar recipes recipes-rendered
     - mv recipes-rendered public
   artifacts:
     paths:
