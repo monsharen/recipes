@@ -8,6 +8,7 @@ pages:
   script:
     - mvn clean install
     - java -jar testbench/target/testbench-1.0-SNAPSHOT.jar recipes
+    - mv recipes-rendered public
   artifacts:
     paths:
       - public
@@ -17,9 +18,5 @@ pages:
 compile:
   script:
     - mvn clean install
-    - mv recipes-rendered public
-  artifacts:
-    paths:
-      - public
   rules:
     - if: '$CI_COMMIT_BRANCH != "main"'
