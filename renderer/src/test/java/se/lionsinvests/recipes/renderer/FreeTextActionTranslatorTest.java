@@ -1,19 +1,17 @@
 package se.lionsinvests.recipes.renderer;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import se.lionsinvests.recipes.renderer.translation.FreeTextActionTranslator;
 import se.lionsinvests.recipes.sdk.Action;
 import se.lionsinvests.recipes.sdk.ActionIdentifier;
-import se.lionsinvests.recipes.sdk.Ingredient;
 import se.lionsinvests.recipes.sdk.unitconversion.SwedishUnitTranslator;
 import se.lionsinvests.recipes.sdk.unitconversion.UnitTranslator;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class FreeTextActionTranslatorTest {
 

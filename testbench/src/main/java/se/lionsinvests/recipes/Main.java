@@ -1,5 +1,7 @@
 package se.lionsinvests.recipes;
 
+import lombok.extern.java.Log;
+import se.lionsinvests.recipes.files.DryRunFileManager;
 import se.lionsinvests.recipes.files.FileManager;
 import se.lionsinvests.recipes.files.RealFileManager;
 import se.lionsinvests.recipes.interpreter.Interpreter;
@@ -11,6 +13,7 @@ import se.lionsinvests.recipes.sdk.unitconversion.UnitConverter;
 import se.lionsinvests.recipes.sdk.unitconversion.WeightUnitConverter;
 
 import java.io.File;
+import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.ArrayList;
@@ -18,40 +21,30 @@ import java.util.List;
 import java.util.Objects;
 import java.util.stream.Stream;
 
+@Log
 public class Main {
 
     public static void main(String[] args) throws Exception {
         Objects.requireNonNull(args);
-        Objects.requireNonNull(args[0]);
-        Objects.requireNonNull(args[1]);
+        Objects.requireNonNull(args[0], "missing recipes folder argument");
 
         File recipesFolder = new File(args[0]);
-        File outputFolder = new File(args[1]);
+
         File recipeTemplate = File.createTempFile("recipes-", ".html");
         recipeTemplate.deleteOnExit();
-
-        FileManager fileManager = new RealFileManager();
 
         if (!recipesFolder.exists() || !recipesFolder.isDirectory()) {
             throw new IllegalStateException("could not find recipes folder or is not a folder");
         }
 
-        if (outputFolder.exists()) {
-            fileManager.deleteDirectoryStream(outputFolder.toPath());
-        }
-
-        if (!outputFolder.mkdir()) {
-            throw new IllegalStateException("failed to create output folder '" + outputFolder.getAbsolutePath() + "'");
-        }
-
-        fileManager.exportResource("/style.css", new File(outputFolder, "style.css"));
-        fileManager.exportResource("/empty.png", new File(outputFolder, "empty.png"));
-        fileManager.exportResource("/index.html", new File(outputFolder, "index.html"));
-        fileManager.exportResource("/recipes.js", new File(outputFolder, "recipes.js"));
-        fileManager.exportResource("/recipe.html", recipeTemplate);
+        FileManager fileManager = getFileManager(args);
+        fileManager.exportResource("/style.css");
+        fileManager.exportResource("/empty.png");
+        fileManager.exportResource("/index.html");
+        fileManager.exportResource("/recipes.js");
+        fileManager.exportResource("/recipe.html");
 
         List<RecipeDTO> recipeList = new ArrayList<>();
-
 
         Interpreter interpreter = new Interpreter();
 
@@ -75,7 +68,7 @@ public class Main {
                 }
 
                 String targetFileName = getTargetFileName(recipeFile.toFile().getName());
-                fileManager.writeToFile(outputFolder, targetFileName, html);
+                fileManager.writeToFile(targetFileName, html);
                 System.out.println("rendered " + targetFileName);
 
                 RecipeDTO recipeDto = map(recipe, targetFileName);
@@ -86,8 +79,43 @@ public class Main {
         // TODO: Generate recipes.json
         JsonRenderer jsonRenderer = new JsonRenderer(recipeList);
         String json = jsonRenderer.render();
-        File recipesJson = new File(outputFolder, "recipes.json");
-        fileManager.writeToFile(recipesJson, json);
+        fileManager.writeToFile("recipes.json", json);
+    }
+
+    private static FileManager getFileManager(String[] args) throws IOException {
+
+        if (isDryRun(args)) {
+            log.info("running in dry-run mode. won't save files to disk");
+            return new DryRunFileManager();
+        }
+
+        Objects.requireNonNull(args[1], "missing output folder argument");
+        File outputFolder = new File(args[1]);
+
+        if (outputFolder.exists()) {
+            RealFileManager.deleteDirectoryStream(outputFolder.toPath());
+        }
+
+        if (!outputFolder.mkdir()) {
+            throw new IllegalStateException("failed to create output folder '" + outputFolder.getAbsolutePath() + "'");
+        }
+
+        return new RealFileManager(outputFolder);
+    }
+
+    private static boolean isDryRun(String[] args) {
+
+        if (args.length < 2) {
+            return true;
+        }
+
+        for (String arg : args) {
+            if (arg.equals("--dry-run")) {
+                return true;
+            }
+        }
+
+        return false;
     }
 
     private static RecipeDTO map(Recipe recipe, String fileName) {

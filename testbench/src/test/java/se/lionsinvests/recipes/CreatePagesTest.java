@@ -9,7 +9,7 @@ public class CreatePagesTest {
     @Test
     public void create() throws Exception {
         File recipesFolder = new File("../recipes");
-        File publicFolder = new File("../recipes-rendered");
-        Main.main(new String[] { recipesFolder.getAbsolutePath(), publicFolder.getAbsolutePath() });
+        //File publicFolder = new File("../recipes-rendered");
+        Main.main(new String[] { recipesFolder.getAbsolutePath() });
     }
 }
