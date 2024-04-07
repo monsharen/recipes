@@ -47,7 +47,7 @@ public class Main {
         fileManager.exportResource("/empty.png");
         fileManager.exportResource("/index.html");
         fileManager.exportResource("/recipes.js");
-        fileManager.exportResource("/recipe.html");
+        fileManager.exportResource("/recipe.html", recipeTemplate);
 
         List<RecipeDTO> recipeList = new ArrayList<>();
 
@@ -73,8 +73,8 @@ public class Main {
                 }
 
                 String targetFileName = getTargetFileName(recipeFile.toFile().getName());
-                fileManager.writeToFile(targetFileName, html);
-                System.out.println("rendered " + targetFileName);
+                fileManager.writeRecipeToFile(targetFileName, html);
+                log.info("rendered " + targetFileName);
 
                 RecipeDTO recipeDto = map(recipe, targetFileName);
                 recipeList.add(recipeDto);
@@ -85,6 +85,7 @@ public class Main {
         JsonRenderer jsonRenderer = new JsonRenderer(recipeList);
         String json = jsonRenderer.render();
         fileManager.writeToFile("recipes.json", json);
+        log.info("created recipes.json containing " + recipeList.size() + " recipes");
     }
 
     private static FileManager getFileManager(String[] args) throws IOException {

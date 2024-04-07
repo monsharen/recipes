@@ -35,12 +35,31 @@ public class RealFileManager implements FileManager {
         }
     }
 
+    public void writeRecipeToFile(String targetFileName, String html) {
+        File file = new File(outputFolder, targetFileName);
+        try {
+            writeToFile(file, html);
+        } catch (IOException e) {
+            throw new IllegalStateException("failed to render file " + file.getAbsolutePath(), e);
+        }
+    }
+
+    private void writeToFile(File file, String content) throws IOException {
+        try (FileOutputStream outputStream = new FileOutputStream(file)) {
+            byte[] strToBytes = content.getBytes();
+            outputStream.write(strToBytes);
+        }
+    }
+
     public void exportResource(String resourceName) throws Exception {
 
         File file = new File(outputFolder, resourceName);
+        exportResource(resourceName, file);
+    }
 
+    public void exportResource(String resourceName, File outputFile) throws Exception {
         try (InputStream stream = Main.class.getResourceAsStream(resourceName);
-             OutputStream resStreamOut = new FileOutputStream(file)) {
+             OutputStream resStreamOut = new FileOutputStream(outputFile)) {
             int readBytes;
             byte[] buffer = new byte[4096];
 
