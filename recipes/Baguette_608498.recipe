@@ -1,0 +1,25 @@
+metadata:
+  name: Baguette
+  images:
+    - https://overgarden.files.wordpress.com/2021/11/baguette4.jpg
+  description: From https://overgarden.wordpress.com/2021/11/03/traditionell-fransk-baguette/ 
+  types: [Bread]
+  estimatedPrepTime: 12 h
+  servings: 3 baguettes
+
+ingredients:
+ - 9 dl mjöl, helst Vetemjöl Special eller liknande
+ - 4.5 dl vatten
+ - 4 g färsk jäst
+ - 2 tsk salt
+
+actions:
+ - free_text Blanda mjöl och vatten ordentligt i en skål. Degen ska vara så fuktig att den kletar fast lite i bunken men ändå släpper när man drar den från kanten, alltså ganska lös.
+ - free_text Vänta 1 timme.
+ - free_text Smula ner jäst i degen. Knåda degen ordentligt.
+ - free_text Blanda i saltet i degen. Knåda degen ordentligt.
+ - free_text Låt jäsa i skålen i kylskåpet i mer än 10 timmar.
+ - free_text Dela degen i tre delar och forma delarna genom att dra ut dem till kvadrater. Rulla ihop kvadraterna till baguetter.
+ - free_text Rulla över baguetterna på bakplåten. Låt dem vila i två timmar.
+ - free_text Skär djupa snitt i baguetterna.
+ - free_text Grädda i 250 grader i 16 minuter eller tills de har önskvärd färg.
