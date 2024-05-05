@@ -1,0 +1,21 @@
+metadata:
+  name: Aperol
+  images:
+    - https://thesuburbansoapbox.com/wp-content/uploads/2023/07/Aperol-Spritz-8.jpg
+  description: From  
+  types: [Drink]
+  estimatedPrepTime: 2 min
+  servings: 1 glass
+
+ingredients:
+ - 9 cl Prosecco
+ - 6 cl Aperol
+ - 3 cl Club Soda
+ - 1 st Orange slice
+ - 4 st Ice cubes
+
+actions:
+ - free_text Fill glass with ice
+ - free_text Add 9 cl Prosecco, 6 cl Aperol and 3 cl Club Soda
+ - free_text Stir gently
+ - free_text Garnish with slice of orange
