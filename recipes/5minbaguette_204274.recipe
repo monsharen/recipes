@@ -14,10 +14,10 @@ ingredients:
  - 730 ml vatten
 
 actions:
- - Gör degen
+ - divider Gör degen
  - free_text Blanda alla ingredienser med handtaget på en träslev. Knåda ej.
  - free_text Låt jäsa i 10 timmar i rumstemperatur.
- - Grädda bröden
+ - divider Grädda bröden
  - free_text Sätt ugnen på 250 C.
  - free_text Mjöla bänk eller annan yta.
  - free_text Stjälp försiktig ut degen på den mjölade ytan.
