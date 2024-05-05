@@ -1,0 +1,25 @@
+metadata:
+  name: 5 min baguette
+  images:
+    - https://i.ytimg.com/vi/Z-husjZkxHw/maxresdefault.jpg
+  description: From https://youtu.be/Z-husjZkxHw?si=86ULK5AQLAmTr8Mu 
+  types: [Bread]
+  estimatedPrepTime: 10 h
+  servings: 4 Baguettes
+
+ingredients:
+ - 950 g mjöl
+ - 2 tsp salt
+ - 15 g jäst
+ - 730 ml vatten
+
+actions:
+ - free_text Blanda alla ingredienser med handtaget på en träslev. Knåda ej.
+ - free_text Låt jäsa i 10 timmar i rumstemperatur.
+ - free_text Sätt ugnen på 250 C.
+ - free_text Mjöla bänk eller annan yta.
+ - free_text Stjälp försiktig ut degen på den mjölade ytan.
+ - free_text Dela degen i 4 bitar.
+ - free_text Drag försiktigt ut en bit i taget till en baguette och lägg på plåt.
+ - free_text Lägg 2 isbitar på botten av ugnen.
+ - free_text Grädda baguetterna i nedre delen av ugnen i 25 min.
