@@ -1,4 +1,4 @@
-import recipes from './recipes.json' assert { type: "json" };
+import recipes from './recipes.json';
 
 const app = new Vue({
 
