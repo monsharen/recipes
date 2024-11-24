@@ -1,0 +1,25 @@
+metadata:
+  name: Sherrysås
+  images:
+    - 
+  description: From https://recept.se/recept/oxfile-med-sherrysas-och-ostronskivling 
+  types: [Sauce]
+  estimatedPrepTime: 15 min
+  servings: 4
+
+ingredients:
+ - 1 msk grönpepparkorn i lag
+ - 1 st schalottenlök
+ - 2 msk smör
+ - 1 tsk tomatpuré
+ - 1.5 dl sherry, t ex Bristol Cream
+ - 4 dl vispgrädde
+ - 1 msk kalvfond
+ - 1 tsk kinesisk soja
+
+actions:
+ - free_text Hacka grönpepparn, skala och hacka löken och fräs den och peppar i smör. 
+ - free_text Tillsätt tomatpuré och fräs en minut. 
+ - free_text Tillsätt sherry, hälften av grädden och fond och koka ihop i 5 minuter.
+ - free_text Späd med resten av grädden och koka ihop till en krämig sås. 
+ - free_text Smaka av med soja, salt och peppar.
