@@ -18,8 +18,8 @@ ingredients:
  - 1 tsk kinesisk soja
 
 actions:
- - free_text Hacka grönpepparn, skala och hacka löken och fräs den och peppar i smör. 
- - free_text Tillsätt tomatpuré och fräs en minut. 
- - free_text Tillsätt sherry, hälften av grädden och fond och koka ihop i 5 minuter.
- - free_text Späd med resten av grädden och koka ihop till en krämig sås. 
- - free_text Smaka av med soja, salt och peppar.
+ - free_text Hacka 1 msk grönpepparkorn, skala och hacka 1 st schalottenlök och fräs den och peppar i 2 msk smör. 
+ - free_text Tillsätt 1 tsk tomatpuré och fräs en minut. 
+ - free_text Tillsätt 1.5 dl sherry, 2 dl grädde, 1 msk kalvfond och koka ihop i 5 minuter.
+ - free_text Tillsätt 2 dl grädde och koka ihop till en krämig sås. 
+ - free_text Smaka av med 1 tsk soja, salt och peppar.
