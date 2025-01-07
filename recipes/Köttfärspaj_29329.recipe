@@ -1,0 +1,38 @@
+metadata:
+  name: Köttfärspaj
+  images:
+    - 
+  description: From https://www.godare.se/recept/a/76WGEw/kottfarspaj 
+  types: [Main,Pie]
+  estimatedPrepTime: 60 mins
+  servings: 6
+
+ingredients:
+ - 150 g smör + 2 msk smör
+ - 3 dl vetemjöl
+ - 2 msk vatten
+ - 1 st gul lök, stor
+ - 2 st vitlöksklyftor
+ - 400 g nötfärs, eller blandfärs
+ - 2 msk tomatpuré
+ - 1 st köttbuljongtärning
+ - 2 msk vetemjöl
+ - 2,5 dl vatten
+ - 1 nypa Salt och svartpeppar
+ - 2 dl riven ost
+
+actions:
+ - free_text Värm ugnen till 200 grader.
+ - free_text Nyp ihop 150 g smör, 3 dl vetemjöl, och 2 msk vatten till en slät pajdeg. 
+ - free_text Klä en pajform med pajdegen och nagga botten med en gaffel.
+ - free_text Förgrädda pajdegen i ca 10 minuter.
+ - free_text Skala och finhacka 1 st gul lök och 2 st vitlöksklyftor. 
+ - free_text Stek lök mjuk i smör på medelvärme, lägg åt sidan.
+ - free_text Smält 2 msk smör i en stekpanna och bryn färsen, lite i taget tills allt är genomstekt.
+ - free_text Häll tillbaka stekt lök och blanda väl.
+ - free_text Häll i 2 msk tomatpuré och fräs ca 1 minut. 
+ - free_text Smula i 1 st buljongtärning. Pudra över 2 msk vetemjöl och häll på 2,5 dl vatten.
+ - free_text Låt puttra i 5 minuter.
+ - free_text Smaka av med 1 nypa salt och peppar. 
+ - free_text Häll köttfärsfyllningen i pajskalet och strö över 2 dl riven ost. 
+ - free_text Sätt in i ugnen i cirka 30-40 minuter.
