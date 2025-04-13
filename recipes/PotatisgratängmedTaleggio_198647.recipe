@@ -1,0 +1,34 @@
+metadata:
+  name: Potatisgratäng med Taleggio
+  images:
+    - 
+  description: From https://homecooking.nu/blog/2024/03/31/kramig-potatisgratang-med-taleggio/ 
+  types: [Main, Side]
+  estimatedPrepTime: 45 min
+  servings: 6 people
+
+ingredients:
+ - 1 kg potatis, gärna mjölig
+ - 2 dm purjolök
+ - 6 st vitlöksklyftor
+ - 5 dl visp- eller matlagningsgrädde
+ - 2 dl mjölk
+ - 100 g smakrik ost, exempelvis präst-, parmesan- eller västerbottensost
+ - 150 g taleggioost
+ - 1 tsk salt
+ - 1 msk kantarellfond
+ - 1 tsk svartpeppar, ett par varv med pepparkvarnen
+ - 1 u smör
+
+actions:
+ - free_text Värm ugnen till 250 grader C varmluft.
+ - free_text Skala och skiva potatisen tunt, exempelvis3-4 mm.
+ - free_text Ansa purjolöken och strimla den tunt.
+ - free_text Skala och finhacka vitlöksklyftorna.
+ - free_text Hetta upp en stekpanna med ett par klickar smör. Bryn purjolöken och vitlöken på medelhög värme i 5-6 minuter. Rör om då och då. Löken ska inte få färg.
+ - free_text Riven prästosten under tiden.
+ - free_text Blanda den brynta löken med potatisen i en tjockbottnad, "non-stick" kastrull. Tillsätt grädde, mjölk, prästost, salt, fond och peppar.
+ - free_text Låt puttra på medelhög värme i 10-15 minuter under omrörning. Se till att inte gräddmjölken bränns vid.
+ - free_text Skiva Taleggion.
+ - free_text Häll över allting i en gratängform. Fördela Taleggioskivorna över potatisblandningen.
+ - free_text Gratinera i 15-20 minuter tills gratängen har fått fin färg.
