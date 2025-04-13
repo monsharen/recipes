@@ -1,0 +1,32 @@
+metadata:
+  name: Potatissallad med sparris och senapsdressing
+  images:
+    - https://images.recept.se/images/recipes/potatissallad-med-sparris-och-senapsdressing_22801.jpg?fit=crop&crop=focalpoint&auto=format&fp-x=0.52548089365036&fp-y=0.57606776055066&fp-z=1.1302832013979&w=600&h=600
+  description: From https://recept.se/recept/potatissallad-med-sparris-och-senapsdressing 
+  types: [Side, Main]
+  estimatedPrepTime: 40 min
+  servings: 6 pers
+
+ingredients:
+ - 900 g delikatess potatis
+ - 2 msk olja till stekning
+ - 1 rödlök
+ - 1 knippe grön sparris 250 g
+ - 1 påse rucola 65 g
+ - 1 knippe rädisor
+ - 1 dl kapris
+ - 1 dl hackad gräslök
+ - 4 msk rapsolja
+ - 2 msk dijonsenap
+ - 1 msk flytande honung
+ - 0.5 dl hackad gräslök
+ - 1 u salt
+ - 1 u peppar
+
+actions:
+ - free_text Skala och koka potatisen mjuk i lättsaltat vatten. Låt svalna.
+ - free_text Skala och skiva rödlök tunt och dela rädisorna i mindre klyftor. 
+ - free_text Ansa och skär av det yttersta på sparrisen. Hetta upp en stekpanna med lite olja och stek bitarna gyllenbruna. Salta och peppra efter smak.
+ - free_text Vispa snabbt ihop olja, senap och flytande honung i en stor skål. 
+ - free_text Vänd ner hackad gräslök och smaka av med salt och peppar.
+ - free_text Vänd ihop alla ingredienser till potatissalladen i skålen med dressingen. Servera salladen lätt ljummen eller kall.
