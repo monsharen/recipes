@@ -1,0 +1,29 @@
+metadata:
+  name: Chocolate chip cookies
+  images:
+    - https://fridasbakblogg.se/wp-content/uploads/2017/03/amerikanska_chocolate_chip_cookies1-scaled-1.jpg
+  description: From https://fridasbakblogg.se/2017/03/31/amerikanska-chocolate-chip-cookies/ 
+  types: [Cookies]
+  estimatedPrepTime: 30 min
+  servings: 20 st
+
+ingredients:
+ - 200 g smör, rumsvarmt
+ - 1.5 dl strösocker
+ - 1.5 dl farinsocker
+ - 1 msk vaniljsocker
+ - 1 st ägg
+ - 1 st äggula
+ - 4 dl vetemjöl
+ - 1 tsk bakpulver
+ - 0.5 tsk salt
+ - 3 dl chokladknappar
+
+actions:
+ - free_text Börja med att sätta ugnen på 200°C och klä en plåt med bakplåtspapper, ställ åt sidan.
+ - free_text Vispa rumsvarmt smör med strösocker, farinsocker och vaniljsocker krämigt. Tillsätt ägg och äggula, rör om tills smeten går ihop.
+ - free_text Arbeta sedan in vetemjöl, bakpulver och salt. Knåda ihop en smidig kakdeg.
+ - free_text Tillsätt 2/3 av chokladknapparna och arbeta in dem i degen.
+ - free_text Rulla 10 stora bollar av kakdegen, drag sedan isär alla bollar så att de delar sig på mitten och lägg med den ojämna sidan uppåt på en plåt.
+ - free_text Grädda kakorna mitt i ugnen i ca. 9-10 minuter, tag ut och lägg på resterande chokladknappar.
+ - free_text Låt svalna på plåten innan du flyttar dem.
