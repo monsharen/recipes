@@ -99,6 +99,33 @@ body {
     background-color: #E9DFD2;
 }
 
+.step-hint {
+    color: #8a8a8a;
+    font-size: 0.9em;
+    font-style: italic;
+    margin-bottom: 0;
+}
+
+/* Instruction steps are clickable to mark them done while cooking. */
+.action {
+    cursor: pointer;
+    user-select: none;
+    transition: opacity 0.15s ease, background-color 0.15s ease;
+}
+
+.action:hover {
+    background-color: #f3efef;
+}
+
+.action.completed {
+    opacity: 0.4;
+    text-decoration: line-through;
+}
+
+.action.completed:hover {
+    opacity: 0.65;
+}
+
 @media (max-width: 640px) {
     .col {
         flex: none;
