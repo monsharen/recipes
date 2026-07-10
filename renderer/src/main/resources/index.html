@@ -11,20 +11,8 @@
         <div class="container" id="recipeList">
 
             <div class="row" style="margin-bottom: 1em">
-                <div class="col-md-7" style="margin-bottom: 0.5em">
+                <div class="col">
                     <input class="form-control form-control-lg" type="text" placeholder="Filter" aria-label="filter" v-model="search">
-                </div>
-                <div class="col-md-3" style="margin-bottom: 0.5em">
-                    <div class="btn-group" role="group" aria-label="Sortering">
-                        <button type="button" class="btn btn-outline-primary btn-lg" :class="{ active: sortBy === 'latest' }" @click="setSort('latest')" aria-label="Sortera efter senaste" title="Senaste">🕒</button>
-                        <button type="button" class="btn btn-outline-primary btn-lg" :class="{ active: sortBy === 'alphabetical' }" @click="setSort('alphabetical')" aria-label="Sortera alfabetiskt" title="Alfabetisk (A–Ö)">🔤</button>
-                    </div>
-                </div>
-                <div class="col-md-2" style="margin-bottom: 0.5em">
-                    <div class="btn-group" role="group" aria-label="Vy">
-                        <button type="button" class="btn btn-outline-primary btn-lg" :class="{ active: viewMode === 'card' }" @click="setView('card')" aria-label="Kortvy" title="Kortvy">▦</button>
-                        <button type="button" class="btn btn-outline-primary btn-lg" :class="{ active: viewMode === 'list' }" @click="setView('list')" aria-label="Listvy" title="Listvy">☰</button>
-                    </div>
                 </div>
             </div>
 
@@ -32,6 +20,20 @@
                 <div class="col" v-for="(recipeType, index) in recipeTypes" style="flex: 0 0 0%; margin-bottom: 1em">
                     <input type="checkbox" class="btn-check" :id="'recipetype-' + index" :name="recipeType" v-model="checkedRecipeTypes" :value="recipeType" autocomplete="off">
                     <label class="btn btn-outline-primary" :for="'recipetype-' + index">{{recipeType}}</label>
+                </div>
+            </div>
+
+            <!-- Sort + display-style toggles, on one line just above the list -->
+            <div class="row" style="margin-bottom: 1em">
+                <div class="col d-flex justify-content-between align-items-center" style="gap: 0.5em; flex-wrap: wrap">
+                    <div class="btn-group" role="group" aria-label="Sortering">
+                        <button type="button" class="btn btn-outline-primary" :class="{ active: sortBy === 'latest' }" @click="setSort('latest')" aria-label="Sortera efter senaste" title="Senaste">🕒</button>
+                        <button type="button" class="btn btn-outline-primary" :class="{ active: sortBy === 'alphabetical' }" @click="setSort('alphabetical')" aria-label="Sortera alfabetiskt" title="Alfabetisk (A–Ö)">🔤</button>
+                    </div>
+                    <div class="btn-group" role="group" aria-label="Vy">
+                        <button type="button" class="btn btn-outline-primary" :class="{ active: viewMode === 'card' }" @click="setView('card')" aria-label="Kortvy" title="Kortvy">▦</button>
+                        <button type="button" class="btn btn-outline-primary" :class="{ active: viewMode === 'list' }" @click="setView('list')" aria-label="Listvy" title="Listvy">☰</button>
+                    </div>
                 </div>
             </div>
 
