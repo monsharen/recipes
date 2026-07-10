@@ -7,6 +7,15 @@ function readView() {
   }
 }
 
+// Remembered sort preference (defaults to latest).
+function readSort() {
+  try {
+    return localStorage.getItem('recipeSort') === 'alphabetical' ? 'alphabetical' : 'latest';
+  } catch (e) {
+    return 'latest';
+  }
+}
+
 // Load recipe data (and optional git-based dates) then start the front-page app.
 Promise.all([
   fetch('./recipes.json').then(response => {
@@ -26,7 +35,7 @@ Promise.all([
         checkedRecipeTypes: [],
         recipes: recipes,
         dates: dates,
-        sortBy: 'latest',
+        sortBy: readSort(),
         viewMode: readView(),
       },
       methods: {
@@ -34,6 +43,12 @@ Promise.all([
           this.viewMode = mode;
           try {
             localStorage.setItem('recipeView', mode);
+          } catch (e) { /* storage unavailable, ignore */ }
+        },
+        setSort(mode) {
+          this.sortBy = mode;
+          try {
+            localStorage.setItem('recipeSort', mode);
           } catch (e) { /* storage unavailable, ignore */ }
         }
       },

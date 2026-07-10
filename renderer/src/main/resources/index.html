@@ -15,10 +15,10 @@
                     <input class="form-control form-control-lg" type="text" placeholder="Filter" aria-label="filter" v-model="search">
                 </div>
                 <div class="col-md-3" style="margin-bottom: 0.5em">
-                    <select class="form-select form-select-lg" v-model="sortBy" aria-label="Sortera recept">
-                        <option value="latest">Senaste</option>
-                        <option value="alphabetical">Alfabetisk (A–Ö)</option>
-                    </select>
+                    <div class="btn-group" role="group" aria-label="Sortering">
+                        <button type="button" class="btn btn-outline-primary btn-lg" :class="{ active: sortBy === 'latest' }" @click="setSort('latest')" aria-label="Sortera efter senaste" title="Senaste">🕒</button>
+                        <button type="button" class="btn btn-outline-primary btn-lg" :class="{ active: sortBy === 'alphabetical' }" @click="setSort('alphabetical')" aria-label="Sortera alfabetiskt" title="Alfabetisk (A–Ö)">🔤</button>
+                    </div>
                 </div>
                 <div class="col-md-2" style="margin-bottom: 0.5em">
                     <div class="btn-group" role="group" aria-label="Vy">
