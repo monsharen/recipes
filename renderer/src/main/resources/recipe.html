@@ -64,9 +64,27 @@
                         <h1>Ingredienser</h1>
                         <div class="description-divider"></div>
                     </div>
+                    <div class="recipe-controls">
+                        <div class="control portions-control" th:if="${data.recipe.metadata.getServings()}"
+                             th:attr="data-servings=${data.recipe.metadata.getServings()}">
+                            <span class="control-label">Portioner</span>
+                            <button type="button" class="stepper-btn" data-step="-1" aria-label="Färre portioner">−</button>
+                            <span class="portions-value">1</span>
+                            <button type="button" class="stepper-btn" data-step="1" aria-label="Fler portioner">+</button>
+                        </div>
+                        <div class="control unit-control">
+                            <label class="control-label" for="unitSelect">Visa mängd i</label>
+                            <select id="unitSelect">
+                                <option value="original">Som receptet</option>
+                                <option value="gram">Gram (våg)</option>
+                                <option value="ml">Milliliter</option>
+                            </select>
+                        </div>
+                    </div>
                     <div>
                         <ul class="ingredients">
-                            <li class="ingredient" th:each="ingredient : ${data.recipe.ingredients}">
+                            <li class="ingredient" th:each="ingredient : ${data.recipe.ingredients}"
+                                th:attr="data-qty=${ingredient.quantity},data-unit=${ingredient.unit},data-desc=${ingredient.description}">
                                 <span class="quantity" th:text="${data.getIngredientListAmountAndUnit(ingredient)}">400.0 grams</span>
                                 <span th:text="${ingredient.description}">chicken-breast</span>
                             </li>
@@ -173,6 +191,150 @@
                     requestWakeLock();
                 }
             });
+        })();
+
+        // Scale portions and convert ingredient amounts between units (client-side).
+        (function () {
+            var list = document.querySelector('ul.ingredients');
+            if (!list) return;
+            var items = Array.prototype.slice.call(list.querySelectorAll('.ingredient'));
+            if (!items.length) return;
+
+            // Unit metadata mirroring the server-side Swedish translator.
+            // ml: volume per 1 unit; g: grams per 1 unit; one/many: singular/plural name.
+            var UNITS = {
+                TABLESPOON:  { ml: 15,   one: 'matsked',     many: 'matskedar' },
+                TEASPOON:    { ml: 5,    one: 'tesked',      many: 'teskedar' },
+                LITRE:       { ml: 1000, one: 'liter',       many: 'liter' },
+                MILLILITRE:  { ml: 1,    one: 'milliliter',  many: 'milliliter' },
+                DECILITRE:   { ml: 100,  one: 'deciliter',   many: 'deciliter' },
+                CENTILITRE:  { ml: 10,   one: 'centiliter',  many: 'centiliter' },
+                CUPS:        { ml: 250,  one: 'kopp',        many: 'koppar' },
+                PINCH:       { ml: 0.3,  one: 'kryddmått',   many: 'kryddmått' },
+                GRAM:        { g: 1,     one: 'gram',        many: 'gram' },
+                KILOGRAM:    { g: 1000,  one: 'kilogram',    many: 'kilogram' },
+                QUANTITY:    { one: 'st',     many: 'st' },
+                PIECE:       { one: 'bit',    many: 'bitar' },
+                CLOVE:       { one: 'klyfta', many: 'klyftor' },
+                CAN:         { one: 'burk',   many: 'burkar' },
+                JAR:         { one: 'burk',   many: 'burkar' },
+                PACKET:      { one: 'paket',  many: 'paket' },
+                DASH:        { one: 'nypa',   many: 'droppar' },
+                BOTTLE:      { one: 'flaska', many: 'flaskor' }
+            };
+
+            // Approximate weight of common (baking) ingredients, grams per decilitre.
+            var DENSITY = {
+                'florsocker': 60, 'strösocker': 85, 'farinsocker': 85, 'vaniljsocker': 85, 'socker': 85,
+                'vetemjöl': 60, 'rågmjöl': 55, 'dinkelmjöl': 55, 'mandelmjöl': 45, 'potatismjöl': 80,
+                'maizena': 60, 'mjöl': 60, 'havregryn': 35, 'kokosflingor': 35, 'kokos': 35,
+                'ströbröd': 45, 'kakao': 40, 'bakpulver': 90, 'salt': 120,
+                'smör': 90, 'margarin': 90, 'olja': 92, 'grädde': 100, 'mjölk': 103, 'filmjölk': 103,
+                'vatten': 100, 'vinäger': 100, 'honung': 140, 'sirap': 140, 'russin': 65, 'mandel': 60
+            };
+            // Longest keys first so "strösocker" wins over "socker".
+            var DENSITY_KEYS = Object.keys(DENSITY).sort(function (a, b) { return b.length - a.length; });
+
+            function densityFor(desc) {
+                var d = (desc || '').toLowerCase();
+                var found = null;
+                DENSITY_KEYS.some(function (k) {
+                    if (d.indexOf(k) !== -1) { found = DENSITY[k]; return true; }
+                    return false;
+                });
+                return found;
+            }
+
+            function fmt(n) {
+                var r = Math.round(n * 100) / 100;
+                if (r === 0) return '0';
+                if (Math.round(r) === r) return String(Math.round(r));
+                if (Math.round(r * 10) / 10 === r) return String(Math.round(r * 10) / 10);
+                return r.toFixed(2);
+            }
+
+            function name(unitKey, amount) {
+                var u = UNITS[unitKey];
+                if (!u) return '';
+                return (amount >= 2) ? u.many : u.one;
+            }
+
+            // Returns the display string for one ingredient given scale factor and target mode.
+            function render(qty, unitKey, desc, scale, mode) {
+                var amount = qty * scale;
+                var u = UNITS[unitKey] || {};
+
+                if (mode === 'gram') {
+                    if (u.g != null) return fmt(amount * u.g) + ' gram';
+                    if (u.ml != null) {
+                        var dens = densityFor(desc);
+                        if (dens != null) return fmt(amount * u.ml / 100 * dens) + ' gram';
+                    }
+                } else if (mode === 'ml') {
+                    if (u.ml != null) return fmt(amount * u.ml) + ' milliliter';
+                    if (u.g != null) {
+                        var dens2 = densityFor(desc);
+                        if (dens2 != null) return fmt(amount * u.g / dens2 * 100) + ' milliliter';
+                    }
+                }
+
+                // 'original', or a conversion that isn't possible for this ingredient.
+                if (amount === 0) return name(unitKey, amount);
+                return fmt(amount) + ' ' + name(unitKey, amount);
+            }
+
+            function apply() {
+                items.forEach(function (li) {
+                    var qty = parseFloat(li.getAttribute('data-qty'));
+                    var unitKey = li.getAttribute('data-unit');
+                    var desc = li.getAttribute('data-desc');
+                    var span = li.querySelector('.quantity');
+                    if (!span || isNaN(qty)) return;
+
+                    var text = render(qty, unitKey, desc, state.scale, state.mode);
+                    span.textContent = text;
+
+                    // Flag amounts that could not be converted to the chosen unit.
+                    var wanted = (state.mode !== 'original');
+                    var converted = wanted && (text.indexOf(state.mode === 'gram' ? 'gram' : 'milliliter') !== -1);
+                    li.classList.toggle('not-converted', wanted && !converted);
+                });
+            }
+
+            var state = { scale: 1, mode: 'original' };
+
+            // Portion stepper.
+            var portionsCtl = document.querySelector('.portions-control');
+            var baseServings = 1;
+            if (portionsCtl) {
+                var raw = portionsCtl.getAttribute('data-servings') || '';
+                var m = raw.match(/[0-9]+([.,][0-9]+)?/);
+                if (m) baseServings = parseFloat(m[0].replace(',', '.')) || 1;
+                var current = baseServings;
+                var valueEl = portionsCtl.querySelector('.portions-value');
+                valueEl.textContent = fmt(current);
+
+                portionsCtl.querySelectorAll('.stepper-btn').forEach(function (btn) {
+                    btn.addEventListener('click', function () {
+                        var delta = parseInt(btn.getAttribute('data-step'), 10);
+                        current = Math.max(1, current + delta);
+                        valueEl.textContent = fmt(current);
+                        state.scale = current / baseServings;
+                        apply();
+                    });
+                });
+            }
+
+            // Unit selector.
+            var unitSelect = document.getElementById('unitSelect');
+            if (unitSelect) {
+                unitSelect.addEventListener('change', function () {
+                    state.mode = unitSelect.value;
+                    apply();
+                });
+            }
+
+            apply();
         })();
     </script>
 </body>
