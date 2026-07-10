@@ -199,6 +199,41 @@ body {
     opacity: 0.6;
 }
 
+/* Compact list view on the front page. */
+.recipe-list {
+    margin-bottom: 1em;
+}
+
+.recipe-list-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75em;
+}
+
+.recipe-list-thumb {
+    width: 3em;
+    height: 3em;
+    object-fit: cover;
+    border-radius: 0.25rem;
+    flex: 0 0 auto;
+}
+
+.recipe-list-name {
+    font-weight: 600;
+    flex: 1 1 auto;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.recipe-list-meta {
+    color: #8a8a8a;
+    font-size: 0.9em;
+    flex: 0 0 auto;
+    white-space: nowrap;
+}
+
 @media (max-width: 640px) {
     .col {
         flex: none;

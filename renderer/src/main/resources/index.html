@@ -11,7 +11,7 @@
         <div class="container" id="recipeList">
 
             <div class="row" style="margin-bottom: 1em">
-                <div class="col-md-9" style="margin-bottom: 0.5em">
+                <div class="col-md-7" style="margin-bottom: 0.5em">
                     <input class="form-control form-control-lg" type="text" placeholder="Filter" aria-label="filter" v-model="search">
                 </div>
                 <div class="col-md-3" style="margin-bottom: 0.5em">
@@ -19,6 +19,12 @@
                         <option value="latest">Senaste</option>
                         <option value="alphabetical">Alfabetisk (A–Ö)</option>
                     </select>
+                </div>
+                <div class="col-md-2" style="margin-bottom: 0.5em">
+                    <div class="btn-group" role="group" aria-label="Vy">
+                        <button type="button" class="btn btn-outline-primary btn-lg" :class="{ active: viewMode === 'card' }" @click="setView('card')" aria-label="Kortvy" title="Kortvy">▦</button>
+                        <button type="button" class="btn btn-outline-primary btn-lg" :class="{ active: viewMode === 'list' }" @click="setView('list')" aria-label="Listvy" title="Listvy">☰</button>
+                    </div>
                 </div>
             </div>
 
@@ -29,29 +35,43 @@
                 </div>
             </div>
 
-            <div class="row" v-for="recipe in filteredRecipes">
-                <div class="col">
+            <!-- Card view -->
+            <template v-if="viewMode === 'card'">
+                <div class="row" v-for="recipe in filteredRecipes">
+                    <div class="col">
 
-                    <div class="card mb-3" >
-                        <div class="row g-0">
+                        <div class="card mb-3" >
+                            <div class="row g-0">
 
-                            <div class="col-md-4">
-                                <img :src="recipe.image" class="img-fluid rounded-start" :alt="recipe.name">
-                            </div>
-                            <div class="col-md-8">
-                                <div class="card-body">
-                                    <h4 class="card-title">{{recipe.name}}</h4>
-                                    <p class="card-text">{{recipe.description}}</p>
-                                    <p class="card-text" v-if="recipe.servings"><small>Servings: {{recipe.servings}}</small></p>
-                                    <p class="card-text" v-if="recipe.estimatedPrepTime"><small>Estimated time: {{recipe.estimatedPrepTime}}</small></p>
-                                    <br />
-                                    <a :href="recipe.url" class="btn btn-primary">Öppna recept</a>
+                                <div class="col-md-4">
+                                    <img :src="recipe.image" class="img-fluid rounded-start" :alt="recipe.name">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <h4 class="card-title">{{recipe.name}}</h4>
+                                        <p class="card-text">{{recipe.description}}</p>
+                                        <p class="card-text" v-if="recipe.servings"><small>Servings: {{recipe.servings}}</small></p>
+                                        <p class="card-text" v-if="recipe.estimatedPrepTime"><small>Estimated time: {{recipe.estimatedPrepTime}}</small></p>
+                                        <br />
+                                        <a :href="recipe.url" class="btn btn-primary">Öppna recept</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </template>
+
+            <!-- Compact list view -->
+            <template v-if="viewMode === 'list'">
+                <div class="list-group recipe-list">
+                    <a v-for="recipe in filteredRecipes" :href="recipe.url" class="list-group-item list-group-item-action recipe-list-item">
+                        <img :src="recipe.image" class="recipe-list-thumb" :alt="recipe.name">
+                        <span class="recipe-list-name">{{recipe.name}}</span>
+                        <span class="recipe-list-meta" v-if="recipe.estimatedPrepTime">{{recipe.estimatedPrepTime}}</span>
+                    </a>
+                </div>
+            </template>
 
         </div>
     </div>

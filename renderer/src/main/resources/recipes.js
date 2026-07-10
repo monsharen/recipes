@@ -1,3 +1,12 @@
+// Remembered card/list preference (defaults to card view).
+function readView() {
+  try {
+    return localStorage.getItem('recipeView') === 'list' ? 'list' : 'card';
+  } catch (e) {
+    return 'card';
+  }
+}
+
 // Load recipe data (and optional git-based dates) then start the front-page app.
 Promise.all([
   fetch('./recipes.json').then(response => {
@@ -18,6 +27,15 @@ Promise.all([
         recipes: recipes,
         dates: dates,
         sortBy: 'latest',
+        viewMode: readView(),
+      },
+      methods: {
+        setView(mode) {
+          this.viewMode = mode;
+          try {
+            localStorage.setItem('recipeView', mode);
+          } catch (e) { /* storage unavailable, ignore */ }
+        }
       },
       computed: {
         filteredRecipes() {
