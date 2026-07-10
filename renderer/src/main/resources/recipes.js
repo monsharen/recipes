@@ -1,24 +1,27 @@
-// Fetch the JSON file and initialize the Vue app once the data is loaded
-fetch('./recipes.json')
-  .then(response => {
+// Load recipe data (and optional git-based dates) then start the front-page app.
+Promise.all([
+  fetch('./recipes.json').then(response => {
     if (!response.ok) {
       throw new Error('Network response was not ok');
     }
     return response.json();
-  })
-  .then(data => {
-    const recipes = data;
-
+  }),
+  // dates.json is generated at build time (url -> last commit date). Optional.
+  fetch('./dates.json').then(response => (response.ok ? response.json() : {})).catch(() => ({}))
+])
+  .then(([recipes, dates]) => {
     const app = new Vue({
       el: '#recipeList',
       data: {
         search: '',
         checkedRecipeTypes: [],
         recipes: recipes,
+        dates: dates,
+        sortBy: 'latest',
       },
       computed: {
         filteredRecipes() {
-          return this.recipes.filter(recipe => {
+          const filtered = this.recipes.filter(recipe => {
             return this.checkedRecipeTypes.every(type => {
               let match = recipe?.types?.includes(type);
               return match;
@@ -42,6 +45,25 @@ fetch('./recipes.json')
             // Check recipe name
             return recipe.name.toLowerCase().indexOf(searchTerm) > -1;
           });
+
+          const dates = this.dates;
+          const sorted = filtered.slice();
+
+          if (this.sortBy === 'alphabetical') {
+            sorted.sort((a, b) => a.name.localeCompare(b.name, 'sv'));
+          } else {
+            // 'latest' — newest last-commit date first; undated recipes go last.
+            sorted.sort((a, b) => {
+              const da = dates[a.url] || '';
+              const db = dates[b.url] || '';
+              if (da === db) {
+                return a.name.localeCompare(b.name, 'sv');
+              }
+              return db.localeCompare(da);
+            });
+          }
+
+          return sorted;
         },
 
         recipeTypes() {

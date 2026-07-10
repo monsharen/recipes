@@ -5,9 +5,26 @@ workflow:
     - if: '$CI_COMMIT_BRANCH'
 
 pages:
+  # Full history so per-recipe git dates below are accurate.
+  variables:
+    GIT_DEPTH: "0"
   script:
     - mvn clean install
     - java -jar testbench/target/testbench-1.0-SNAPSHOT.jar recipes recipes-rendered
+    # Emit dates.json mapping each recipe page url to its last-commit date,
+    # used by the front page to sort by "Senaste" (latest).
+    - |
+      echo '{' > recipes-rendered/dates.json
+      first=1
+      git ls-files recipes | grep '\.recipe$' | while read -r f; do
+        url="$(basename "$f").html"
+        d=$(git log -1 --format=%cs -- "$f")
+        if [ "$first" -eq 0 ]; then printf ',\n' >> recipes-rendered/dates.json; fi
+        first=0
+        printf '  "%s": "%s"' "$url" "$d" >> recipes-rendered/dates.json
+      done
+      printf '\n}\n' >> recipes-rendered/dates.json
+      cat recipes-rendered/dates.json
     - mv recipes-rendered public
   artifacts:
     paths:
