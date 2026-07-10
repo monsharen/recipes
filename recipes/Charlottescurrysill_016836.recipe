@@ -1,5 +1,7 @@
 metadata:
   name: Charlottes currysill
+  images:
+    - empty.png
   description: Från handskrivet familjerecept
   types: [Starter, Side]
   estimatedPrepTime: 30 min + 2 dygn
