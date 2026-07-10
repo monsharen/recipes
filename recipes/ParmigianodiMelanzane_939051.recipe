@@ -1,7 +1,7 @@
 metadata:
   name: Parmigiano di Melanzane 
   images:
-    - 
+    - empty.png
   description: From https://www.insidetherustickitchen.com/parmigiana-di-melanzane-aubergine-parmigana/ 
   types: [Main]
   estimatedPrepTime: 2 h
@@ -9,10 +9,10 @@ metadata:
 
 ingredients:
  - 2 st large aubergines/eggplant, around (700g/ 1.5 lbs)
- - 1.5 lbs pureed tomatoes (passata), chunky or smooth texture (700g)
+ - 700 g pureed tomatoes (passata), chunky or smooth texture
  - 1 st white onion
  - 1 st bunch of basil
- - 8.8 oz mozzarella cheese, cut into cubes (250g)
+ - 250 g mozzarella cheese, cut into cubes
  - 0.75 cups Parmigiano Reggiano cheese, freshly grated (70g)
  - 0.5 tbsp olive oil
  - 1 dl flour, for dusting
