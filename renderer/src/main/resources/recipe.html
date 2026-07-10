@@ -76,9 +76,10 @@
                 <div class="col">
                     <div>
                         <h1>Instruktioner</h1>
+                        <p class="step-hint">Klicka på ett steg för att bocka av det medan du lagar. Klicka igen för att ångra.</p>
                         <div class="description-divider"></div>
                     </div>
-                    <div class="actions">
+                    <div class="actions" th:attr="data-recipe=${data.recipe.metadata.name}">
                         <div th:each="action : ${data.recipe.actions}" th:class="${data.getActionClass(action)}">
                             <div class="container">
                                 <div class="row">
@@ -96,5 +97,83 @@
             </div>
         </div>
     </div>
+    <script th:inline="none">
+        // Mark instruction steps as completed while cooking (persisted per recipe).
+        (function () {
+            var actionsEl = document.querySelector('.actions');
+            if (!actionsEl) return;
+
+            var recipeKey = 'recipe-progress:' + (actionsEl.getAttribute('data-recipe') || document.title);
+            var steps = Array.prototype.slice.call(actionsEl.querySelectorAll('.action'));
+
+            var completed;
+            try {
+                completed = JSON.parse(localStorage.getItem(recipeKey)) || [];
+            } catch (e) {
+                completed = [];
+            }
+            if (!Array.isArray(completed)) completed = [];
+
+            function save() {
+                try {
+                    localStorage.setItem(recipeKey, JSON.stringify(completed));
+                } catch (e) { /* storage unavailable, ignore */ }
+            }
+
+            function toggle(step, index) {
+                var pos = completed.indexOf(index);
+                if (pos === -1) {
+                    step.classList.add('completed');
+                    completed.push(index);
+                } else {
+                    step.classList.remove('completed');
+                    completed.splice(pos, 1);
+                }
+                save();
+            }
+
+            steps.forEach(function (step, index) {
+                if (completed.indexOf(index) !== -1) {
+                    step.classList.add('completed');
+                }
+                step.setAttribute('role', 'button');
+                step.setAttribute('tabindex', '0');
+                step.addEventListener('click', function () {
+                    toggle(step, index);
+                });
+                step.addEventListener('keydown', function (e) {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        toggle(step, index);
+                    }
+                });
+            });
+        })();
+
+        // Keep the screen awake while a recipe is open (best-effort).
+        (function () {
+            if (!('wakeLock' in navigator)) return;
+
+            var wakeLock = null;
+
+            function requestWakeLock() {
+                navigator.wakeLock.request('screen').then(function (lock) {
+                    wakeLock = lock;
+                    wakeLock.addEventListener('release', function () {
+                        wakeLock = null;
+                    });
+                }).catch(function () { /* denied or not allowed, ignore */ });
+            }
+
+            requestWakeLock();
+
+            // The lock is released when the tab is hidden; re-acquire on return.
+            document.addEventListener('visibilitychange', function () {
+                if (wakeLock === null && document.visibilityState === 'visible') {
+                    requestWakeLock();
+                }
+            });
+        })();
+    </script>
 </body>
 </html>
