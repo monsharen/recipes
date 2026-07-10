@@ -18,8 +18,8 @@ then a 6-digit number (effectively random/unique). Example: `Chocolatechipcookie
 
 ```yaml
 metadata:
-  name: Chocolate chip cookies        # required — display title
-  images:                             # list of hero image URLs (usually one)
+  name: Chocolate chip cookies        # MANDATORY — display title
+  images:                             # MANDATORY — needs at least one entry
     - https://example.com/photo.jpg
   description: From https://source... # free text; convention is "From <source url>"
   notes: "Optional extra tip."        # optional; quote if it contains ':' or special chars
@@ -28,9 +28,17 @@ metadata:
   servings: 20 st                     # free-form string (e.g. "6", "1 glass", "10-12 st")
 ```
 
-All fields are optional except that `name` is what identifies the recipe. Other supported
-but rarely-used fields: `language`. Every value is stored as-is (strings), so
-`estimatedPrepTime` and `servings` accept any human text.
+### Mandatory fields (the build FAILS without them)
+
+- **`name`** — identifies the recipe; without it the front-page card and page have no title.
+- **`images`** — must contain **at least one entry**. The front-page renderer calls
+  `images.get(0)` unconditionally (`Main.map()`), so a missing `images:` key or an empty list
+  throws a `NullPointerException` and fails the pipeline. If you have no photo yet, use a
+  placeholder: `- empty.png` (a bundled fallback image). An empty list item (`- ` with no
+  value) counts as one entry but renders as a broken card — prefer `empty.png`.
+
+Everything else is optional. Other supported but rarely-used field: `language`. Every value is
+stored as-is (strings), so `estimatedPrepTime` and `servings` accept any human text.
 
 **types** are free-form tags used for filtering on the front page. Observed values:
 `Bread, Cookies, Dessert, Drink, Main, Pasta, Pie, Side, Sauce, Marinade, Stew, Sausage,
