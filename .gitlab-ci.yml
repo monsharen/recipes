@@ -18,7 +18,7 @@ pages:
       first=1
       git ls-files recipes | grep '\.recipe$' | while read -r f; do
         url="$(basename "$f").html"
-        d=$(git log -1 --format=%cs -- "$f")
+        d=$(git log -1 --date=short --format=%cd -- "$f")
         if [ "$first" -eq 0 ]; then printf ',\n' >> recipes-rendered/dates.json; fi
         first=0
         printf '  "%s": "%s"' "$url" "$d" >> recipes-rendered/dates.json
