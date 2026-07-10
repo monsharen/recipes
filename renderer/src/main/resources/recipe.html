@@ -71,6 +71,7 @@
                             <button type="button" class="stepper-btn" data-step="-1" aria-label="Färre portioner">−</button>
                             <span class="portions-value">1</span>
                             <button type="button" class="stepper-btn" data-step="1" aria-label="Fler portioner">+</button>
+                            <button type="button" class="reset-btn" data-reset aria-label="Återställ portioner">Återställ</button>
                         </div>
                         <div class="control unit-control">
                             <label class="control-label" for="unitSelect">Visa mängd i</label>
@@ -314,15 +315,25 @@
                 var valueEl = portionsCtl.querySelector('.portions-value');
                 valueEl.textContent = fmt(current);
 
+                function setPortions(value) {
+                    current = Math.max(1, value);
+                    valueEl.textContent = fmt(current);
+                    state.scale = current / baseServings;
+                    apply();
+                }
+
                 portionsCtl.querySelectorAll('.stepper-btn').forEach(function (btn) {
                     btn.addEventListener('click', function () {
-                        var delta = parseInt(btn.getAttribute('data-step'), 10);
-                        current = Math.max(1, current + delta);
-                        valueEl.textContent = fmt(current);
-                        state.scale = current / baseServings;
-                        apply();
+                        setPortions(current + parseInt(btn.getAttribute('data-step'), 10));
                     });
                 });
+
+                var resetBtn = portionsCtl.querySelector('.reset-btn');
+                if (resetBtn) {
+                    resetBtn.addEventListener('click', function () {
+                        setPortions(baseServings);
+                    });
+                }
             }
 
             // Unit selector.
