@@ -1,0 +1,31 @@
+metadata:
+  name: Charlottes currysill
+  description: Från handskrivet familjerecept
+  types: [Starter, Side]
+  estimatedPrepTime: 30 min + 2 dygn
+  servings: 6
+
+ingredients:
+ - 0.5 dl ättiksprit 12%
+ - 1.5 dl vatten
+ - 1.5 dl strösocker
+ - 1 st lagerblad
+ - 5 st nejlikor
+ - 0.5 msk stött kryddpeppar
+ - 1 burk inläggningssill
+ - 0.75 dl majonnäs
+ - 1.5 dl gräddfil
+ - 1 tsk curry
+ - 0.5 dl hackad syltlök
+ - 0.5 dl finskuren purjolök
+ - 1 st salt
+ - 1 st svartpeppar
+
+actions:
+ - divider Sillag
+ - free_text Blanda ättiksprit, vatten, strösocker, lagerblad, nejlikor och stött kryddpeppar i en kastrull.
+ - free_text Låt lagen koka upp så att sockret smälter. Låt kallna.
+ - free_text Låt sillfiléerna dra i sillagen 1 dygn. Låt dem sedan rinna av.
+ - divider Currysillröra
+ - free_text Blanda majonnäs, gräddfil, curry, hackad syltlök och finskuren purjolök. Smaka av med salt och svartpeppar.
+ - free_text Blanda sillen med majonnäsröran. Låt den vila ytterligare 1 dygn innan servering.
