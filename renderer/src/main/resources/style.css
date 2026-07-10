@@ -126,6 +126,63 @@ body {
     opacity: 0.65;
 }
 
+/* Portion + unit controls above the ingredient list. */
+.recipe-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    margin-bottom: 1em;
+}
+
+.recipe-controls .control {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    background-color: white;
+    border-radius: 0.25rem;
+    padding: 0.5em 0.75em;
+    box-shadow: 0 0.0625rem 0.125rem 0 rgb(0 0 0 / 6%);
+}
+
+.recipe-controls .control-label {
+    font-weight: 600;
+    font-size: 0.95em;
+}
+
+.stepper-btn {
+    border: 1px solid #d9d2d2;
+    background-color: #f9f5f5;
+    border-radius: 0.25rem;
+    width: 1.9em;
+    height: 1.9em;
+    line-height: 1;
+    font-size: 1.1em;
+    cursor: pointer;
+}
+
+.stepper-btn:hover {
+    background-color: #efe7e7;
+}
+
+.portions-value {
+    min-width: 1.5em;
+    text-align: center;
+    font-weight: 600;
+}
+
+.unit-control select {
+    border: 1px solid #d9d2d2;
+    border-radius: 0.25rem;
+    padding: 0.25em 0.4em;
+    background-color: #f9f5f5;
+    cursor: pointer;
+}
+
+/* Ingredient whose amount can't be expressed in the chosen unit. */
+.ingredient.not-converted {
+    opacity: 0.6;
+}
+
 @media (max-width: 640px) {
     .col {
         flex: none;
