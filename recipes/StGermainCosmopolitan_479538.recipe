@@ -16,5 +16,5 @@ ingredients:
  - 1 st Lemon wheel, for the garnish ​
 
 actions:
- - free_text Mix all ingredients in shaker and shake well
- - free_text Garnish with lemon wheel
+ - free_text Mix 30 ml vodka, 30 ml cranberry juice, 15 ml St. Germain, 15 ml lemon juice and 5 ml simple syrup in a shaker and shake well
+ - free_text Garnish with 1 lemon wheel

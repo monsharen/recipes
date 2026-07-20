@@ -15,7 +15,7 @@ ingredients:
  - 4 st Ice cubes
 
 actions:
- - free_text Fill glass with ice
+ - free_text Fill glass with 4 ice cubes
  - free_text Add 9 cl Prosecco, 6 cl Aperol and 3 cl Club Soda
  - free_text Stir gently
- - free_text Garnish with slice of orange
+ - free_text Garnish with 1 slice of orange
