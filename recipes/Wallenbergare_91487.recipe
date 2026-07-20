@@ -19,8 +19,8 @@ ingredients:
 actions:
  - free_text Blanda 3 dl grädde med 1 dl ströbröd och låt stå i 10 min.
  - free_text Sätt ugnen på 175 C.
- - free_text Lägg färsen i en skål och tillsätt 3 st äggulor.
- - free_text Tillsätt salt, vitpeppar och ev. fyra kryddor.
+ - free_text Lägg 500 g finmalen kalvfärs i en skål och tillsätt 3 st äggulor.
+ - free_text Tillsätt 0.5 tsk salt, 1 krm vitpeppar och ev. 2 krm fyra kryddor.
  - free_text Tillsätt ströbröd-blandningen och blanda ordentligt.
  - divider Dags att steka och grädda
  - free_text Värm en stekpanna med smör i.

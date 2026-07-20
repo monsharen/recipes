@@ -16,11 +16,11 @@ ingredients:
 
 
 actions:
-  - free_text Skär i 1 cm tjocka skivor. Dela varje skiva i fyra delar.
-  - free_text Dela löken i klyftor.
-  - free_text Skär svampen i bitar.
+  - free_text Skär 800 g falukorv i 1 cm tjocka skivor. Dela varje skiva i fyra delar.
+  - free_text Dela 4 st schalottenlökar i klyftor.
+  - free_text Skär 100 g shiitakesvamp i bitar.
   - free_text Bryn lök och korven i olivolja.
   - free_text Lägg i svampen och låt den fräsa i någon halvminut.
-  - free_text Häll i creme fraichen och mjölken och rör om.
-  - free_text Tillsätt tomatpurén och basilikan.
+  - free_text Häll i 6 dl creme fraiche och 3 dl mjölk och rör om.
+  - free_text Tillsätt 2 msk tomatpuré och 1 msk strimlad färsk basilika.
   - free_text Låt allt sjuda i några minuter, salta och peppra.

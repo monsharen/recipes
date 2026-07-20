@@ -24,9 +24,9 @@ ingredients:
 
 
 actions:
-  - free_text Fry chicken in oil in a pan
-  - free_text Cut onion and add to pan until lightly translucent
-  - free_text Add curry paste, mashed garlic and let it fry for 2 mins
-  - free_text Add peppers and turmeric
-  - free_text Add coconut milk, celery, fish sauce, chili and let it simmer for 10 mins
-  - free_text Add lime and coriander. Serve!
+  - free_text Fry 200 g chicken in 2 spoons of oil in a pan
+  - free_text Cut 1 onion and add to pan until lightly translucent
+  - free_text Add the curry paste, 5 mashed garlic cloves, 1 lemon grass stalk and the fresh ginger and let it fry for 2 mins
+  - free_text Add 1 red/green pepper and 2 tbsp turmeric
+  - free_text Add 2 cans coconut milk, 1 celery, the fish sauce, 1 chili and let it simmer for 10 mins
+  - free_text Add 1 lime and the coriander. Serve!

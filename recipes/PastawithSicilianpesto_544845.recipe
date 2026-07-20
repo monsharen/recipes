@@ -20,8 +20,8 @@ ingredients:
  - 400 g pasta Strozzapreti or similar
 
 actions:
- - free_text Koka pastavatten
- - free_text Rosta en handful mandlar i stekpanna
+ - free_text Koka pastavatten och koka 400 g pasta
+ - free_text Rosta 1 handfull mandlar i stekpanna
  - free_text Rosta 1 vitlöksklyfta i stekpanna
- - free_text Blanda alla ingredienser väl i en bunke. 
+ - free_text Blanda 50 g soltorkade tomater, 2 st färska tomater, 40 g basilika, 70 g olivolja, mandlarna, 0.5 handfull russin, vitlöken, 200 g ricotta och 40 g parmesan väl i en bunke.
  - free_text Smaka av med salt o peppar

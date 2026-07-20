@@ -16,8 +16,8 @@ ingredients:
  - 1 krm svartpeppar
 
 actions:
- - free_text Blanda samman havregryn, mjölk och ägg i en bunke och låt svälla 5 minuter.
- - free_text  Blanda ner citronsaft, zest, timjan, salt och peppar.
- - free_text Blanda sist i kycklingfärsen och blanda väl. Smeten ska vara lite lös.
+ - free_text Blanda samman 0.5 dl havregryn, 0.5 dl mjölk och 1 st ägg i en bunke och låt svälla 5 minuter.
+ - free_text Blanda ner saft och zest från 0.5 st citron, 0.5 tsk torkad timjan, 0.5 tsk salt och 1 krm svartpeppar.
+ - free_text Blanda sist i 500 g kycklingfärs och blanda väl. Smeten ska vara lite lös.
  - free_text Värm en stekpanna till medelvarmt.
  - free_text Klicka ut smeten och forma till biffar med baksidan på en sked som du doppar i vatten mellan varven. Stek 3-4 minuter per sida tills de är genomstekta.
