@@ -17,8 +17,8 @@ ingredients:
 
 actions:
  - free_text Sätt ugnen på 175 C, över- och undervärme
- - free_text Blanda ihop alla torra ingredienser i en bunke
- - free_text Tillsätt filmjölk och sirap och rör om till en tjock smet
+ - free_text Blanda ihop 100 g fint rågmjöl, 240 g vetemjöl, 2 tsk bikarbonat och 0.5 tsk salt i en bunke
+ - free_text Tillsätt 3 dl filmjölk och 2 dl mörk sirap och rör om till en tjock smet
  - free_text Sätt ett bakplåtspapper i en avlång limpform som rymmer minst 1.2 liter
  - free_text Häll över smeten i formen och jämna ut
  - free_text Ställ in formen mitt i ugnen och grädda i 55 min

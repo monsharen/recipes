@@ -15,7 +15,7 @@ ingredients:
 
 actions:
  - divider Gör degen
- - free_text Blanda alla ingredienser med handtaget på en träslev. Knåda ej.
+ - free_text Blanda 950 g mjöl, 2.5 tsk salt, 15 g jäst och 730 ml vatten med handtaget på en träslev. Knåda ej.
  - free_text Låt jäsa i 10 timmar i rumstemperatur.
  - divider Grädda bröden
  - free_text Sätt ugnen på 250 C.

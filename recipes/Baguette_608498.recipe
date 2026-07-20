@@ -14,10 +14,10 @@ ingredients:
  - 2 tsk salt
 
 actions:
- - free_text Blanda mjöl och vatten ordentligt i en skål. Degen ska vara så fuktig att den kletar fast lite i bunken men ändå släpper när man drar den från kanten, alltså ganska lös.
+ - free_text Blanda 9 dl mjöl och 4.5 dl vatten ordentligt i en skål. Degen ska vara så fuktig att den kletar fast lite i bunken men ändå släpper när man drar den från kanten, alltså ganska lös.
  - free_text Vänta 1 timme.
- - free_text Smula ner jäst i degen. Knåda degen ordentligt.
- - free_text Blanda i saltet i degen. Knåda degen ordentligt.
+ - free_text Smula ner 4 g färsk jäst i degen. Knåda degen ordentligt.
+ - free_text Blanda i 2 tsk salt i degen. Knåda degen ordentligt.
  - free_text Låt jäsa i skålen i kylskåpet i mer än 10 timmar.
  - free_text Dela degen i tre delar och forma delarna genom att dra ut dem till kvadrater. Rulla ihop kvadraterna till baguetter.
  - free_text Rulla över baguetterna på bakplåten. Låt dem vila i två timmar.
