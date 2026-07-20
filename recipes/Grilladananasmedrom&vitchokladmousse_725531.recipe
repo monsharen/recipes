@@ -24,12 +24,12 @@ actions:
  - free_text Vänd sedan ner resten av grädden och blanda runt. 
  - free_text Ställ moussen i kylen ca 1 timme.
  - divider Romsås
- - free_text Blanda sirap och rom.
- - free_text Myntasocker 
- - free_text Mortla samman mynta och socker.
+ - free_text Blanda 1 dl ljus sirap och 2 msk mörk rom.
+ - free_text Myntasocker
+ - free_text Mortla samman 0.5 kruka mynta och 2 msk strösocker.
  - divider Grillad ananas
- - free_text Skala ananasen och skär bort den grova stocken i mitten. Skär ananasen i klyftor. 
- - free_text Trä upp dem på spett. 
+ - free_text Skala 1 ananas och skär bort den grova stocken i mitten. Skär ananasen i klyftor.
+ - free_text Trä upp dem på 10 st grillspett.
  - free_text Grilla ananasspetten ca 2-3 min på varje sida, tills de fått färg. 
  - free_text Lägg dem på ett fat och ringla över romsirapen. 
  - free_text Strö på myntasockret. 
