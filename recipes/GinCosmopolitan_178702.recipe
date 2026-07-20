@@ -16,7 +16,7 @@ ingredients:
  - 1 u salt for glasses
 
 actions:
- - free_text Combine lime juice, cranberry juice, gin and cointreau in an ice-filled cocktail shaker
+ - free_text Combine 15 ml lime juice, 30 ml cranberry juice, 45 ml gin and 30 ml Cointreau in an ice-filled cocktail shaker
  - free_text Shake until outside of shaker gets cold. Strain into chilled martini glass
  - free_text Twist citrus peel over glass and dip rim in salt.
- - free_text Garnish the glass with a lime wedge
+ - free_text Garnish the glass with 1 lime wheel

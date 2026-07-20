@@ -15,7 +15,7 @@ ingredients:
  - 2 cl Äggvita
 
 actions:
- - free_text Häll alla ingredienser i en shaker.
+ - free_text Häll 5 cl Campari, 2.5 cl citronjuice, 1 cl apelsinjuice, 1.5 cl sockerlag och 2 cl äggvita i en shaker.
  - free_text Skaka drinken utan is så att äggvitan skummar sig.
  - free_text Fyll shakern med is och skaka drinken kall.
  - free_text Sila upp drinken i ett glas.
