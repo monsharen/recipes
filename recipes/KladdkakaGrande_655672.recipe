@@ -17,7 +17,7 @@ ingredients:
 actions:
  - free_text Sätt ugnen på 200 grader
  - free_text Smörj form, cirka 22 cm i diameter, med smör och täck med kokosflingor
- - free_text Smält smöret
- - free_text Vispa ihop ägg och socker lätt och rör ner smöret.
- - free_text Blanda mjöl, kakao, vaniljsocker och salt och rör ner i äggsmeten.
+ - free_text Smält 150 g smör
+ - free_text Vispa ihop 3 st ägg och 3 dl strösocker lätt och rör ner det smälta smöret.
+ - free_text Blanda 3.5 dl vetemjöl, 1 dl kakao, 1 tsk vaniljsocker och 1 nypa salt och rör ner i äggsmeten.
  - free_text Häll smeten i formen och grädda kakan i nedre delen av ugnen i 200 grader i cirka 12 minuter

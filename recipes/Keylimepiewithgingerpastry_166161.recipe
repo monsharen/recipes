@@ -28,7 +28,7 @@ ingredients:
 
 actions:
  - divider Pajbotten
- - free_text Sikta 400 g mjöl, 80 g florsocker, 4 tsk riven ingefära och en nypa salt i en stor mixerskål. Blanda i det tärnade smöret tills blandningen liknar brödsmulor.
+ - free_text Sikta 400 g mjöl, 80 g florsocker, 4 tsk riven ingefära och en nypa salt i en stor mixerskål. Blanda i 250 g tärnat osaltat smör tills blandningen liknar brödsmulor.
  - free_text Blanda ner 3 äggulor i 50 ml iskallt vatten och tillsätt i mjölblandningen. Rör om med händerna tills blandningen precis går ihop till en deg. Tillsätt 1 tbsp olivolja om degen är lite torr. Slå in degen i matfilm och ställ i kylen i 20-30 minuter.
  - free_text Sätt ugnen på 200 C.
  - free_text Kavla ut degen på en lätt mjölad yta till ca 3 mm tjocklek. Drapera degen över kaveln och använd den för att överföra degen till en 30 cm tårtform. Tryck ut degen i formen, se till att det inte finns några luckor i hörnet. Låt överskottet av degen hänga över formen. 
@@ -41,7 +41,7 @@ actions:
  - free_text Häll blandningen i pajskalet, jämna till toppen med en palettkniv och grädda i 15-20 minuter. Pajen är klar när fyllningen har en liten vinkling eller när temperaturen i mitten har nått 70C vid kontroll med en sondtermometer.
  - free_text Ställ åt sidan för att svalna 30 min i bakformen. Kyl sedan pajen i kylen så länge som möjligt.
  - divider Maräng
- - free_text Häll sockret i en tjock djup kastrull med 6 tbsp vatten och värm på medelhög värme. Koka upp blandningen utan att röra om, borsta ner eventuella sockerkristaller på sidan av pannan med en våt bakelseborste. Ta bort sirapen från värmen när den når 120 C (det fasta kulstadiet).
+ - free_text Häll 225 g socker i en tjock djup kastrull med 6 msk vatten och värm på medelhög värme. Koka upp blandningen utan att röra om, borsta ner eventuella sockerkristaller på sidan av pannan med en våt bakelseborste. Ta bort sirapen från värmen när den når 120 C (det fasta kulstadiet).
  - free_text Vispa 4 äggvitor i en fristående mixer tills det bildas styva toppar när visp tas bort. Under vispningen häller du den kokande sirapen på äggvitorna i en tunn, jämn stråle. Fortsätt att vispa äggvitorna tills blandningen är styv, blank och stabil.
  - free_text Lägg marängen i en spritspåse försedd med ett 1.5 cm runt munstycke.
  - divider Bygg ihop pajen
