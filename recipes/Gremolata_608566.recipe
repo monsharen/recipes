@@ -11,5 +11,5 @@ ingredients:
  - 2 u garlic cloves, grated
 
 actions:
- - free_text Finely chop the parsley and place in a bowl
- - free_text Add the garlic and lemon zest and mix together
+ - free_text Finely chop 1 bunch of parsley and place in a bowl
+ - free_text Add 2 grated garlic cloves and the zest of 2 lemons and mix together

@@ -19,11 +19,11 @@ ingredients:
  - 1 nypa cayennepeppar, eventuellt
 
 actions:
- - free_text Smält smöret i en kastrull och ställ åt sidan.
- - free_text Koka upp vatten, vinäger och lök. Reducera till ca 1 msk återstår.
+ - free_text Smält 75 g smör i en kastrull och ställ åt sidan.
+ - free_text Koka upp 0.5 dl vatten, 1.5 msk vitvinsvinäger och 0.5 st hackad schalottenlök. Reducera till ca 1 msk återstår.
  - free_text Sila av i en kopp med en tesil.
- - free_text Häll tillbaka i kastrullen och tillsätt äggulorna. Vispa kraftigt på låg värme tills det blir ett fluffigt skum och börjar tjockna.
- - free_text Ta av kastrullen från plattan och vispa i smöret, lite i sänder. Häll i en smal stråle samtidigt som du vispar ordentligt.
+ - free_text Häll tillbaka i kastrullen och tillsätt 2 st äggulor. Vispa kraftigt på låg värme tills det blir ett fluffigt skum och börjar tjockna.
+ - free_text Ta av kastrullen från plattan och vispa i det smälta smöret, lite i sänder. Häll i en smal stråle samtidigt som du vispar ordentligt.
  - free_text Om såsen blir för tunn kan du värma den försiktigt samtidigt som du vispar för att få den lite tjockare.
  - free_text Tillsätt 1 tsk dragon i vinäger och 1 krm salt. Smaka av.
  - free_text Har du cayennepeppar hemma kan du dofta över ett uns. Har du inte det går det bra ändå. Såsen blir underbart god!

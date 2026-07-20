@@ -20,13 +20,13 @@ ingredients:
 
 actions:
  - divider Ättikslag
- - free_text Mät upp ättika, socker och vatten i en kastrull. Tillsätt krossad kryddpeppar, krossad vitpeppar, lagerblad samt kryddnejlikor och koka upp.
+ - free_text Mät upp 0.5 dl ättiksprit 12%, 1 dl socker och 1.5 dl vatten i en kastrull. Tillsätt 2 tsk grovt krossad kryddpeppar, 0.5 tsk grovt krossad vitpeppar, 1 st lagerblad samt 5 st kryddnejlikor och koka upp.
  - free_text Rör om så att sockret löser sig.
  - free_text Sätt ättikslagen åt sidan att svalna och kallna.
  - divider Sillen
- - free_text Häll av och skölj sillen.
+ - free_text Häll av och skölj 1 burk inläggningssill på 420 gram.
  - free_text Skär eller klipp sillen i lagom bitar - förslagsvis någon cm breda.
- - free_text Skala samt hacka eller strimla löken.
+ - free_text Skala samt hacka eller strimla 1 st röd eller gul lök.
  - free_text Varva sill och lök i en eller två glasburkar och häll över lagen.
  - free_text Låt sillen stå i kylen i minst 5 timmar, gärna 1-2 dygn för bästa smak.
  - free_text Löksillen håller flera veckor om den förvaras svalt.

@@ -15,5 +15,5 @@ ingredients:
  - 2 msk olja
 
 actions:
- - free_text Blanda alla ingredienser
+ - free_text Blanda 2 st vitlöksklyftor, 1 msk riven ingefära, 0.5 dl japansk soja, 0.5 dl flytande honung och 2 msk olja
  - free_text Låt stå i minst 2 timmar
