@@ -18,10 +18,10 @@ ingredients:
  - 1 dl riven parmesanost
 
 actions:
- - free_text Koka pastan “al dente” enligt förpackningens anvisningar.
- - free_text Riv zucchinin grovt på ett rivjärn och hacka vitlöken. 
- - free_text Fräs zucchiniraspet och vitlöken i smör tills de är mjuka och har fått lite färg. 
- - free_text Vänd ner så mycket crème fraiche att zucchinin binds ihop till en krämig sås. 
- - free_text Värm och smaksätt med salt och peppar. 
+ - free_text Koka 400 g pasta “al dente” enligt förpackningens anvisningar.
+ - free_text Riv 1 stor zucchini grovt på ett rivjärn och hacka 1 vitlöksklyfta.
+ - free_text Fräs zucchiniraspet och vitlöken i 1 msk smör tills de är mjuka och har fått lite färg.
+ - free_text Vänd ner 2 msk crème fraiche, eller så mycket att zucchinin binds ihop till en krämig sås.
+ - free_text Värm och smaksätt med 1 nypa salt och 1 nypa peppar.
  - free_text Vänd ner såsen i den avrunna pastan.
- - free_text Servera med parmesanost.
+ - free_text Servera med 1 dl riven parmesanost.
