@@ -1,7 +1,7 @@
 metadata:
   name: Sorbetto Pompelmo, Campari e Menta
   images:
-    - empty.png
+    - https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Blood_orange_Scream_sorbet_%284511550716%29.jpg/960px-Blood_orange_Scream_sorbet_%284511550716%29.jpg
   description: "Grapefruit Campari Mint Sorbet. A frozen aperitivo — intensely grapefruity, laced with Campari's bitter depth and lifted by fresh mint."
   notes: "Needs an ice cream machine. Contains alcohol, which softens the freeze — expect a longer churn and a longer firming time than the alcohol-free version."
   types: [Dessert, Ice Cream]

@@ -1,7 +1,7 @@
 metadata:
   name: Sorbetto al Limone Intenso
   images:
-    - empty.png
+    - https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Lemon_sorbet_%284173840081%29.jpg/960px-Lemon_sorbet_%284173840081%29.jpg
   description: "Riviera Lemon Sorbet. Riviera-style sorbetto al limone — sharp, perfumed, and unapologetically lemony, built on a heavy zest infusion."
   notes: "Needs an ice cream machine. The juice goes in raw and cold at the end, never heated."
   types: [Dessert, Ice Cream]

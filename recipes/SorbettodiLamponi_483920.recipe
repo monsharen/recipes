@@ -1,7 +1,7 @@
 metadata:
   name: Sorbetto di Lamponi
   images:
-    - empty.png
+    - https://upload.wikimedia.org/wikipedia/commons/f/fb/Raspberry_sorbet.jpg
   description: "Italian Raspberry Sorbet. A classic Italian-style sorbet — pure raspberry flavor, silky texture, no dairy or eggs."
   notes: "Needs an ice cream machine. The base must be fully chilled before churning."
   types: [Dessert, Ice Cream]
