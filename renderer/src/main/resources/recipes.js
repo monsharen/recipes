@@ -16,16 +16,24 @@ function readSort() {
   }
 }
 
+// GitLab Pages serves everything with "Cache-Control: max-age=600" and custom
+// headers can't be set on gitlab.com, so iOS Safari happily shows a stale list
+// long after a rebuild. Bypass the HTTP cache for the data files: 'no-store'
+// skips the cache entirely, and the cache-buster keeps intermediaries honest.
+function fetchFresh(url) {
+  return fetch(url + '?t=' + Date.now(), { cache: 'no-store' });
+}
+
 // Load recipe data (and optional git-based dates) then start the front-page app.
 Promise.all([
-  fetch('./recipes.json').then(response => {
+  fetchFresh('./recipes.json').then(response => {
     if (!response.ok) {
       throw new Error('Network response was not ok');
     }
     return response.json();
   }),
   // dates.json is generated at build time (url -> last commit date). Optional.
-  fetch('./dates.json').then(response => (response.ok ? response.json() : {})).catch(() => ({}))
+  fetchFresh('./dates.json').then(response => (response.ok ? response.json() : {})).catch(() => ({}))
 ])
   .then(([recipes, dates]) => {
     const app = new Vue({
