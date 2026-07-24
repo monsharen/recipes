@@ -1,0 +1,30 @@
+metadata:
+  name: Sorbetto Pompelmo, Campari e Menta
+  images:
+    - https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Blood_orange_Scream_sorbet_%284511550716%29.jpg/960px-Blood_orange_Scream_sorbet_%284511550716%29.jpg
+  description: "Grapefruit Campari Mint Sorbet. A frozen aperitivo — intensely grapefruity, laced with Campari's bitter depth and lifted by fresh mint."
+  notes: "Needs an ice cream machine. Contains alcohol, which softens the freeze — expect a longer churn and a longer firming time than the alcohol-free version."
+  types: [Dessert, Ice Cream]
+  estimatedPrepTime: 40 min + 5 h
+  servings: 6
+
+ingredients:
+ - 600 ml freshly squeezed red grapefruit juice (about 4 grapefruits)
+ - 190 g granulated sugar
+ - 2 st red grapefruits, zested (zest only, no white pith)
+ - 15 st fresh mint leaves
+ - 2.5 tbsp Campari
+ - 1 tbsp freshly squeezed lemon juice
+ - 0.1 tsp fine salt
+
+actions:
+ - divider Make the base
+ - free_text <b>Zest, juice, and divide:</b> Zest 2 st red grapefruits (zest only, no white pith), then juice them — plus more as needed — to get 600 ml freshly squeezed red grapefruit juice. Divide — 200 ml into a small saucepan for reducing, 150 ml reserved for the syrup, and the remaining 250 ml into a bowl in the fridge.
+ - free_text <b>Reduce a portion of the juice:</b> Simmer the 200 ml of juice over medium heat until reduced by half, to about 100 ml, roughly 8–9 minutes. Watch it closely near the end — concentrated citrus scorches fast. Set aside to cool.
+ - free_text <b>Make the zest &amp; mint syrup:</b> In another saucepan, combine the reserved 150 ml of juice, 190 g granulated sugar, and all the zest. Warm gently, stirring, just until the sugar dissolves — no simmering. Remove from heat, slap the 15 st fresh mint leaves between your palms and stir them in, cover, and steep for 15 minutes.
+ - free_text <b>Strain the syrup:</b> Strain the syrup, pressing firmly on the zest and mint to extract the oils. Discard the solids. The syrup should smell distinctly of mint — it will soften once diluted into the full base.
+ - free_text <b>Combine and taste:</b> Combine the raw juice, reduced juice, syrup, 2.5 tbsp Campari, 1 tbsp freshly squeezed lemon juice, and 0.1 tsp fine salt. The Campari goes in off the heat to keep its aroma intact. Taste — slightly too sweet cold, boldly grapefruity, the Campari bitterness present but rounded, mint as a cool finish. Adjust sugar if the bitter edge bites.
+ - divider Chill, churn and freeze
+ - free_text <b>Chill thoroughly:</b> Refrigerate the base until completely cold, at least 120 minutes or overnight.
+ - free_text <b>Churn:</b> Churn until soft-serve consistency, 25–30 minutes — the Campari slows freezing slightly, so it may take longer than the plain version.
+ - free_text <b>Firm up in the freezer:</b> Transfer to a chilled container, press parchment against the surface, and freeze until scoopable, about 180 minutes — the alcohol extends the firming time.

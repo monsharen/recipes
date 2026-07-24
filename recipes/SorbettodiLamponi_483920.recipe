@@ -1,0 +1,27 @@
+metadata:
+  name: Sorbetto di Lamponi
+  images:
+    - https://upload.wikimedia.org/wikipedia/commons/f/fb/Raspberry_sorbet.jpg
+  description: "Italian Raspberry Sorbet. A classic Italian-style sorbet — pure raspberry flavor, silky texture, no dairy or eggs."
+  notes: "Needs an ice cream machine. The base must be fully chilled before churning."
+  types: [Dessert, Ice Cream]
+  estimatedPrepTime: 30 min + 4 h
+  servings: 6
+
+ingredients:
+ - 550 g fresh raspberries
+ - 160 g granulated sugar
+ - 120 ml water
+ - 1 tbsp freshly squeezed lemon juice
+ - 0.1 tsp fine salt
+
+actions:
+ - divider Make the base
+ - free_text <b>Make the syrup:</b> Combine 160 g granulated sugar and 120 ml water in a small saucepan. Warm over medium heat, stirring, just until the sugar fully dissolves — no need to boil. Remove from heat and let cool.
+ - free_text <b>Purée the raspberries:</b> Blend 550 g fresh raspberries until completely smooth, about 30–60 seconds.
+ - free_text <b>Strain out the seeds:</b> Push the purée through a fine-mesh sieve with a spatula or the back of a ladle, pressing well to extract all the pulp. Discard the seeds. This is what gives Italian sorbetto its silky texture — don't skip it.
+ - free_text <b>Combine the base:</b> Stir the cooled syrup into the raspberry purée along with 1 tbsp freshly squeezed lemon juice and 0.1 tsp fine salt. Taste — it should seem slightly too sweet at room temperature, since cold dulls sweetness.
+ - divider Chill, churn and freeze
+ - free_text <b>Chill thoroughly:</b> Refrigerate the base until completely cold, at least 120 minutes (or overnight). A cold base churns faster and gives smaller ice crystals.
+ - free_text <b>Churn:</b> Pour the base into your ice cream machine and churn until it reaches a thick, soft-serve consistency, typically 20–25 minutes depending on the machine.
+ - free_text <b>Firm up in the freezer:</b> Transfer to a chilled, lidded container, press a piece of parchment against the surface, and freeze until scoopable, about 120 minutes. Let it sit at room temperature for 5 minutes before serving if it's been frozen longer.
