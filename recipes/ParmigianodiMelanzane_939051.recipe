@@ -1,7 +1,7 @@
 metadata:
   name: Parmigiano di Melanzane 
   images:
-    - empty.png
+    - https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Melanzane_alla_parmigiana_finished.jpg/960px-Melanzane_alla_parmigiana_finished.jpg
   description: From https://www.insidetherustickitchen.com/parmigiana-di-melanzane-aubergine-parmigana/ 
   types: [Main]
   estimatedPrepTime: 2 h

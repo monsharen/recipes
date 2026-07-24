@@ -1,7 +1,7 @@
 metadata:
   name: Köttfärspaj
   images:
-    - 
+    - https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/-2019-12-22_Venison%2C_beef_and_lamb_Yule_Pie_with_onions%2C_herbs_and_mushrooms_topped_with_short_crust_pastry.JPG/960px--2019-12-22_Venison%2C_beef_and_lamb_Yule_Pie_with_onions%2C_herbs_and_mushrooms_topped_with_short_crust_pastry.JPG
   description: From https://www.godare.se/recept/a/76WGEw/kottfarspaj 
   types: [Main,Pie]
   estimatedPrepTime: 60 mins

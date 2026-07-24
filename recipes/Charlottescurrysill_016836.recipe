@@ -1,7 +1,7 @@
 metadata:
   name: Charlottes currysill
   images:
-    - empty.png
+    - https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Julbord_sill.jpg/960px-Julbord_sill.jpg
   description: Från handskrivet familjerecept
   types: [Starter, Side]
   estimatedPrepTime: 30 min + 2 dygn

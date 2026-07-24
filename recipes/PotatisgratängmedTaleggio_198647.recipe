@@ -1,7 +1,7 @@
 metadata:
   name: Potatisgratäng med Taleggio
   images:
-    - 
+    - https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Gratin_Dauphinoise.JPG/960px-Gratin_Dauphinoise.JPG
   description: From https://homecooking.nu/blog/2024/03/31/kramig-potatisgratang-med-taleggio/ 
   types: [Main, Side]
   estimatedPrepTime: 45 min

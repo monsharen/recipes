@@ -1,7 +1,7 @@
 metadata:
   name: Chocolate chip cookies
   images:
-    - https://fridasbakblogg.se/wp-content/uploads/2017/03/amerikanska_chocolate_chip_cookies1-scaled-1.jpg
+    - https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Chocolate_chip_cookies_fresh_from_the_oven%2C_July_2024.jpg/960px-Chocolate_chip_cookies_fresh_from_the_oven%2C_July_2024.jpg
   description: From https://fridasbakblogg.se/2017/03/31/amerikanska-chocolate-chip-cookies/ 
   types: [Cookies]
   estimatedPrepTime: 30 min
