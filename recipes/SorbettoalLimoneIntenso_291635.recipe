@@ -1,0 +1,27 @@
+metadata:
+  name: Sorbetto al Limone Intenso
+  images:
+    - empty.png
+  description: "Riviera Lemon Sorbet. Riviera-style sorbetto al limone — sharp, perfumed, and unapologetically lemony, built on a heavy zest infusion."
+  notes: "Needs an ice cream machine. The juice goes in raw and cold at the end, never heated."
+  types: [Dessert, Ice Cream]
+  estimatedPrepTime: 30 min + 4 h
+  servings: 6
+
+ingredients:
+ - 300 ml freshly squeezed lemon juice (about 6-8 lemons)
+ - 230 g granulated sugar
+ - 400 ml water
+ - 5 st lemons, zested (zest only, no white pith)
+ - 0.1 tsp fine salt
+
+actions:
+ - divider Make the base
+ - free_text <b>Zest, then juice:</b> Scrub the lemons in warm water. Zest all 5 st lemons with a fine grater or peeler, taking only the yellow surface, no white pith. Then juice as many as needed to get 300 ml freshly squeezed lemon juice. Refrigerate the juice — it goes in raw at the end, never heated.
+ - free_text <b>Make the heavy zest infusion:</b> Combine 230 g granulated sugar, 400 ml water, and all the zest in a saucepan. Warm over medium heat, stirring, just until the sugar dissolves — do not simmer. Remove from heat, cover, and steep for 30 minutes as it cools. This long, heavy infusion is the Menton move — it pulls the aromatic oils out of the peel and is what separates a perfumed sorbetto from mere frozen lemonade.
+ - free_text <b>Strain and press:</b> Strain the syrup, pressing very firmly on the zest to wring out every drop of oil. The syrup should smell intensely of lemon peel — almost like limoncello — before any juice is added. Discard the zest.
+ - free_text <b>Combine cold and taste:</b> Once the syrup is at room temperature or cooler, stir in the cold juice and 0.1 tsp fine salt. Adding the juice off the heat keeps its raw, sharp freshness intact. Taste — it should be bracingly lemony and slightly too sweet when cold, the classic tug-of-war between sharp and sweet is exactly what you want. Adjust with more sugar (dissolves fine with stirring) or a splash more juice.
+ - divider Chill, churn and freeze
+ - free_text <b>Chill thoroughly:</b> Refrigerate the base until completely cold, at least 120 minutes or overnight.
+ - free_text <b>Churn:</b> Churn until soft-serve consistency, typically 20–25 minutes. Lemon sorbet is traditionally served on the softer side — you can serve it straight from the machine, Riviera beach-kiosk style.
+ - free_text <b>Firm up (optional):</b> If not serving immediately, transfer to a chilled container, press parchment against the surface, and freeze until scoopable, about 120 minutes.
