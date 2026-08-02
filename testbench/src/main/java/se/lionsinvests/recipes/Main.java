@@ -49,6 +49,15 @@ public class Main {
         fileManager.exportResource("/recipes.js");
         fileManager.exportResource("/recipe.html", recipeTemplate);
 
+        // Progressive web app: manifest, service worker and icons.
+        fileManager.exportResource("/manifest.webmanifest");
+        fileManager.exportResource("/service-worker.js");
+        fileManager.exportResource("/pwa.js");
+        fileManager.exportResource("/icon-192.png");
+        fileManager.exportResource("/icon-512.png");
+        fileManager.exportResource("/apple-touch-icon.png");
+        fileManager.exportResource("/favicon.png");
+
         List<RecipeDTO> recipeList = new ArrayList<>();
 
         Interpreter interpreter = new Interpreter();
