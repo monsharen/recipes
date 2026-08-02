@@ -1,0 +1,37 @@
+metadata:
+  name: Klassisk västerbottenpaj
+  images:
+    - https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_231370/cf_259/klassisk_vasterbottenpaj.jpg
+  description: From https://www.ica.se/recept/klassisk-vasterbottenpaj-725368/
+  types: [Main,Pie]
+  estimatedPrepTime: 1 tim 45 min
+  servings: 8 port
+
+ingredients:
+ - 2 dl vetemjöl
+ - 1 dl grahamsmjöl
+ - 125 g smör
+ - 1 st ägg, till degen
+ - 4 st ägg, till fyllningen
+ - 2.5 dl vispgrädde (40%)
+ - 1 dl mjölk
+ - 300 g västerbottensost
+ - 2 krm salt
+ - 1 krm svartpeppar
+ - 1 st gräddfil, till garnering
+ - 1 st löjrom eller stenbitsrom, till garnering
+ - 1 st gräslök, hackad, till garnering
+
+actions:
+ - divider Gör pajdegen
+ - free_text Blanda 2 dl vetemjöl, 1 dl grahamsmjöl och 125 g smör. Tillsätt 1 ägg och blanda snabbt ihop till en deg.
+ - free_text Tryck ut degen i en pajform, ca 25 cm i diameter (för 8 port). Låt vila i kylen i 30 minuter.
+ - free_text Sätt ugnen på 200°C, över- och undervärme.
+ - free_text Nagga botten med en gaffel och förgrädda skalet mitt i ugnen 10-15 minuter.
+ - divider Gör fyllningen
+ - free_text Sänk ugnen till 175°C, över- och undervärme.
+ - free_text Vispa ihop 4 ägg, 2.5 dl vispgrädde och 1 dl mjölk.
+ - free_text Riv 300 g västerbottensost. Blanda i osten tillsammans med 2 krm salt och 1 krm svartpeppar i äggblandningen.
+ - divider Grädda pajen
+ - free_text Häll fyllningen i pajskalet och grädda mitt i ugnen ca 50 minuter eller tills fyllningen har stannat och pajen har fått fin färg.
+ - free_text Servera med gräddfil, löjrom eller stenbitsrom och hackad gräslök.
