@@ -1,4 +1,4 @@
-image: maven:3.6-jdk-11
+image: maven:3.9-eclipse-temurin-25
 
 workflow:
   rules:
@@ -16,7 +16,9 @@ pages:
     - |
       echo '{' > recipes-rendered/dates.json
       first=1
-      git ls-files recipes | grep '\.recipe$' | while read -r f; do
+      # quotepath=off: without it git escapes non-ASCII names ("Gl\303\266gg...")
+      # which then fail the .recipe match, silently dropping every recipe with å/ä/ö.
+      git -c core.quotepath=off ls-files recipes | grep '\.recipe$' | while read -r f; do
         url="$(basename "$f").html"
         d=$(git log -1 --date=short --format=%cd -- "$f")
         if [ "$first" -eq 0 ]; then printf ',\n' >> recipes-rendered/dates.json; fi

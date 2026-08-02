@@ -67,9 +67,9 @@ public class SwedishUnitTranslator implements UnitTranslator {
         String displayAmount;
 
         if (hasFractionalPart(amount)) {
-            displayAmount = String.format("%.1f", amount);
+            displayAmount = String.format(UnitUtil.DISPLAY_LOCALE, "%.1f", amount);
         } else {
-            displayAmount = String.format("%.0f", amount);
+            displayAmount = String.format(UnitUtil.DISPLAY_LOCALE, "%.0f", amount);
         }
 
         return displayAmount + " " + displayName;

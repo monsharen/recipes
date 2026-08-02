@@ -4,10 +4,10 @@ import se.lionsinvests.recipes.sdk.Unit;
 
 import java.util.HashMap;
 import java.util.List;
-import java.util.Locale;
 import java.util.Map;
 
 import static se.lionsinvests.recipes.sdk.Unit.*;
+import static se.lionsinvests.recipes.sdk.unitconversion.UnitUtil.DISPLAY_LOCALE;
 import static se.lionsinvests.recipes.sdk.unitconversion.UnitUtil.hasFractionalPart;
 import static se.lionsinvests.recipes.sdk.unitconversion.UnitUtil.hasMoreThanOneDecimal;
 
@@ -55,13 +55,13 @@ public class WeightUnitConverter {
             if (hasFractionalPart(result)) {
 
                 if (hasMoreThanOneDecimal(result)) {
-                    return String.format("%.2f ml", result);
+                    return String.format(DISPLAY_LOCALE, "%.2f ml", result);
                 }
 
-                return String.format("%.1f ml", result);
+                return String.format(DISPLAY_LOCALE, "%.1f ml", result);
             }
 
-            return String.format("%.0f ml", result);
+            return String.format(DISPLAY_LOCALE, "%.0f ml", result);
         }
 
         return "";
@@ -90,13 +90,13 @@ public class WeightUnitConverter {
         if (hasFractionalPart(result)) {
 
             if (hasMoreThanOneDecimal(result)) {
-                return String.format(Locale.ENGLISH, "%.2f g", result);
+                return String.format(DISPLAY_LOCALE, "%.2f g", result);
             }
 
-            return String.format(Locale.ENGLISH, "%.1f g", result);
+            return String.format(DISPLAY_LOCALE, "%.1f g", result);
         }
 
-        return String.format(Locale.ENGLISH, "%.0f g", result);
+        return String.format(DISPLAY_LOCALE, "%.0f g", result);
     }
 
 

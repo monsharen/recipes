@@ -3,6 +3,7 @@ recipes_rendered/
 recipes-rendered/
 public/
 **/target/
+dependency-reduced-pom.xml
 .idea/
 
 # Created by https://www.toptal.com/developers/gitignore/api/intellij,git
