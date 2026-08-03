@@ -82,6 +82,15 @@ Counts & misc: `st`/`u` quantity (whole items), `piece`, `clove`/`cloves`/`klyft
 
 Both English and Swedish keywords work. Unknown units fail the build.
 
+### Writing rules
+
+- Never use a fraction — `2 1/2 dl` → `2.5 dl`.
+- Unquantified items (salt, pepper, garnishes) still need a number and unit:
+  `1 st salt och peppar`.
+- Disambiguate repeated ingredients in the description: `1 st ägg, till degen` /
+  `4 st ägg, till fyllningen`.
+- List ingredients in the order they are used.
+
 ## actions
 
 A YAML list of steps. Each line is `<action_type> <content>`. Four action types:
@@ -103,6 +112,14 @@ actions:
 - **youtube** — `youtube <embed-url>`. Use the `/embed/` form of the YouTube URL.
 
 The action keyword is case-insensitive and matched by the text before the first space.
+
+### Writing rules
+
+- Keep each step to a single instruction — split multi-action paragraphs into separate
+  `free_text` lines.
+- Restate quantities inline in each step (`Vispa ihop 4 ägg, 2.5 dl vispgrädde och 1 dl
+  mjölk.`) so a step reads on its own.
+- Keep the source recipe's wording and language rather than paraphrasing or translating it.
 
 ## Minimal template
 
