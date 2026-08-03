@@ -17,11 +17,16 @@ ingredients:
 
 actions:
  - divider Make the base
- - free_text <b>Zest, then juice:</b> Scrub the lemons in warm water. Zest all 5 st lemons with a fine grater or peeler, taking only the yellow surface, no white pith. Then juice as many as needed to get 300 ml freshly squeezed lemon juice. Refrigerate the juice — it goes in raw at the end, never heated.
- - free_text <b>Make the heavy zest infusion:</b> Combine 230 g granulated sugar, 400 ml water, and all the zest in a saucepan. Warm over medium heat, stirring, just until the sugar dissolves — do not simmer. Remove from heat, cover, and steep for 30 minutes as it cools. This long, heavy infusion is the Menton move — it pulls the aromatic oils out of the peel and is what separates a perfumed sorbetto from mere frozen lemonade.
- - free_text <b>Strain and press:</b> Strain the syrup, pressing very firmly on the zest to wring out every drop of oil. The syrup should smell intensely of lemon peel — almost like limoncello — before any juice is added. Discard the zest.
- - free_text <b>Combine cold and taste:</b> Once the syrup is at room temperature or cooler, stir in the cold juice and 0.1 tsp fine salt. Adding the juice off the heat keeps its raw, sharp freshness intact. Taste — it should be bracingly lemony and slightly too sweet when cold, the classic tug-of-war between sharp and sweet is exactly what you want. Adjust with more sugar (dissolves fine with stirring) or a splash more juice.
+ - free_text Scrub the lemons in warm water.
+ - free_text Zest all 5 st lemons with a fine grater or peeler, taking only the yellow surface, no white pith.
+ - free_text Juice as many lemons as needed to get 300 ml freshly squeezed lemon juice, then refrigerate the juice.
+ - free_text Combine 230 g granulated sugar, 400 ml water, and all the zest in a saucepan.
+ - free_text Warm over medium heat, stirring, just until the sugar dissolves — do not simmer.
+ - free_text Remove from heat, cover, and steep for 30 minutes as it cools.
+ - free_text Strain the syrup, pressing firmly on the zest to wring out the oils, then discard the zest. The syrup should smell intensely of lemon peel.
+ - free_text Once the syrup is at room temperature or cooler, stir in the cold juice and 0.1 tsp fine salt.
+ - free_text Taste and adjust with more sugar or a splash more juice — it should be bracingly lemony and slightly too sweet when cold.
  - divider Chill, churn and freeze
- - free_text <b>Chill thoroughly:</b> Refrigerate the base until completely cold, at least 120 minutes or overnight.
- - free_text <b>Churn:</b> Churn until soft-serve consistency, typically 20–25 minutes. Lemon sorbet is traditionally served on the softer side — you can serve it straight from the machine, Riviera beach-kiosk style.
- - free_text <b>Firm up (optional):</b> If not serving immediately, transfer to a chilled container, press parchment against the surface, and freeze until scoopable, about 120 minutes.
+ - free_text Refrigerate the base until completely cold, at least 120 minutes or overnight.
+ - free_text Churn until soft-serve consistency, typically 20–25 minutes. It can be served straight from the machine.
+ - free_text If not serving immediately, transfer to a chilled container, press parchment against the surface, and freeze until scoopable, about 120 minutes.
