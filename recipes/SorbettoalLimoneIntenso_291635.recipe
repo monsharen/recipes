@@ -18,9 +18,9 @@ ingredients:
 actions:
  - divider Make the base
  - free_text Scrub the lemons in warm water.
- - free_text Zest all 5 st lemons with a fine grater or peeler, taking only the yellow surface, no white pith.
+ - free_text Zest all 5 st lemons into a saucepan with a fine grater or peeler, taking only the yellow surface, no white pith.
  - free_text Juice as many lemons as needed to get 300 ml freshly squeezed lemon juice, then refrigerate the juice.
- - free_text Combine 230 g granulated sugar, 400 ml water, and all the zest in a saucepan.
+ - free_text Add 230 g granulated sugar and 400 ml water to the saucepan with the zest.
  - free_text Warm over medium heat, stirring, just until the sugar dissolves — do not simmer.
  - free_text Remove from heat, cover, and steep for 30 minutes as it cools.
  - free_text Strain the syrup, pressing firmly on the zest to wring out the oils, then discard the zest. The syrup should smell intensely of lemon peel.
