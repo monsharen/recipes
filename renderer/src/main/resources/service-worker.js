@@ -82,7 +82,13 @@ function fromCache(request) {
 
 async function networkFirst(request) {
   try {
-    const response = await fetch(request);
+    // Pages hosting serves everything with max-age=600 and mobile browsers hold on to
+    // that HTTP cache aggressively, so "network first" through the HTTP cache can still
+    // be ten-minutes-plus stale. 'no-cache' forces revalidation with the server (cheap
+    // 304s via ETag) while keeping the offline fallback below intact. A fresh Request is
+    // built from the URL because a navigation Request can't be re-dispatched with an
+    // overridden cache mode.
+    const response = await fetch(new Request(request.url, { cache: 'no-cache' }));
 
     if (cacheable(response)) {
       const copy = response.clone();
