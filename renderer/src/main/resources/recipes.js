@@ -120,6 +120,14 @@ Promise.all([
         }
       },
       computed: {
+        // The button is an icon, so the count only shows in its tooltip and to
+        // screen readers.
+        favoritesOnlyLabel() {
+          return this.favorites.length
+            ? 'Visa endast favoriter (' + this.favorites.length + ')'
+            : 'Visa endast favoriter';
+        },
+
         filteredRecipes() {
           const filtered = this.recipes.filter(recipe => {
             return this.checkedRecipeTypes.every(type => {
