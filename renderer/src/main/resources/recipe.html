@@ -228,6 +228,26 @@
                 paint();
             });
 
+            // This page can come back from the browser's back/forward cache, or the star
+            // may have been toggled in another tab, so re-read the list before painting.
+            function reload() {
+                try {
+                    favorites = JSON.parse(localStorage.getItem(key)) || [];
+                } catch (e) {
+                    favorites = [];
+                }
+                if (!Array.isArray(favorites)) favorites = [];
+                paint();
+            }
+
+            window.addEventListener('pageshow', function (event) {
+                if (event.persisted) reload();
+            });
+
+            window.addEventListener('storage', function (event) {
+                if (event.key === key) reload();
+            });
+
             paint();
         })();
 

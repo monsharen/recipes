@@ -30,6 +30,16 @@ function readFavorites() {
   }
 }
 
+// Remembered "only favorites" filter, like the view and sort preferences. Never
+// restored while nothing is starred, so the list can't come back mysteriously empty.
+function readFavoritesOnly(favorites) {
+  try {
+    return favorites.length > 0 && localStorage.getItem('recipeFavoritesOnly') === 'true';
+  } catch (e) {
+    return false;
+  }
+}
+
 // GitLab Pages serves everything with "Cache-Control: max-age=600" and custom
 // headers can't be set on gitlab.com, so iOS Safari happily shows a stale list
 // long after a rebuild. Bypass the HTTP cache for the data files: 'no-store'
@@ -50,6 +60,19 @@ Promise.all([
   fetchFresh('./dates.json').then(response => (response.ok ? response.json() : {})).catch(() => ({}))
 ])
   .then(([recipes, dates]) => {
+    // Recipes get renamed and deleted, which would leave favorites pointing at pages
+    // that no longer exist and a count that never matches the list. recipes.json is the
+    // source of truth, so drop anything missing from it.
+    const known = recipes.map(recipe => recipe.url);
+    const stored = readFavorites();
+    const favorites = stored.filter(url => known.indexOf(url) !== -1);
+
+    if (favorites.length !== stored.length) {
+      try {
+        localStorage.setItem(FAVORITES_KEY, JSON.stringify(favorites));
+      } catch (e) { /* storage unavailable, ignore */ }
+    }
+
     const app = new Vue({
       el: '#recipeList',
       data: {
@@ -59,8 +82,8 @@ Promise.all([
         dates: dates,
         sortBy: readSort(),
         viewMode: readView(),
-        favorites: readFavorites(),
-        favoritesOnly: false,
+        favorites: favorites,
+        favoritesOnly: readFavoritesOnly(favorites),
       },
       methods: {
         setView(mode) {
@@ -91,6 +114,9 @@ Promise.all([
         },
         toggleFavoritesOnly() {
           this.favoritesOnly = !this.favoritesOnly;
+          try {
+            localStorage.setItem('recipeFavoritesOnly', this.favoritesOnly ? 'true' : 'false');
+          } catch (e) { /* storage unavailable, ignore */ }
         }
       },
       computed: {
@@ -168,6 +194,26 @@ Promise.all([
 
           return types;
         }
+      }
+    });
+
+    // Stars can be toggled outside this page: on a recipe page the user came back
+    // from (browsers restore the front page from memory rather than reloading it),
+    // or in another tab. Re-read the stored list instead of trusting the copy in
+    // memory, so the stars are never out of date.
+    function syncFavorites() {
+      app.favorites = readFavorites().filter(url => known.indexOf(url) !== -1);
+    }
+
+    window.addEventListener('pageshow', event => {
+      if (event.persisted) {
+        syncFavorites();
+      }
+    });
+
+    window.addEventListener('storage', event => {
+      if (event.key === FAVORITES_KEY) {
+        syncFavorites();
       }
     });
   })

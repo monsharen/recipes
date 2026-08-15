@@ -37,10 +37,14 @@
     });
   });
 
-  // Reload once when a new worker takes control, so the page matches the new cache.
+  // Reload once when a new worker *replaces* the one that served this page, so the page
+  // matches the new cache. A page that loaded without a controller already came straight
+  // from the network, so the very first worker claiming it is not a reason to reload —
+  // doing so on a first visit throws away whatever the user had typed or toggled.
+  var hadController = !!navigator.serviceWorker.controller;
   var refreshing = false;
   navigator.serviceWorker.addEventListener('controllerchange', function () {
-    if (refreshing) {
+    if (refreshing || !hadController) {
       return;
     }
     refreshing = true;
