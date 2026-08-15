@@ -10,9 +10,23 @@ function readView() {
 // Remembered sort preference (defaults to latest).
 function readSort() {
   try {
-    return localStorage.getItem('recipeSort') === 'alphabetical' ? 'alphabetical' : 'latest';
+    const stored = localStorage.getItem('recipeSort');
+    return (stored === 'alphabetical' || stored === 'favorites') ? stored : 'latest';
   } catch (e) {
     return 'latest';
+  }
+}
+
+// Favorited recipes are stored as a list of recipe urls, shared with the
+// recipe pages (which write the same key when their star is toggled).
+const FAVORITES_KEY = 'recipeFavorites';
+
+function readFavorites() {
+  try {
+    const stored = JSON.parse(localStorage.getItem(FAVORITES_KEY));
+    return Array.isArray(stored) ? stored.filter(url => typeof url === 'string') : [];
+  } catch (e) {
+    return [];
   }
 }
 
@@ -45,6 +59,8 @@ Promise.all([
         dates: dates,
         sortBy: readSort(),
         viewMode: readView(),
+        favorites: readFavorites(),
+        favoritesOnly: false,
       },
       methods: {
         setView(mode) {
@@ -58,6 +74,23 @@ Promise.all([
           try {
             localStorage.setItem('recipeSort', mode);
           } catch (e) { /* storage unavailable, ignore */ }
+        },
+        isFavorite(recipe) {
+          return this.favorites.indexOf(recipe.url) !== -1;
+        },
+        toggleFavorite(recipe) {
+          const index = this.favorites.indexOf(recipe.url);
+          if (index === -1) {
+            this.favorites.push(recipe.url);
+          } else {
+            this.favorites.splice(index, 1);
+          }
+          try {
+            localStorage.setItem(FAVORITES_KEY, JSON.stringify(this.favorites));
+          } catch (e) { /* storage unavailable, ignore */ }
+        },
+        toggleFavoritesOnly() {
+          this.favoritesOnly = !this.favoritesOnly;
         }
       },
       computed: {
@@ -85,23 +118,37 @@ Promise.all([
 
             // Check recipe name
             return recipe.name.toLowerCase().indexOf(searchTerm) > -1;
+          }).filter(recipe => {
+            return !this.favoritesOnly || this.isFavorite(recipe);
           });
 
           const dates = this.dates;
           const sorted = filtered.slice();
 
+          // 'latest' — newest last-commit date first; undated recipes go last.
+          const byLatest = (a, b) => {
+            const da = dates[a.url] || '';
+            const db = dates[b.url] || '';
+            if (da === db) {
+              return a.name.localeCompare(b.name, 'sv');
+            }
+            return db.localeCompare(da);
+          };
+
           if (this.sortBy === 'alphabetical') {
             sorted.sort((a, b) => a.name.localeCompare(b.name, 'sv'));
-          } else {
-            // 'latest' — newest last-commit date first; undated recipes go last.
+          } else if (this.sortBy === 'favorites') {
+            // Favorites float to the top, everything else keeps the latest order.
             sorted.sort((a, b) => {
-              const da = dates[a.url] || '';
-              const db = dates[b.url] || '';
-              if (da === db) {
-                return a.name.localeCompare(b.name, 'sv');
+              const fa = this.isFavorite(a) ? 0 : 1;
+              const fb = this.isFavorite(b) ? 0 : 1;
+              if (fa !== fb) {
+                return fa - fb;
               }
-              return db.localeCompare(da);
+              return byLatest(a, b);
             });
+          } else {
+            sorted.sort(byLatest);
           }
 
           return sorted;

@@ -34,10 +34,12 @@
             <div class="row">
                 <div class="col">
                     <nav>
-                        <div>
+                        <div class="recipe-title-row">
                             <h1 th:text="${data.recipe.metadata.name}">
                                 Chicken Ragout Soup
                             </h1>
+                            <button type="button" class="favorite-btn favorite-btn-lg" id="favoriteToggle"
+                                    aria-pressed="false" aria-label="Spara som favorit" title="Spara som favorit">☆</button>
                         </div>
                     </nav>
                 </div>
@@ -175,6 +177,58 @@
                     }
                 });
             });
+        })();
+
+        // Star this recipe as a favorite. The url list is shared with the front
+        // page, which reads the same localStorage key to filter and sort.
+        (function () {
+            var button = document.getElementById('favoriteToggle');
+            if (!button) return;
+
+            var key = 'recipeFavorites';
+            var url;
+            try {
+                url = decodeURIComponent(location.pathname.split('/').pop() || '');
+            } catch (e) {
+                url = location.pathname.split('/').pop() || '';
+            }
+            if (!url) {
+                button.style.display = 'none';
+                return;
+            }
+
+            var favorites;
+            try {
+                favorites = JSON.parse(localStorage.getItem(key)) || [];
+            } catch (e) {
+                favorites = [];
+            }
+            if (!Array.isArray(favorites)) favorites = [];
+
+            function paint() {
+                var isFavorite = favorites.indexOf(url) !== -1;
+                var label = isFavorite ? 'Ta bort från favoriter' : 'Spara som favorit';
+                button.textContent = isFavorite ? '★' : '☆';
+                button.classList.toggle('active', isFavorite);
+                button.setAttribute('aria-pressed', isFavorite ? 'true' : 'false');
+                button.setAttribute('aria-label', label);
+                button.setAttribute('title', label);
+            }
+
+            button.addEventListener('click', function () {
+                var pos = favorites.indexOf(url);
+                if (pos === -1) {
+                    favorites.push(url);
+                } else {
+                    favorites.splice(pos, 1);
+                }
+                try {
+                    localStorage.setItem(key, JSON.stringify(favorites));
+                } catch (e) { /* storage unavailable, ignore */ }
+                paint();
+            });
+
+            paint();
         })();
 
         // Keep the screen awake while a recipe is open (best-effort).

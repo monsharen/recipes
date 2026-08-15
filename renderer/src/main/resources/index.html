@@ -37,11 +37,22 @@
                     <div class="btn-group" role="group" aria-label="Sortering">
                         <button type="button" class="btn btn-outline-primary" :class="{ active: sortBy === 'latest' }" @click="setSort('latest')" aria-label="Sortera efter senaste" title="Senaste">🕒</button>
                         <button type="button" class="btn btn-outline-primary" :class="{ active: sortBy === 'alphabetical' }" @click="setSort('alphabetical')" aria-label="Sortera alfabetiskt" title="Alfabetisk (A–Ö)">🔤</button>
+                        <button type="button" class="btn btn-outline-primary" :class="{ active: sortBy === 'favorites' }" @click="setSort('favorites')" aria-label="Sortera med favoriter först" title="Favoriter först">★</button>
                     </div>
+                    <button type="button" class="btn btn-outline-primary" :class="{ active: favoritesOnly }" @click="toggleFavoritesOnly()" :aria-pressed="favoritesOnly ? 'true' : 'false'" aria-label="Visa endast favoriter" title="Visa endast favoriter">
+                        ★ Endast favoriter<span v-if="favorites.length"> ({{favorites.length}})</span>
+                    </button>
                     <div class="btn-group" role="group" aria-label="Vy">
                         <button type="button" class="btn btn-outline-primary" :class="{ active: viewMode === 'card' }" @click="setView('card')" aria-label="Kortvy" title="Kortvy">▦</button>
                         <button type="button" class="btn btn-outline-primary" :class="{ active: viewMode === 'list' }" @click="setView('list')" aria-label="Listvy" title="Listvy">☰</button>
                     </div>
+                </div>
+            </div>
+
+            <!-- Nothing to show when the favorites filter is on but nothing is starred yet -->
+            <div class="row" v-if="favoritesOnly && filteredRecipes.length === 0">
+                <div class="col">
+                    <p class="favorites-empty">Inga favoriter matchar. Tryck på stjärnan på ett recept för att spara det som favorit.</p>
                 </div>
             </div>
 
@@ -58,7 +69,10 @@
                                 </div>
                                 <div class="col-md-8">
                                     <div class="card-body">
-                                        <h4 class="card-title">{{recipe.name}}</h4>
+                                        <div class="card-title-row">
+                                            <h4 class="card-title">{{recipe.name}}</h4>
+                                            <button type="button" class="favorite-btn" :class="{ active: isFavorite(recipe) }" @click="toggleFavorite(recipe)" :aria-pressed="isFavorite(recipe) ? 'true' : 'false'" :aria-label="isFavorite(recipe) ? 'Ta bort från favoriter' : 'Spara som favorit'" :title="isFavorite(recipe) ? 'Ta bort från favoriter' : 'Spara som favorit'">{{ isFavorite(recipe) ? '★' : '☆' }}</button>
+                                        </div>
                                         <p class="card-text">{{recipe.description}}</p>
                                         <p class="card-text" v-if="recipe.servings"><small>Servings: {{recipe.servings}}</small></p>
                                         <p class="card-text" v-if="recipe.estimatedPrepTime"><small>Estimated time: {{recipe.estimatedPrepTime}}</small></p>
@@ -75,11 +89,14 @@
             <!-- Compact list view -->
             <template v-if="viewMode === 'list'">
                 <div class="list-group recipe-list">
-                    <a v-for="recipe in filteredRecipes" :href="recipe.url" class="list-group-item list-group-item-action recipe-list-item">
-                        <img :src="recipe.image" class="recipe-list-thumb" :alt="recipe.name">
-                        <span class="recipe-list-name">{{recipe.name}}</span>
+                    <div v-for="recipe in filteredRecipes" class="list-group-item recipe-list-item">
+                        <a :href="recipe.url" class="recipe-list-link">
+                            <img :src="recipe.image" class="recipe-list-thumb" :alt="recipe.name">
+                            <span class="recipe-list-name">{{recipe.name}}</span>
+                        </a>
                         <span class="recipe-list-meta" v-if="recipe.estimatedPrepTime">{{recipe.estimatedPrepTime}}</span>
-                    </a>
+                        <button type="button" class="favorite-btn" :class="{ active: isFavorite(recipe) }" @click="toggleFavorite(recipe)" :aria-pressed="isFavorite(recipe) ? 'true' : 'false'" :aria-label="isFavorite(recipe) ? 'Ta bort från favoriter' : 'Spara som favorit'" :title="isFavorite(recipe) ? 'Ta bort från favoriter' : 'Spara som favorit'">{{ isFavorite(recipe) ? '★' : '☆' }}</button>
+                    </div>
                 </div>
             </template>
 
