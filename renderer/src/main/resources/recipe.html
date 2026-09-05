@@ -71,7 +71,12 @@
             <div class="row">
                 <div class="col">
                     <div>
-                        <h1>Ingredienser</h1>
+                        <div class="section-title-row">
+                            <h1>Ingredienser</h1>
+                            <button type="button" class="icon-btn" id="copyIngredients"
+                                    aria-label="Kopiera ingredienslistan" title="Kopiera ingredienslistan">📋</button>
+                            <span class="visually-hidden" role="status" id="copyIngredientsStatus"></span>
+                        </div>
                         <div class="description-divider"></div>
                     </div>
                     <div class="recipe-controls">
@@ -249,6 +254,106 @@
             });
 
             paint();
+        })();
+
+        // Copy the ingredient list as plain text, one ingredient per line. The text is
+        // read from the list as rendered, so it follows the portion and unit controls.
+        (function () {
+            var button = document.getElementById('copyIngredients');
+            var status = document.getElementById('copyIngredientsStatus');
+            var list = document.querySelector('ul.ingredients');
+            if (!button || !list) return;
+
+            var LABEL = 'Kopiera ingredienslistan';
+            var resetTimer = null;
+
+            function ingredientText() {
+                var items = Array.prototype.slice.call(list.querySelectorAll('.ingredient'));
+                return items.map(function (item) {
+                    // The amount and the description are separate elements, so the raw
+                    // text carries the newline and indentation between them.
+                    return item.textContent.replace(/\s+/g, ' ').trim();
+                }).filter(function (line) {
+                    return line.length > 0;
+                }).join('\n');
+            }
+
+            // Older browsers have no clipboard API at all. Selecting a throwaway textarea
+            // replaces whatever the user had selected and moves focus, so both are put
+            // back afterwards - otherwise the next Tab would restart at the top of the page.
+            function copyByTextarea(text) {
+                var selection = document.getSelection();
+                var previousRange = (selection && selection.rangeCount > 0) ? selection.getRangeAt(0) : null;
+                var previousFocus = document.activeElement;
+
+                var area = document.createElement('textarea');
+                area.value = text;
+                area.setAttribute('readonly', '');
+                area.style.position = 'fixed';
+                area.style.top = '0';
+                area.style.opacity = '0';
+                document.body.appendChild(area);
+                area.select();
+                area.setSelectionRange(0, text.length);
+
+                var copied = false;
+                try {
+                    copied = document.execCommand('copy');
+                } catch (e) {
+                    copied = false;
+                }
+
+                document.body.removeChild(area);
+
+                if (selection) {
+                    selection.removeAllRanges();
+                    if (previousRange) selection.addRange(previousRange);
+                }
+                if (previousFocus && previousFocus.focus) previousFocus.focus();
+
+                return copied;
+            }
+
+            function feedback(copied) {
+                var message = copied ? 'Ingredienslistan kopierad' : 'Kunde inte kopiera';
+                button.textContent = copied ? '\u2714' : '\u2715';
+                button.classList.toggle('copied', copied);
+                button.setAttribute('title', message);
+                button.setAttribute('aria-label', message);
+                if (status) status.textContent = message;
+
+                clearTimeout(resetTimer);
+                resetTimer = setTimeout(function () {
+                    button.textContent = '\uD83D\uDCCB';
+                    button.classList.remove('copied');
+                    button.setAttribute('title', LABEL);
+                    button.setAttribute('aria-label', LABEL);
+                    if (status) status.textContent = '';
+                }, 1500);
+            }
+
+            button.addEventListener('click', function () {
+                var text = ingredientText();
+
+                if (!text) {
+                    feedback(false);
+                    return;
+                }
+
+                if (navigator.clipboard && navigator.clipboard.writeText) {
+                    navigator.clipboard.writeText(text).then(function () {
+                        feedback(true);
+                    }, function () {
+                        // Best effort only: some browsers refuse execCommand this late,
+                        // outside the click that started the copy. When it does not take,
+                        // feedback() says so rather than claiming a copy that never happened.
+                        feedback(copyByTextarea(text));
+                    });
+                    return;
+                }
+
+                feedback(copyByTextarea(text));
+            });
         })();
 
         // Keep the screen awake while a recipe is open (best-effort).
