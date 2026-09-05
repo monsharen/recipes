@@ -248,6 +248,38 @@ body {
     white-space: nowrap;
 }
 
+/* Icon button next to a section heading, styled like the recipe controls. */
+.section-title-row {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.section-title-row h1 {
+    margin-bottom: 0;
+}
+
+.icon-btn {
+    border: 1px solid #d9d2d2;
+    background-color: #f9f5f5;
+    border-radius: 0.25rem;
+    min-width: 1.9em;
+    height: 1.9em;
+    padding: 0 0.35em;
+    line-height: 1;
+    font-size: 1.1em;
+    cursor: pointer;
+}
+
+.icon-btn:hover {
+    background-color: #efe7e7;
+}
+
+.icon-btn.copied {
+    border-color: #7ea87e;
+    color: #3f7d3f;
+}
+
 /* Favorite stars, on the front page and on the recipe pages. */
 .favorite-btn {
     border: none;
